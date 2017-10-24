@@ -28,7 +28,7 @@ app.get('/weixin', validateToken);
 app.post('/weixin', getMessageFromGongZhongHao);
 
 app.get('/*', function (req, res, next) {
-    req.end('server building ...');
+    res.end('server building ...');
 });
 
 app.use(function(err, req, res, next) {
