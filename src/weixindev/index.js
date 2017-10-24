@@ -7,7 +7,8 @@ const wxAppId = '';
 const wxSecret = '';
 
 const crypto = require('crypto');
-
+const request = require('superagent');
+const parseXMLString = require('xml2js').parseString;
 
 function validateToken(req, res) {
     console.log('>>>> validate token ...');
@@ -43,6 +44,11 @@ function getMessageFromGongZhongHao(req, res) {
     });
     req.on("end",function(){
         //console.log("end");
+        parseXMLString(_da, function (err, result) {
+            console.log('>>>> result : >>>');
+            console.log(result);
+        });
+
         const ToUserName = getXMLNodeValue('ToUserName',_da);
         const FromUserName = getXMLNodeValue('FromUserName',_da);
         const CreateTime = getXMLNodeValue('CreateTime',_da);
@@ -56,10 +62,27 @@ function getMessageFromGongZhongHao(req, res) {
         console.log(Content);
         console.log(MsgId);
         const xml = '<xml><ToUserName>'+FromUserName+'</ToUserName><FromUserName>'+ToUserName+'</FromUserName><CreateTime>'+CreateTime+'</CreateTime><MsgType>'+MsgType+'</MsgType><Content>'+Content+'</Content></xml>';
+
+
+
+        // request.post('http://www.tuling123.com/openapi/api')
+        //     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
+        //         info: '',
+        //         userid: ''})
+        //     .end(function (err, res) {
+        //        // do somthing
+        //
+        //     });
+
         res.send(xml);
     });
 
 }
+
+var xml = "<root>Hello mxl2js!</root>";
+parseXMLString(xml, function (err, result) {
+    console.dir(result);
+})
 
 function getXMLNodeValue(node_name,xml){
     let tmp = xml.split("<"+node_name+">");
