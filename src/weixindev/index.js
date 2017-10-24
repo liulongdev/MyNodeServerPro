@@ -101,6 +101,7 @@ function handleWeiXinMessage(res, result) {
             let temp = result.xml.ToUserName;
             result.xml.ToUserName = result.xml.FromUserName;
             result.xml.FromUserName = temp;
+            result.xml.msgType = 'text';
             result.xml.Content = '请发文本哦';
 
             let xmlStr = builderXML.buildObject(result);
