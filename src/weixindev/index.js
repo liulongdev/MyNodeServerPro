@@ -56,7 +56,7 @@ async function getMessageFromGongZhongHao(req, res) {
             let isReturnError = false;
             if (result.xml && result.xml.MsgType)
             {
-                handleWeiXinMessage(res, result.xml);
+                handleWeiXinMessage(res, result);
             }
             else
             {
@@ -66,9 +66,9 @@ async function getMessageFromGongZhongHao(req, res) {
     });
 }
 
-function handleWeiXinMessage(res, xmlJson) {
-        const msgType = xmlJson.MsgType[0];
-        const userId = xmlJson.FromUserName[0];
+function handleWeiXinMessage(res, result) {
+        const msgType = result.xml.MsgType[0];
+        const userId = result.xml.FromUserName[0];
         if (msgType == 'text')
         {
             const content = result.xml.Content[0];
