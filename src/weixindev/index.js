@@ -81,12 +81,12 @@ function getMessageFromGongZhongHao(req, res) {
                                     return;
                                 }
                                 console.log('6. step >>>>>>>');
-                                let responseText = res.text;
+                                let responseJson = JSON.parse(res.text);
                                 let replyContent = null;
-                                if (responseText.code === 100000)
+                                if (responseJson.code == 100000)
                                 {
                                     console.log('7. step >>>>>>>');
-                                    replyContent = responseText.text;
+                                    replyContent = responseJson.text;
                                     let temp = result.xml.FromUserName;
                                     result.xml.ToUserName = result.xml.FromUserName;
                                     result.xml.FromUserName = temp;
@@ -125,14 +125,16 @@ function getMessageFromGongZhongHao(req, res) {
 };
 
 
-// request.post('http://www.tuling123.com/openapi/api')
-//     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
-//         info: '今天天气很好哦',
-//         userid: 'liulongdev'})
-//     .end(function (err, res) {
-//         console.log('tuling >>>>>>' + res);
-//         console.log(res.text);
-//     });
+request.post('http://www.tuling123.com/openapi/api')
+    .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
+        info: '今天天气很好哦',
+        userid: 'liulongdev'})
+    .end(function (err, res) {
+        console.log('tuling >>>>>>' + res);
+        console.log(res.text);
+        let responseText = res.text;
+
+    });
 
 function getXMLNodeValue(node_name,xml){
     let tmp = xml.split("<"+node_name+">");
