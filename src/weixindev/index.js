@@ -8,7 +8,9 @@ const wxSecret = '';
 
 const crypto = require('crypto');
 const request = require('superagent');
-const parseXMLString = require('xml2js').parseString;
+const tuLingRobotAppKey = 'fe1a7ebad1e4d5ce85454b2c2f858a90';
+const xml2js = require('xml2js');
+const parseXMLString = xml2js.parseString;
 
 function validateToken(req, res) {
     console.log('>>>> validate token ...');
@@ -47,42 +49,90 @@ function getMessageFromGongZhongHao(req, res) {
         parseXMLString(_da, function (err, result) {
             console.log('>>>> result : >>>');
             console.log(result);
+            if (err)
+            {
+                res.end('error');
+                return;
+            }
+            let isReturnError = false;
+            console.log('1. step >>>>>>>');
+            if (result.xml && result.xml.MsgType)
+            {
+                console.log('2. step >>>>>>>');
+                if (Array.isArray(result.xml.MsgType) && result.xml.MsgType.length > 0)
+                {
+                    console.log('3. step >>>>>>>');
+                    const msgType = result.xml.MsgType[0];
+                    const userId = result.xml.FromUserName[0];
+                    if (msgType == 'text')
+                    {
+                        console.log('4. step >>>>>>>');
+                        const content = result.xml.Content[0];
+                        request.post('http://www.tuling123.com/openapi/api')
+                            .send({key: tuLingRobotAppKey,
+                                info: content + '',
+                                userid: userId + ''})
+                            .end(function (err, res) {
+                                console.log('5. step >>>>>>>');
+                                console.log('tuling >>>>>>' + res);
+                                if (err)
+                                {
+                                    res.end('error');
+                                    return;
+                                }
+                                console.log('6. step >>>>>>>');
+                                let responseText = res.text;
+                                let replyContent = null;
+                                if (responseText.code === 100000)
+                                {
+                                    console.log('7. step >>>>>>>');
+                                    replyContent = responseText.text;
+                                    let temp = result.xml.FromUserName;
+                                    result.xml.ToUserName = result.xml.FromUserName;
+                                    result.xml.FromUserName = temp;
+
+                                    parseXMLString(result, function (error, xmlString) {
+                                        console.log('8. step >>>>>>>');
+                                        if (error)
+                                        {
+                                            res.end('error');
+                                            return;
+                                        }
+                                        console.log('9. step >>>>>>>');
+                                        res.end(xmlString);
+                                    });
+                                };
+                            });
+                    }
+                }
+                else
+                {
+                    isReturnError = true;
+                }
+            }
+            else
+            {
+                isReturnError = true;
+            }
+
+            if (isReturnError)
+            {
+                res.end('error');
+            }
+
         });
-
-        const ToUserName = getXMLNodeValue('ToUserName',_da);
-        const FromUserName = getXMLNodeValue('FromUserName',_da);
-        const CreateTime = getXMLNodeValue('CreateTime',_da);
-        const MsgType = getXMLNodeValue('MsgType',_da);
-        const Content = getXMLNodeValue('Content',_da);
-        const MsgId = getXMLNodeValue('MsgId',_da);
-        console.log(ToUserName);
-        console.log(FromUserName);
-        console.log(CreateTime);
-        console.log(MsgType);
-        console.log(Content);
-        console.log(MsgId);
-        const xml = '<xml><ToUserName>'+FromUserName+'</ToUserName><FromUserName>'+ToUserName+'</FromUserName><CreateTime>'+CreateTime+'</CreateTime><MsgType>'+MsgType+'</MsgType><Content>'+Content+'</Content></xml>';
-
-
-
-        // request.post('http://www.tuling123.com/openapi/api')
-        //     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
-        //         info: '',
-        //         userid: ''})
-        //     .end(function (err, res) {
-        //        // do somthing
-        //
-        //     });
-
-        res.send(xml);
     });
+};
 
-}
 
-var xml = "<root>Hello mxl2js!</root>";
-parseXMLString(xml, function (err, result) {
-    console.dir(result);
-})
+// request.post('http://www.tuling123.com/openapi/api')
+//     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
+//         info: '今天天气很好哦',
+//         userid: 'liulongdev'})
+//     .end(function (err, res) {
+//         console.log('tuling >>>>>>' + res);
+//         console.log(res.text);
+//     });
 
 function getXMLNodeValue(node_name,xml){
     let tmp = xml.split("<"+node_name+">");
