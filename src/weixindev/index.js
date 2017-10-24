@@ -11,6 +11,7 @@ const request = require('superagent');
 const tuLingRobotAppKey = 'fe1a7ebad1e4d5ce85454b2c2f858a90';
 const xml2js = require('xml2js');
 const parseXMLString = xml2js.parseString;
+const builderXML = new xml2js.Builder();
 
 function validateToken(req, res) {
     console.log('>>>> validate token ...');
@@ -68,7 +69,6 @@ function getMessageFromGongZhongHao(req, res) {
                     {
                         console.log('4. step >>>>>>>');
                         const content = result.xml.Content[0];
-                        console.log('>>>> Content : ' + Content);
                         request.post('http://www.tuling123.com/openapi/api')
                             .send({key: tuLingRobotAppKey,
                                 info: content + '',
@@ -91,17 +91,9 @@ function getMessageFromGongZhongHao(req, res) {
                                     let temp = result.xml.FromUserName;
                                     result.xml.ToUserName = result.xml.FromUserName;
                                     result.xml.FromUserName = temp;
-
-                                    parseXMLString(result, function (error, xmlString) {
-                                        console.log('8. step >>>>>>>');
-                                        if (error)
-                                        {
-                                            res.end('error');
-                                            return;
-                                        }
-                                        console.log('9. step >>>>>>>');
-                                        res.end(xmlString);
-                                    });
+                                    result.xml.Content = replyContent + '';
+                                    let xmlStr = builderXML.buildObject(result);
+                                    res.end(xmlStr);
                                 };
                             });
                     }
@@ -123,24 +115,7 @@ function getMessageFromGongZhongHao(req, res) {
 
         });
     });
-};
-
-
-// request.post('http://www.tuling123.com/openapi/api')
-//     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
-//         info: '你好',
-//         userid: 'liulongdev'})
-//     .end(function (err, res) {
-//         if (err)
-//         {
-//             console.log('>>> error');
-//             console.log(err);
-//         }
-//         console.log('tuling >>>>>>' + res);
-//         console.log(res.text);
-//         let responseText = res.text;
-//
-//     });
+}
 
 function getXMLNodeValue(node_name,xml){
     let tmp = xml.split("<"+node_name+">");
