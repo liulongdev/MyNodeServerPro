@@ -11,7 +11,8 @@ const request = require('superagent');
 const tuLingRobotAppKey = 'fe1a7ebad1e4d5ce85454b2c2f858a90';
 const xml2js = require('xml2js');
 const parseXMLString = xml2js.parseString;
-const builderXML = new xml2js.Builder();
+const builderXML = new xml2js.Builder({cdata:true});
+
 
 function validateToken(req, res) {
     console.log('>>>> validate token ...');
@@ -92,8 +93,12 @@ function getMessageFromGongZhongHao(req, res) {
                                     result.xml.ToUserName = result.xml.FromUserName;
                                     result.xml.FromUserName = temp;
                                     result.xml.Content = replyContent + '';
+
                                     let xmlStr = builderXML.buildObject(result);
-                                    res.end(xmlStr);
+                                    let xmlStrArray = xmlStr.split('?>');
+                                    let replyXML = (Array.isArray(xmlStrArray) && xmlStrArray.length > 1) ? xmlStrArray[1] : xmlStrArray[0];
+                                    console.log(replyXML);
+                                    res.end(replyXML);
                                 };
                             });
                     }
@@ -115,12 +120,6 @@ function getMessageFromGongZhongHao(req, res) {
 
         });
     });
-}
-
-function getXMLNodeValue(node_name,xml){
-    let tmp = xml.split("<"+node_name+">");
-    let _tmp = tmp[1].split("</"+node_name+">");
-    return _tmp[0];
 }
 
 exports.validateToken = validateToken;
