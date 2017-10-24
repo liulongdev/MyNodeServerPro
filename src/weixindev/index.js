@@ -68,20 +68,21 @@ function getMessageFromGongZhongHao(req, res) {
                     {
                         console.log('4. step >>>>>>>');
                         const content = result.xml.Content[0];
+                        console.log('>>>> Content : ' + Content);
                         request.post('http://www.tuling123.com/openapi/api')
                             .send({key: tuLingRobotAppKey,
                                 info: content + '',
                                 userid: userId + ''})
-                            .end(function (err, res) {
+                            .end(function (err, response) {
                                 console.log('5. step >>>>>>>');
-                                console.log('tuling >>>>>>' + res);
+                                console.log('tuling >>>>>>' + response);
                                 if (err)
                                 {
                                     res.end('error');
                                     return;
                                 }
                                 console.log('6. step >>>>>>>');
-                                let responseJson = JSON.parse(res.text);
+                                let responseJson = JSON.parse(response.text);
                                 let replyContent = null;
                                 if (responseJson.code == 100000)
                                 {
@@ -125,16 +126,21 @@ function getMessageFromGongZhongHao(req, res) {
 };
 
 
-request.post('http://www.tuling123.com/openapi/api')
-    .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
-        info: '今天天气很好哦',
-        userid: 'liulongdev'})
-    .end(function (err, res) {
-        console.log('tuling >>>>>>' + res);
-        console.log(res.text);
-        let responseText = res.text;
-
-    });
+// request.post('http://www.tuling123.com/openapi/api')
+//     .send({key: 'fe1a7ebad1e4d5ce85454b2c2f858a90',
+//         info: '你好',
+//         userid: 'liulongdev'})
+//     .end(function (err, res) {
+//         if (err)
+//         {
+//             console.log('>>> error');
+//             console.log(err);
+//         }
+//         console.log('tuling >>>>>>' + res);
+//         console.log(res.text);
+//         let responseText = res.text;
+//
+//     });
 
 function getXMLNodeValue(node_name,xml){
     let tmp = xml.split("<"+node_name+">");
