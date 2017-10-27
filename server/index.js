@@ -20,12 +20,13 @@ const bodyParser = require('body-parser');
 app.use(bodyParser());
 app.use(express.static(__dirname));
 
-const validateToken = require('../src/weixindev/index').validateToken;
-const getMessageFromGongZhongHao = require('../src/weixindev/index').getMessageFromGongZhongHao;
+const WXPackage = require('../src/weixindev/index').WXPackage;
+const refreshWXAccessToken = WXPackage.refreshWXAccessToken;
+// refreshWXAccessToken();
 
-app.get('/weixin', validateToken);
+app.get('/weixin', WXPackage.validateToken);
 
-app.post('/weixin', getMessageFromGongZhongHao);
+app.post('/weixin', WXPackage.getMessageFromGongZhongHao);
 
 app.get('/*', function (req, res, next) {
     res.end('server building ...');
