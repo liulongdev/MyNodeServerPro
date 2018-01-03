@@ -70,9 +70,35 @@ function getMessageFromGongZhongHao(req, res) {
 function handleWeiXinMessage(res, result) {
         const msgType = result.xml.MsgType[0];
         const userId = result.xml.FromUserName[0];
+        console.log('handleWeiXinMessage');
         if (msgType == 'text')
         {
             const content = result.xml.Content[0];
+            if (content.indexOf('九帮出入证') >= 0)
+            {
+                let temp = result.xml.ToUserName;
+                result.xml.ToUserName = result.xml.FromUserName;
+                result.xml.FromUserName = temp;
+                result.xml.MediaId = 'mvl8-Q-WjWTJHhUrJVm6hQ84IlMhY5i6CvDITJgYId9mxbonk-WOK5AJOuIg1qlB';
+                result.xml.MsgType = 'image';
+                result.xml.PicUrl = 'http://liulong.site/jiubang/back.png';
+                let xmlStr = builderXML.buildObject(result);
+                res.end(xmlStr);
+                console.log('>>>>>>>>test');
+                console.log(xmlStr);
+                return;
+            }
+            else if (content == 'mytoken')
+            {
+                let temp = result.xml.ToUserName;
+                result.xml.ToUserName = result.xml.FromUserName;
+                result.xml.FromUserName = temp;
+                result.xml.Content = getLocalWXAccessToken();
+                let xmlStr = builderXML.buildObject(result);
+                res.end(xmlStr);
+                return;
+            }
+
             request.post('http://www.tuling123.com/openapi/api')
                 .send({key: tuLingRobotAppKey,
                     info: content + '',
@@ -190,6 +216,12 @@ const createMenu = function () {
         })
 
 };
+
+
+const updateTempSuCai = function () {
+    let url = 'https://api.weixin.qq.com/cgi-bin/media/upload?type=image&access_token=' + getLocalWXAccessToken();
+
+}
 
 // getAccessTokenFromWXServer();
 // createMenu();
