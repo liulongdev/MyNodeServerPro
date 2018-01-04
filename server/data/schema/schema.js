@@ -70,6 +70,7 @@ module.exports = {
         signature: {type: String},      // 数字签名
         operation: {type: String},      // 操作
         operationTime: {type: Date},    // 操作时间
+        currentUserId: {type: String},         // 用户Id
     },{
         strict: false,
     }),
@@ -87,6 +88,7 @@ module.exports = {
         signature: {type: String},      // 数字签名
         operation: {type: String},      // 操作
         operationTime: {type: Date},    // 操作时间
+        currentUserId: {type: String},         // 用户Id
     }),
 
     mar_test_table: new Schema({

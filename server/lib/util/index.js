@@ -21,6 +21,8 @@ let MARUtil = {
     /*判断params的属性集合是否包含keyArray里面所有值*/
     verifyParams: verifyParams,
 
+    /*判断手机号是否符合格式*/
+    checkPhone : checkPhone,
 };
 
 function verifyParams(params, keyArray) {
@@ -33,5 +35,10 @@ function verifyParams(params, keyArray) {
     }
     return true;
 }
+
+function checkPhone(phone) {
+    return (/^1[34578]\d{9}$/.test(phone));
+}
+
 
 module.exports = MARUtil;

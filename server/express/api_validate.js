@@ -23,7 +23,8 @@ function mar_checkAPIRequest(req) {
                 + 'machineModel' + params['machineModel']
                 + 'machineModelName' + params['machineModelName']
                 + 'osVersion' + params['osVersion']
-                + 'timeStamp' +params['timeStamp']
+                + 'timeStamp' + params['timeStamp']
+                + 'currentUserId' + params['currentUserId']
             ;
             const destinationStr = mar_hmacSha256(originalSignatureStr);
             return destinationStr === params['signature'];
@@ -34,7 +35,7 @@ function mar_checkAPIRequest(req) {
 
 function mar_validateAPIParamKey(params) {
     // console.log(params);
-    let needKeys = ['appVersion', 'deviceType', 'deviceUUID', 'machineModelName', 'timeStamp', 'signature'];
+    let needKeys = ['appVersion', 'deviceType', 'deviceUUID', 'machineModelName', 'timeStamp', 'signature', 'currentUserId'];
     for (let key in needKeys) {
         if (!params.hasOwnProperty(needKeys[key]))
         {

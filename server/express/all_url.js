@@ -10,5 +10,6 @@ module.exports = Object.freeze({
     SERVER_URL_ThirdPlatformLogin:      '/api/core/v1/user/thirdPlatformLogin', // 第三方平台登陆
     SERVER_URL_UserExistWithPhone:      '/api/core/v1/user/userExistWithPhone', // 是否存在该手机号的用户
     SERVER_URL_ChangePassword:          '/api/core/v1/user/changePassword', // 更改密码
+    SERVER_URL_BindPhone:               '/api/core/v1/user/bindPhone', // 设置密码
     SERVER_URL_SetPassword:             '/api/core/v1/user/setPassword', // 设置密码
 });

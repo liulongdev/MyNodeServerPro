@@ -162,15 +162,15 @@ function mxr_express_server(app) {
     /*第三方平台登陆*/
     app.post(AllUrl.SERVER_URL_ThirdPlatformLogin, function (req, res, next) {
         console.log('>>>>>> third platform login');
+        let thirdUserInfoJSON = req.body;
         const result = new MARResponseModel();
         if (!MARUtil.verifyParams(thirdUserInfoJSON, ['usid']))
         {
             result.header.errCode = 500;
             result.header.errMsg = '缺少参数';
-            res.sendStatus(result.toResponseJSON());
+            res.json(result.toResponseJSON());
             return;
         }
-        let thirdUserInfoJSON = req.body;
         dbOp.user.getUsersWithThirdUserId(thirdUserInfoJSON.usid, function (err, users) {
             if (err)
             {
@@ -239,7 +239,7 @@ function mxr_express_server(app) {
         {
             result.header.errCode = 500;
             result.header.errMsg = '请输入正确的手机号';
-            res.sendStatus(result.toResponseJSON());
+            res.json(result.toResponseJSON());
             return;
         }
         models.mongooseModelTable.MARUserModel.update({_id:params.userId}, {$set: {password: params.password}})
@@ -273,7 +273,7 @@ function mxr_express_server(app) {
         {
             result.header.errCode = 500;
             result.header.errMsg = '缺少参数';
-            res.sendStatus(result.toResponseJSON());
+            res.json(result.toResponseJSON());
         }
         dbOp.user.getUserFullInfoFindOneWithPhone(params['phone'], function (err, userModel) {
             if (err)
@@ -298,6 +298,91 @@ function mxr_express_server(app) {
         });
     });
 
+    /*绑定手机号
+    * userId
+    * phone
+    * */
+    app.post(AllUrl.SERVER_URL_BindPhone, function (req, res, next) {
+        let params = req.body;
+        let result = new MARResponseModel();
+        if (!MARUtil.verifyParams(params, ['userId', 'phone']))
+        {
+            result.header.errCode = 500;
+            result.header.errMsg = '缺少参数';
+            res.json(result.toResponseJSON());
+        }
+        console.log('>>>>>>>>> 1');
+        dbOp.user.getUserFindOneWithUserId(params.userId, function (err, userModel) {
+           if (err || !userModel)
+           {
+               console.log('>>>>>>>>> 2');
+               result.header.errCode = 1;
+               result.header.errMsg = '服务开小差了';
+               res.json(result.toResponseJSON());
+           }
+           else
+           {
+               console.log('>>>>>>>>> 3');
+               if (MARUtil.checkPhone(userModel.phone))
+               {
+                   console.log('>>>>>>>>> 4');
+                   result.header.errCode = 1;
+                   result.header.errMsg = '该账号已经绑定手机号了';
+                   res.json(result.toResponseJSON());
+               }
+               else
+               {
+                   console.log('>>>>>>>>> 5');
+                   dbOp.user.getUserFullInfoFindOneWithPhone(params['phone'], function (err, userModel) {
+                       if (err)
+                       {
+                           result.header.errCode = 1;
+                           result.header.errMsg = '服务开小差了';
+                           console.error('find user with phone error : ' + err);
+                           res.json(result.toResponseJSON());
+                       }
+                       else
+                       {
+                           if (userModel)
+                           {
+                               console.log('>>>>>>>>> 6');
+                               result.header.errCode = 1;
+                               result.header.errMsg = '该手机已经绑定用户';
+                               res.json(result.toResponseJSON());
+                           }
+                           else
+                           {
+                               models.mongooseModelTable.MARUserModel.update({_id:params.userId}, {$set: {phone: params.phone}})
+                                   .exec(function (err, ret) {
+                                       if (err)
+                                       {
+                                           console.error('set password error : '+ err);
+                                           result.header.errCode = 1;
+                                           result.header.errMsg = '服务器开小差了';
+                                       }
+                                       else
+                                       {
+                                           console.log('>>>>>>>>> 7');
+                                           if (ret['ok'] === 1)
+                                           {
+
+                                           }
+                                           else
+                                           {
+                                               result.header.errCode = 1;
+                                               result.header.errMsg = '绑定手机号失败';
+                                           }
+                                       }
+                                       res.json(result.toResponseJSON());
+                                   });
+                           }
+
+                       }
+                   });
+               }
+           }
+        });
+    });
 
     //
     // let testJSON = {name:'Martin', age:10, date: new Date()};

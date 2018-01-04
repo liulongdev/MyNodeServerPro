@@ -103,12 +103,12 @@ function testQueryTrain() {
     console.log('>>>>> test ');
     let url = 'https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-12-18&leftTicketDTO.from_station=SZH&leftTicketDTO.to_station=SHH&purpose_codes=ADULT';
     let queryParams = {
-        'leftTicketDTO.train_date': '2017-12-26',
+        'leftTicketDTO.train_date': '2018-01-04',
         'leftTicketDTO.from_station': 'SZH',
         'leftTicketDTO.to_station': 'SHH',
         'purpose_codes': 'ADULT'
     };
-    let wxGetAccessTokenBaseUrl = 'https://kyfw.12306.cn/otn/leftTicket/query';
+    let wxGetAccessTokenBaseUrl = 'https://kyfw.12306.cn/otn/leftTicket/queryA';
     request.get(wxGetAccessTokenBaseUrl)
         .query(queryParams)
         .end(function (err, res) {
@@ -131,3 +131,5 @@ function testQueryTrain() {
 // setInterval(testQueryTrain, 1000);
 
 // testQueryTrain();
+// /Users/Martin/Dev/huochedianbao.xls
+

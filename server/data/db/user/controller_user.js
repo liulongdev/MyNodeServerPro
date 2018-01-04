@@ -32,7 +32,6 @@ function createUser(userJSON, callback) {
     const userModel = new models.mongooseModelTable.MARUserModel(userJSON);
     userModel._id = MARUtil.generateMongooseUUID();
     userModel.createTime = userModel.updateTime = new Date();
-    console.log('>>>>>>>>>>');
     console.log(userModel.phone);
     if (!userModel.phone || (typeof userModel.phone === 'string' && userModel.phone.length === 0))
     {
@@ -82,6 +81,11 @@ function createUserWithThirdUserInfoJSON(thirdUserInfo, callback) {
     if (typeof thirdUserInfo.usid === 'string' && thirdUserInfo.usid.length > 0)
     {
         models.mongooseModelTable.MARThirdPlatFormUserModel.deleteMany({usid: thirdUserInfo.usid}, function (err, doc) {
+            if (err)
+            {
+                callback(err);
+                return;
+            }
             const user_id = MARUtil.generateMongooseUUID();
             const thirdUser_id = MARUtil.generateMongooseUUID();
             const nowDate = new Date();
@@ -98,10 +102,12 @@ function createUserWithThirdUserInfoJSON(thirdUserInfo, callback) {
             new models.mongooseModelTable.MARUserModel(userInfoJSON).save(function (err, doc) {
                if (err)
                {
+                   console.log('>>>>>> 3');
                    if (callback) callback(err);
                }
                else
                {
+                   console.log('>>>>>> 4');
                    thirdUserInfo._id = thirdUser_id;
                    thirdUserInfo.userId = user_id;
                    new models.mongooseModelTable.MARThirdPlatFormUserModel(thirdUserInfo).save(function (err, doc) {
