@@ -5,12 +5,19 @@
 const _ = require('lodash');
 const crypto = require('crypto');
 const models = require('../models');
-
+const MARUtil = require('../lib/util/index');
+const dbOp = require('../data/db');
+const MARResponseModel = require('../express/mar_response_model');
+/*  ------------------------------------------------------------------------
+*       验证数字签名
+* */
 function mar_checkAPIRequest(req) {
+    console.log('>>>> 验证数字签名');
     const reqMethod = _(req.method).toUpper();
     let params = req.body;
     if (reqMethod === 'GET' || reqMethod === 'HEAD' || reqMethod === 'DELETE' )
         params = req.query;
+    // let params = MARUtil.reqParamJson(req);
     if (mar_validateAPIParamKey(params))
     {
         const currentTimeTamp = _(_.now() / 1000).toInteger();
@@ -55,25 +62,8 @@ function mar_hmacSha256(originalStr) {
 }
 
 
-function mar_express_api_core_validate(app) {
-    /*
-     * 进行接口验证
-     * */
-    app.use('/api/core/*', function (req, res, next) {
-        if (mar_checkAPIRequest(req))
-        {
-            mar_saveOperationLog(req);
-            next();
-            // res.json({result:'success'});
-            return;
-        }
-        console.error(req.originalUrl + ' invalid, didn\'t pass the verification');
-        res.sendStatus(500);
-
-    });
-}
-
 function mar_saveOperationLog(req) {
+    console.log('>>>> 保存操作url');
     const reqMethod = _(req.method).toUpper();
     let params = req.body;
     if (reqMethod === 'GET' || reqMethod === 'HEAD' || reqMethod === 'DELETE' )
@@ -91,9 +81,85 @@ function mar_saveOperationLog(req) {
             // console.log('add op log success');
             if (doc)
             {
-                console.log(doc);
+                // console.log(doc);
             }
         }
+    });
+}
+/*      验证数字签名
+ *    ------------------------------------------------------------------------
+ * */
+
+
+/*  ------------------------------------------------------------------------
+ *      验证登录状态
+ * */
+
+function mar_validate_login_status(req, res, next) {
+    console.log('>>>> 验证登录状态');
+    let result = new MARResponseModel();
+    let paramJSON = MARUtil.reqParamJson(req);
+    if (paramJSON['currentUserId'] && paramJSON['currentUserId'].length > 0)
+    {
+        dbOp.user.getUserLoginActiveWithUserId(paramJSON['currentUserId'], function (loginActiveModel, err) {
+            if (err)
+            {
+                result.header.errorCode = 1;
+                result.header.errMsg = '登录异常，请重新登录';
+                res.json(result.toResponseJSON());
+            }
+            else {
+                if (loginActiveModel)
+                {
+                    if (loginActiveModel.deviceUUID == paramJSON['currentUserId'])
+                    {
+                        next();
+                    }
+                    else
+                    {
+                        /* 被抢登了 */
+                        result.header.errCode = 10000000001;
+                        result.body = loginActiveModel;
+                        res.json(result.toResponseJSON());
+                    }
+                }
+                else
+                {
+                    /* 登录状态失效了 */
+                    result.header.errCode = 10000000002;
+                    result.body = loginActiveModel;
+                    res.json(result.toResponseJSON());
+                }
+            }
+        });
+    }
+    else
+    {
+        next();
+    }
+}
+
+/*      验证登录状态
+ *    ------------------------------------------------------------------------
+ * */
+
+
+function mar_express_api_core_validate(app) {
+    /*
+     * 进行接口验证
+     * */
+    app.use('/api/core/*', function (req, res, next) {
+        if (mar_checkAPIRequest(req))
+        {
+            mar_saveOperationLog(req);
+            mar_validate_login_status(req, res, next);
+            // next();
+            // res.json({result:'success'});
+            return;
+        }
+        console.error(req.originalUrl + ' invalid, didn\'t pass the verification');
+        res.sendStatus(500);
+
     });
 }
 

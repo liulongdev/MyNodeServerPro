@@ -26,6 +26,8 @@ const user = {
     getUserLoginActiveWithUserId: getUserLoginActiveWithUserId,
 
     saveUserLoginActiveWithLoginJSON: saveUserLoginActiveWithLoginJSON,
+
+    getUserLoginActiveWithParamJSON: getUserLoginActiveWithParamJSON,
 };
 
 function createUser(userJSON, callback) {
@@ -37,7 +39,7 @@ function createUser(userJSON, callback) {
     {
         userModel.phone = userModel._id;
     }
-    console.log(userModel);
+    // console.log(userModel);
     userModel.save(callback);
 }
 
@@ -143,34 +145,36 @@ function saveUserLoginActiveWithLoginJSON(loginJSON, callback) {
     loginActive.u_id = loginJSON.u_id;
     loginActive.loginTime = new Date();
     models.mongooseModelTable.MARLoginActiveModel.findOne({u_id: loginActive.u_id}, function (err, loginActiveModel) {
-       if (err)
-       {
-           if (callback) callback(err);
-       }
-       else
-       {
-           if (loginActiveModel){
-               console.log(loginActiveModel);
-               loginActive._id = loginActiveModel._id;
-               models.mongooseModelTable.MARLoginActiveModel.update({_id:loginActiveModel.id}, {$set: loginJSON}, function (err) {
-                   if (!err)
-                   {
-                       callback(null, loginActive);
-                   }
-                   else
-                   {
-                       callback(err);
-                   }
-               });
-           }
-           else
-           {
-               loginActive._id = MARUtil.generateMongooseUUID();
-               loginActive.save(callback);
-           }
-       }
+        if (err) {
+            if (callback) callback(err);
+        }
+        else {
+            if (loginActiveModel) {
+                // console.log(loginActiveModel);
+                loginActive._id = loginActiveModel._id;
+                models.mongooseModelTable.MARLoginActiveModel.update({_id: loginActiveModel.id}, {$set: loginJSON}, function (err) {
+                    if (!err) {
+                        callback(null, loginActive);
+                    }
+                    else {
+                        callback(err);
+                    }
+                });
+            }
+            else {
+                loginActive._id = MARUtil.generateMongooseUUID();
+                loginActive.save(callback);
+            }
+        }
 
     });
+}
+
+/* 根据userId  和 设备标识，检验是否被抢登
+ * param：  u_id  deviceUUID
+ * */
+function getUserLoginActiveWithParamJSON(paramJSON, callback) {
+    models.mongooseModelTable.MARLoginActiveModel.findOne(paramJSON, callback);
 }
 
 module.exports = user;

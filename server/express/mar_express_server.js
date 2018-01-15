@@ -46,7 +46,7 @@ function mxr_express_server(app) {
             }
             else {
                 console.log('register success');
-                console.log(doc);
+                // console.log(doc);
                 result.body = JSON.stringify(doc);
             }
             res.json(result.toResponseJSON());
@@ -123,7 +123,7 @@ function mxr_express_server(app) {
                     let loginActiveJSON = params;
                     loginActiveJSON.u_id = user._id;
                     console.log('>>>>>>>>>>lksjdfl ');
-                    console.log(user);
+                    // console.log(user);
                     loginActiveJSON.loginTime = new Date();
                     dbOp.user.saveUserLoginActiveWithLoginJSON(loginActiveJSON, function (err, model) {
                         if (err || !model)
@@ -133,7 +133,7 @@ function mxr_express_server(app) {
                             console.error('3save login active table error : ' + err);
                         }
                         console.log('>>>>>> test');
-                        console.log(result.toResponseJSON());
+                        // console.log(result.toResponseJSON());
                         res.json(result.toResponseJSON());
                     });
                 }
@@ -149,7 +149,7 @@ function mxr_express_server(app) {
                         }
                         else {
                             console.log('register success');
-                            console.log(user);
+                            // console.log(user);
                             result.body = JSON.stringify(user);
                         }
                         res.json(result.toResponseJSON());

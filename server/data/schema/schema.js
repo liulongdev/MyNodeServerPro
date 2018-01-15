@@ -91,6 +91,9 @@ module.exports = {
         currentUserId: {type: String},         // 用户Id
     }),
 
+    // mar_wy_new: new Schema({
+    // }),
+
     mar_test_table: new Schema({
         name: {type: String},
         age: {type: Number},

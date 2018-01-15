@@ -20,7 +20,11 @@ const app = express();
 // const OAuth = require('wechat-oauth');
 // var client = new OAuth(wxAppId, wxSecret);
 const bodyParser = require('body-parser');
-app.use(bodyParser());
+// app.use(bodyParser());
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 // app.use(express.static(__dirname));
 app.use(express.static(__dirname + '/web'));
 
@@ -37,14 +41,10 @@ app.get('/testRender', function (req, res, next) {
    res.render('./testweb.html');
 });
 
-/* /api/core/* 接口验证， 数字签名验证 */
-const mar_express_api_core_validate = require('./express/api_validate');
-mar_express_api_core_validate(app);
-
 /*网易特殊url处理
-* url:
-* method:   POST GET
-* */
+ * url:
+ * method:   POST GET
+ * */
 app.post('/api/core/delegation/wy/special', function (req, res, next) {
     let result = new MARResponseModel();
     let params = req.body;
@@ -73,12 +73,16 @@ app.post('/api/core/delegation/wy/special', function (req, res, next) {
                 else
                 {
                     result.body = response.text;
-                    console.log('>>>>>>>> ' + response.text);
+                    // console.log('>>>>>>>> ' + response.text);
                 }
                 res.json(result.toResponseJSON());
             });
     }
 });
+
+/* /api/core/* 接口验证， 数字签名验证 */
+const mar_express_api_core_validate = require('./express/api_validate');
+mar_express_api_core_validate(app);
 
 /* 接口服务 */
 const mxr_express_server = require('./express/mar_express_server');
@@ -98,11 +102,31 @@ app.use(function(err, req, res, next) {
     res.status(500).send('Something broke!');
 });
 
-let server = app.listen(3000, function () {
-    const host = server.address().address;
-    const port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+const https = require('https');
+const privateKey  = fs.readFileSync(path.resolve('./server/cer/maxiaoding.key'), 'utf8');
+const certificate = fs.readFileSync(path.resolve('./server/cer/maxiaoding.pem'), 'utf8');
+const credentials = {key: privateKey, cert: certificate};
+
+
+
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(3000, function() {
+    console.log('HTTP Server is running on: http://localhost:%s', 80);
 });
+httpsServer.listen(3001, function() {
+    console.log('HTTPS Server is running on: https://localhost:%s', 443);
+});
+
+// let server = app.listen(3000, function () {
+//     const host = server.address().address;
+//     const port = server.address().port;
+//     console.log('Example app listening at http://%s:%s', host, port);
+// });
 
 
 // const models = require('./models');
@@ -171,8 +195,10 @@ function testQueryTrain() {
 
 function  testWangyiXin() {
     let url = null;
+    // 视频
+    url = "https://c.m.163.com/recommend/getChanListNews?channel=T1457068979049&subtab=Video_Recom&passport=&devId=4q9wyqO%2BqQBTBHM8f1fMsbVhBeT2jN%2BpF2piB1fvCVBW8vGHludHKO1HgHn4Q%2BQf&version=31.0&spever=false&net=wifi&lat=CTVtEvU9h%2B%2Bh5zacKMVTrA%3D%3D&lon=9EoiG%2BcFCaYhcgFCoEmb2w%3D%3D&ts=1515782236&sign=0wajItdSjKo2ICaGivynYmo62uLj1wYkfOcODn7p%2BnB48ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=1";
     // url = "https://c.m.163.com/recommend/getChanListNews?channel=T1456112438822&passport=&devId=4q9wyqO%2BqQBTBHM8f1fMsbVhBeT2jN%2BpF2piB1fvCVBW8vGHludHKO1HgHn4Q%2BQf&version=31.0&spever=false&net=wifi&lat=h4oCMn4567dmFOuemqUYsw%3D%3D&lon=thiEhYUT/OmIwZnpr9nr1A%3D%3D&ts=1515226754&sign=HdjOz40v0FJZW3%2B298s1AUZtrCVm%2BmHAuGmN8nwcfD948ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=1";
-    url = "https://c.m.163.com/recommend/getChanListNews?channel=T1457068979049&subtab=Video_Beauty&passport=&devId=I9mEvOjEpr7x6qKZ0E/jqz%2BXNYccr98jb6FUP/c34MDLszEoKIcbpbZWUwpshTwP&version=31.0&spever=false&net=wifi&lat=Db%2By8mQzKvnL76zse8k%2BFw%3D%3D&lon=YUz/CebUbKsPIsBavk9JUg%3D%3D&ts=1515393095&sign=7eFT5nh9qzmonv%2BiOvKmqmk6ziKtcFHuolPv9o5qzst48ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=2";
+    // url = "https://c.m.163.com/recommend/getChanListNews?channel=T1457068979049&subtab=Video_Beauty&passport=&devId=I9mEvOjEpr7x6qKZ0E/jqz%2BXNYccr98jb6FUP/c34MDLszEoKIcbpbZWUwpshTwP&version=31.0&spever=false&net=wifi&lat=Db%2By8mQzKvnL76zse8k%2BFw%3D%3D&lon=YUz/CebUbKsPIsBavk9JUg%3D%3D&ts=1515393095&sign=7eFT5nh9qzmonv%2BiOvKmqmk6ziKtcFHuolPv9o5qzst48ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=2";
     request.get(url)
         // .set('Host', 'c.m.163.com')
         // .set('Accept-Language', 'zh-Hans;q=1.0')
