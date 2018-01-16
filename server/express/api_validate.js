@@ -13,11 +13,14 @@ const MARResponseModel = require('../express/mar_response_model');
 * */
 function mar_checkAPIRequest(req) {
     console.log('>>>> 验证数字签名');
-    const reqMethod = _(req.method).toUpper();
-    let params = req.body;
-    if (reqMethod === 'GET' || reqMethod === 'HEAD' || reqMethod === 'DELETE' )
-        params = req.query;
+    // const reqMethod = _(req.method).toUpper();
+    // let params = req.body;
+    // if (reqMethod === 'GET' || reqMethod === 'HEAD' || reqMethod === 'DELETE' )
+    //     params = req.query;
     // let params = MARUtil.reqParamJson(req);
+
+    let params = MARUtil.reqHeaderSignatureJSON(req)
+
     if (mar_validateAPIParamKey(params))
     {
         const currentTimeTamp = _(_.now() / 1000).toInteger();
@@ -31,7 +34,7 @@ function mar_checkAPIRequest(req) {
                 + 'machineModelName' + params['machineModelName']
                 + 'osVersion' + params['osVersion']
                 + 'timeStamp' + params['timeStamp']
-                + 'currentUserId' + params['currentUserId']
+                + 'userId' + params['userId']
             ;
             const destinationStr = mar_hmacSha256(originalSignatureStr);
             return destinationStr === params['signature'];
@@ -42,7 +45,7 @@ function mar_checkAPIRequest(req) {
 
 function mar_validateAPIParamKey(params) {
     // console.log(params);
-    let needKeys = ['appVersion', 'deviceType', 'deviceUUID', 'machineModelName', 'timeStamp', 'signature', 'currentUserId'];
+    let needKeys = ['appVersion', 'deviceType', 'deviceUUID', 'machineModelName', 'timeStamp', 'signature', 'userId'];
     for (let key in needKeys) {
         if (!params.hasOwnProperty(needKeys[key]))
         {
@@ -96,12 +99,15 @@ function mar_saveOperationLog(req) {
  * */
 
 function mar_validate_login_status(req, res, next) {
+    next();
+    return;
     console.log('>>>> 验证登录状态');
     let result = new MARResponseModel();
-    let paramJSON = MARUtil.reqParamJson(req);
-    if (paramJSON['currentUserId'] && paramJSON['currentUserId'].length > 0)
+    let paramJSON = MARUtil.reqHeaderSignatureJSON(req); // MARUtil.reqParamJson(req);
+
+    if (paramJSON['userId'] && paramJSON['userId'].length > 0)
     {
-        dbOp.user.getUserLoginActiveWithUserId(paramJSON['currentUserId'], function (loginActiveModel, err) {
+        dbOp.user.getUserLoginActiveWithUserId(paramJSON['userId'], function (err, loginActiveModel) {
             if (err)
             {
                 result.header.errorCode = 1;
@@ -111,7 +117,7 @@ function mar_validate_login_status(req, res, next) {
             else {
                 if (loginActiveModel)
                 {
-                    if (loginActiveModel.deviceUUID == paramJSON['currentUserId'])
+                    if (loginActiveModel.deviceUUID == paramJSON['userId'])
                     {
                         next();
                     }

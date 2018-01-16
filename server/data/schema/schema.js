@@ -70,7 +70,7 @@ module.exports = {
         signature: {type: String},      // 数字签名
         operation: {type: String},      // 操作
         operationTime: {type: Date},    // 操作时间
-        currentUserId: {type: String},         // 用户Id
+        userId: {type: String},         // 用户Id
     },{
         strict: false,
     }),
@@ -88,11 +88,67 @@ module.exports = {
         signature: {type: String},      // 数字签名
         operation: {type: String},      // 操作
         operationTime: {type: Date},    // 操作时间
-        currentUserId: {type: String},         // 用户Id
+        userId: {type: String},         // 用户Id
+    }),
+    /*网易新闻观看记录*/
+    mar_wy_new_record_table: new Schema({
+        tid : {type: String, require: true},
+        deviceUUID : {type: String},
+        userId : {type: String},
+        tname : {type: String},
+        ptime : {type: Date},
+        title : {type: String},
+        docid : {type: String},
+        imgsrc :  {type: String},
+        createTime: {type: Date},
+        updateTime: {type: Date},
+    }, {
+        strict : false
+    }),
+    /*网易新闻收藏记录*/
+    mar_wy_new_collection_table: new Schema({
+        tid : {type: String, require: true},
+        deviceUUID : {type: String},
+        userId : {type: String},
+        tname : {type: String},
+        ptime : {type: Date},
+        title : {type: String},
+        docid : {type: String},
+        imgsrc :  {type: String},
+        createTime: {type: Date},
+        updateTime: {type: Date},
+    }, {
+        strict : false
     }),
 
-    // mar_wy_new: new Schema({
-    // }),
+    /*网易视频新闻观看记录*/
+    mar_wy_video_new_record_table: new Schema({
+        vid : {type: String, require: true},
+        deviceUUID : {type: String},
+        userId : {type: String},
+        ptime : {type: Date},
+        title : {type: String},
+        mp4_url : {type: String},
+        m3u8_url : {type: String},
+        cover : {type: String},
+        topicDesc : {type: String},
+    }, {
+        strict : false
+    }),
+
+    /*网易视频新闻收藏记录*/
+    mar_wy_video_new_collection_table: new Schema({
+        vid : {type: String, require: true},
+        deviceUUID : {type: String},
+        userId : {type: String},
+        ptime : {type: Date},
+        title : {type: String},
+        mp4_url : {type: String},
+        cover : {type: String},
+        topicDesc : {type: String},
+    }, {
+        strict : false
+    }),
 
     mar_test_table: new Schema({
         name: {type: String},

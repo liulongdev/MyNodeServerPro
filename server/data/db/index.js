@@ -3,9 +3,10 @@
  */
 
 const userController = require('./user/controller_user');
-
+const wyNewController = require('./wy-new/controller_wy_new');
 const dbController = {
     user : userController,
+    wyNew : wyNewController,
 };
 
 module.exports = dbController;

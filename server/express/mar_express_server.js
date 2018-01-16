@@ -423,6 +423,105 @@ function mxr_express_server(app) {
     //     }
     // })
 
+    /* 增加网易视频观看记录
+    *
+    * */
+    app.post(AllUrl.SERVER_URL_AddWYVideoNewRecord, function (req, res, next) {
+       let result = new MARResponseModel();
+       let paramJSON = MARUtil.reqParamJson(req);
+       dbOp.wyNew.addVideoNewRecord(paramJSON, function (err, doc) {
+           if (err)
+           {
+               result.header.errCode = 1;
+               result.header.errMsg = '';
+               console.error('add wy video new record error : ' + err);
+           }
+           res.json(result.toResponseJSON());
+       });
+    });
+
+    /* 增加网易视频收藏记录
+     *
+     * */
+    app.post(AllUrl.SERVER_URL_AddWYVideoNewCollection, function (req, res, next) {
+        let result = new MARResponseModel();
+        let paramJSON = MARUtil.reqParamJson(req);
+        if (!paramJSON['userId'] && !paramJSON['deviceUUID'] && !paramJSON['vid'])
+        {
+            result.header.errCode = 500;
+            result.header.errMsg = '缺少参数';
+            res.json(result.toResponseJSON());
+            return;
+        }
+        dbOp.wyNew.getOneVideoCollectionWithVid(paramJSON, function (err, doc) {
+            if (doc) {
+                console.log('已经收藏过了，不需要重复收藏');
+                res.json(result.toResponseJSON());
+            }
+            else {
+                dbOp.wyNew.addVideoNewCollection(paramJSON, function (err, doc) {
+                    if (err)
+                    {
+                        result.header.errCode = 1;
+                        result.header.errMsg = '';
+                    }
+                    res.json(result.toResponseJSON());
+                });
+            }
+        });
+
+    });
+
+    /*删除某个用户或某台设备上的所有的wy视频收藏
+     * userId       至少一个
+     * deviceUUID   至少一个
+    * */
+    app.post(AllUrl.SERVER_URL_RemoveAllWYVideoNewCollection, function (req, res, next) {
+        let result = new MARResponseModel();
+        let paramJSON = MARUtil.reqParamJson(req);
+        if (!paramJSON['userId'] && !paramJSON['deviceUUID'])
+        {
+            result.header.errCode = 500;
+            result.header.errMsg = '缺少参数';
+            res.json(result.toResponseJSON());
+            return;
+        }
+        dbOp.wyNew.removeAllVideoNewCollection(paramJSON, function (err, ret) {
+            if (err)
+            {
+                result.header.errCode = 1;
+                result.header.errMsg = '';
+            }
+            res.json(result.toResponseJSON());
+        });
+    });
+
+    /*获取某个用户活着某台设备的所有视频收藏列表
+    *  userId       至少一个
+    *  deviceUUID   至少一个
+    * */
+    app.get(AllUrl.SERVER_URL_GetAllWYVideoNewCollection, function (req, res, next) {
+        let result = new MARResponseModel();
+        let paramJSON = MARUtil.reqParamJson(req);
+        if (!paramJSON['userId'] && !paramJSON['deviceUUID'])
+        {
+            result.header.errCode = 500;
+            result.header.errMsg = '缺少参数';
+            res.json(result.toResponseJSON());
+            return;
+        }
+        dbOp.wyNew.getAllVideoNewCollection(paramJSON, function (err, docs) {
+            if (err)
+            {
+                result.header.errCode = 1;
+                result.header.errMsg = '获取收藏列表失败';
+            }
+            else
+                result.body = docs;
+            res.json(result.toResponseJSON());
+        });
+    });
+
 }
 
 module.exports = mxr_express_server;

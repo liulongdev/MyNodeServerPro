@@ -25,7 +25,8 @@ let MARUtil = {
 
     /*判断params的属性集合是否包含keyArray里面所有值 用法： MARUtil.verifyParams(params, keyArray)*/
     verifyParams: verifyParams,
-
+    /* 获取数字签名JSON */
+    reqHeaderSignatureJSON: reqHeaderSignatureJSON,
     /*判断手机号是否符合格式  用法： MARUtil.checkPhone(phone)*/
     checkPhone : checkPhone,
 };
@@ -51,6 +52,25 @@ function reqParamJson(req) {
     if (reqMethod === 'GET' || reqMethod === 'HEAD' || reqMethod === 'DELETE' )
         params = req.query;
     return params;
+}
+
+function reqHeaderSignatureJSON(req) {
+    let headerSignatureJSON = undefined;
+    try
+    {
+        const headerJSON = req.headers;
+        const signatureString = headerJSON['mar-signature'];
+        headerSignatureJSON = JSON.parse(signatureString);
+
+    }
+    catch  (err)
+    {
+        console.log('parse signature json error : ' + err);
+    }
+    finally
+    {
+        return headerSignatureJSON;
+    }
 }
 
 

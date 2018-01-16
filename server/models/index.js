@@ -13,6 +13,10 @@ module.exports = {
         MARUserModel : conn.model('mar_user_model', schemaTables.mar_user_table),
         MARThirdPlatFormUserModel : conn.model('mar_third_platform_user_model', schemaTables.mar_third_platform_user_table),
         MARLoginActiveModel : conn.model('mar_login_active_model', schemaTables.mar_login_active_table),
+        MARWYNewRecordModel : conn.model('mar_wy_new_record_model', schemaTables.mar_wy_new_record_table),
+        MARWYNewCollectionModel : conn.model('mar_wy_new_collection_model', schemaTables.mar_wy_new_collection_table),
+        MARWYVideoNewRecordModel : conn.model('mar_wy_video_new_record_model', schemaTables.mar_wy_video_new_record_table),
+        MARWYVideoNewCollectionModel : conn.model('mar_wy_video_new_collection_model', schemaTables.mar_wy_video_new_collection_table),
 
         MARTestModel: conn.model('mar_test_model', schemaTables.mar_test_table),
 
