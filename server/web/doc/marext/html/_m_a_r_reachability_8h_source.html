@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MAREXT: /Users/Martin/Dev/SourceTree/MAREXT/MAREX/MARExtension/Utility/MARReachability.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MAREXT
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6ff6e638149d1e43152554a9a9ed4cd7.html">SourceTree</a></li><li class="navelem"><a class="el" href="dir_f8d83dd4ad399eada900cbfc6beb8db3.html">MAREXT</a></li><li class="navelem"><a class="el" href="dir_6daae844af948711e071770fd937495a.html">MAREX</a></li><li class="navelem"><a class="el" href="dir_b932bfee56a058adac3470b82c4da045.html">MARExtension</a></li><li class="navelem"><a class="el" href="dir_5a4abd5a3e9a971d537a0fca0c51b18d.html">Utility</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MARReachability.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_m_a_r_reachability_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  MARReachability.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  MARExtensionDemo</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Martin.liu on 17/5/18.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2017年 MAR. All rights reserved.</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#import &lt;SystemConfiguration/SystemConfiguration.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#import &lt;netinet/in.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;NS_ASSUME_NONNULL_BEGIN</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="_m_a_r_reachability_8h.html#aab99f00198936d694ed8545e22ea9edd">   15</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="_m_a_r_reachability_8h.html#aab99f00198936d694ed8545e22ea9edd">NS_ENUM</a>(NSUInteger, MARReachabilityStatus) {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    MARReachabilityStatusNone  = 0, </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    MARReachabilityStatusWWAN  = 1, </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    MARReachabilityStatusWiFi  = 2, </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_m_a_r_reachability_8h.html#acc9c40d8d5d388d0dcf6619392f89760">   21</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="_m_a_r_reachability_8h.html#aab99f00198936d694ed8545e22ea9edd">NS_ENUM</a>(NSUInteger, MARReachabilityWWANStatus) {</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    MARReachabilityWWANStatusNone  = 0, </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    MARReachabilityWWANStatus2G = 2, </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    MARReachabilityWWANStatus3G = 3, </div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    MARReachabilityWWANStatus4G = 4, </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="interface_m_a_r_reachability.html">   31</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_m_a_r_reachability.html">MARReachability</a> : NSObject</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="interface_m_a_r_reachability.html#a5609e9b8862a463872d79be768d5c75c">   33</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) SCNetworkReachabilityFlags <a class="code" href="interface_m_a_r_reachability.html#a5609e9b8862a463872d79be768d5c75c">flags</a>;                           </div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="interface_m_a_r_reachability.html#a016228b173329e79b0857ca50c29ddc8">   34</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) MARReachabilityStatus <a class="code" href="interface_m_a_r_reachability.html#a016228b173329e79b0857ca50c29ddc8">status</a>;                                </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">@property</span> (nonatomic, readonly) MARReachabilityWWANStatus <a class="code" href="interface_m_a_r_reachability.html#a7c116d20e2a6072f3521ce7d53d033b9">wwanStatus</a> <a class="code" href="interface_m_a_r_reachability.html#a54d3eee2e017ed0eb16f9f187c92e64a">NS_AVAILABLE_IOS</a>(7_0);  </div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interface_m_a_r_reachability.html#a423d1d55fdbc1866c41bcaaf433aa982">   36</a></span>&#160;<span class="keyword">@property</span> (nonatomic, readonly, getter=<a class="code" href="interface_m_a_r_reachability.html#ae3321738fab3aa1aff0b9b38c1694640">isReachable</a>) BOOL <a class="code" href="interface_m_a_r_reachability.html#a423d1d55fdbc1866c41bcaaf433aa982">reachable</a>;                         </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@property</span> (nullable, nonatomic, copy) <span class="keywordtype">void</span> (^<a class="code" href="interface_m_a_r_reachability.html#a139ed1358b13ec8fa7386ff02b611cdb">notifyBlock</a>)(<a class="code" href="interface_m_a_r_reachability.html">MARReachability</a> *<a class="code" href="interface_m_a_r_reachability.html#ad46b6909f162c589339d3a22b72d056d">reachability</a>);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;+ (instancetype)<a class="code" href="interface_m_a_r_reachability.html#ad46b6909f162c589339d3a22b72d056d">reachability</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;+ (instancetype)<a class="code" href="interface_m_a_r_reachability.html#a706357e0b7f514d9604406ee6b9a485d">reachabilityForLocalWifi</a> <a class="code" href="interface_m_a_r_reachability.html#a52766c60081736ecc8b4217c4ebd503a">DEPRECATED_MSG_ATTRIBUTE</a>(&quot;unnecessary and potentially harmful&quot;);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;+ (nullable instancetype)reachabilityWithHostname:(NSString *)hostname;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;+ (nullable instancetype)reachabilityWithAddress:(const struct sockaddr *)hostAddress;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@end</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;NS_ASSUME_NONNULL_END</div><div class="ttc" id="interface_m_a_r_reachability_html_a54d3eee2e017ed0eb16f9f187c92e64a"><div class="ttname"><a href="interface_m_a_r_reachability.html#a54d3eee2e017ed0eb16f9f187c92e64a">-[MARReachability NS_AVAILABLE_IOS]</a></div><div class="ttdeci">MARReachabilityWWANStatus wwanStatus NS_AVAILABLE_IOS(7_0)</div><div class="ttdoc">Current WWAN status. </div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_ae3321738fab3aa1aff0b9b38c1694640"><div class="ttname"><a href="interface_m_a_r_reachability.html#ae3321738fab3aa1aff0b9b38c1694640">-[MARReachability isReachable]</a></div><div class="ttdeci">BOOL isReachable()</div><div class="ttdef"><b>Definition:</b> MARReachability.m:137</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html"><div class="ttname"><a href="interface_m_a_r_reachability.html">MARReachability</a></div><div class="ttdef"><b>Definition:</b> MARReachability.h:31</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a423d1d55fdbc1866c41bcaaf433aa982"><div class="ttname"><a href="interface_m_a_r_reachability.html#a423d1d55fdbc1866c41bcaaf433aa982">MARReachability::reachable</a></div><div class="ttdeci">BOOL reachable</div><div class="ttdoc">Current reachable status. </div><div class="ttdef"><b>Definition:</b> MARReachability.h:36</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a139ed1358b13ec8fa7386ff02b611cdb"><div class="ttname"><a href="interface_m_a_r_reachability.html#a139ed1358b13ec8fa7386ff02b611cdb">MARReachability::notifyBlock</a></div><div class="ttdeci">void(^ notifyBlock)(MARReachability *reachability)</div><div class="ttdoc">Notify block which will be called on main thread when network changed. </div></div>
+<div class="ttc" id="_m_a_r_reachability_8h_html_aab99f00198936d694ed8545e22ea9edd"><div class="ttname"><a href="_m_a_r_reachability_8h.html#aab99f00198936d694ed8545e22ea9edd">NS_ENUM</a></div><div class="ttdeci">NS_ASSUME_NONNULL_BEGIN typedef NS_ENUM(NSUInteger, MARReachabilityStatus)</div><div class="ttdef"><b>Definition:</b> MARReachability.h:15</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a7c116d20e2a6072f3521ce7d53d033b9"><div class="ttname"><a href="interface_m_a_r_reachability.html#a7c116d20e2a6072f3521ce7d53d033b9">-[MARReachability wwanStatus]</a></div><div class="ttdeci">MARReachabilityWWANStatus wwanStatus()</div><div class="ttdef"><b>Definition:</b> MARReachability.m:113</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_ad46b6909f162c589339d3a22b72d056d"><div class="ttname"><a href="interface_m_a_r_reachability.html#ad46b6909f162c589339d3a22b72d056d">+[MARReachability reachability]</a></div><div class="ttdeci">instancetype reachability()</div><div class="ttdoc">Create an object to check the reachability of the default route. </div><div class="ttdef"><b>Definition:</b> MARReachability.m:141</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a706357e0b7f514d9604406ee6b9a485d"><div class="ttname"><a href="interface_m_a_r_reachability.html#a706357e0b7f514d9604406ee6b9a485d">+[MARReachability reachabilityForLocalWifi]</a></div><div class="ttdeci">instancetype reachabilityForLocalWifi()</div><div class="ttdef"><b>Definition:</b> MARReachability.m:145</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a5609e9b8862a463872d79be768d5c75c"><div class="ttname"><a href="interface_m_a_r_reachability.html#a5609e9b8862a463872d79be768d5c75c">MARReachability::flags</a></div><div class="ttdeci">SCNetworkReachabilityFlags flags</div><div class="ttdoc">Current flags. </div><div class="ttdef"><b>Definition:</b> MARReachability.h:33</div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a52766c60081736ecc8b4217c4ebd503a"><div class="ttname"><a href="interface_m_a_r_reachability.html#a52766c60081736ecc8b4217c4ebd503a">+[MARReachability DEPRECATED_MSG_ATTRIBUTE]</a></div><div class="ttdeci">&quot;unnecessary and potentially harmful&quot; DEPRECATED_MSG_ATTRIBUTE()</div><div class="ttdoc">Create an object to check the reachability of the local WI-FI. </div></div>
+<div class="ttc" id="interface_m_a_r_reachability_html_a016228b173329e79b0857ca50c29ddc8"><div class="ttname"><a href="interface_m_a_r_reachability.html#a016228b173329e79b0857ca50c29ddc8">MARReachability::status</a></div><div class="ttdeci">MARReachabilityStatus status</div><div class="ttdoc">Current status. </div><div class="ttdef"><b>Definition:</b> MARReachability.h:34</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

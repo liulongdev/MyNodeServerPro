@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MAREXT: /Users/Martin/Dev/SourceTree/MAREXT/MAREX/MARExtension/UIKit/UIGestureRecognizer+MAREX.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MAREXT
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6ff6e638149d1e43152554a9a9ed4cd7.html">SourceTree</a></li><li class="navelem"><a class="el" href="dir_f8d83dd4ad399eada900cbfc6beb8db3.html">MAREXT</a></li><li class="navelem"><a class="el" href="dir_6daae844af948711e071770fd937495a.html">MAREX</a></li><li class="navelem"><a class="el" href="dir_b932bfee56a058adac3470b82c4da045.html">MARExtension</a></li><li class="navelem"><a class="el" href="dir_892605f1bb60009771f4c5b8766992c2.html">UIKit</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">UIGestureRecognizer+MAREX.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_u_i_gesture_recognizer_09_m_a_r_e_x_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  UIGestureRecognizer+MAREX.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  MARExtensionDemo</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Martin.liu on 17/5/17.</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright © 2017年 MAR. All rights reserved.</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;NS_ASSUME_NONNULL_BEGIN</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="category_u_i_gesture_recognizer_07_m_a_r_e_x_08.html">   13</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x_08.html">UIGestureRecognizer (MAREX)</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;- (instancetype)initWithMarActionBlock:(<span class="keywordtype">void</span> (^)(<span class="keywordtype">id</span> sender))block;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;- (void)mar_addActionBlock:(<span class="keywordtype">void</span> (^)(<span class="keywordtype">id</span> sender))block;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (void)<a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x_08.html#a3c4dd9de6912147a75e39e0afd2ecc0f">mar_removeAllActionBlocks</a>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@end</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html">   49</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html">UIGestureRecognizer (MAREX_Block)</a></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">@property</span> (nonatomic, copy, nullable) <span class="keywordtype">void</span> (^<a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#a8ebb4c7ba4fb4b70b6e6f5f580f10eda">mar_handler</a>)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#a3a5aedf9c3b8ffce2fa72d8021cb656d">   58</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSTimeInterval <a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#a3a5aedf9c3b8ffce2fa72d8021cb656d">mar_handlerDelay</a>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;+ (instancetype)mar_recognizerWithDelay:(NSTimeInterval)delay handler:(<span class="keywordtype">void</span> (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (instancetype)initWithMarDelay:(NSTimeInterval)delay Handler:(<span class="keywordtype">void</span> (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;+ (instancetype)mar_recognizerWithHandler:(<span class="keywordtype">void</span> (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (instancetype)initWithMarHandler:(<span class="keywordtype">void</span> (^)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location))block;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;- (void)<a class="code" href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#ac83e4894ae42430e6e0ceefd22afa03d">mar_cancel</a>;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">@end</span></div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;NS_ASSUME_NONNULL_END</div><div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x_08_html"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x_08.html">UIGestureRecognizer(MAREX)</a></div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.h:13</div></div>
+<div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08_html_a3a5aedf9c3b8ffce2fa72d8021cb656d"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#a3a5aedf9c3b8ffce2fa72d8021cb656d">UIGestureRecognizer(MAREX_Block)::mar_handlerDelay</a></div><div class="ttdeci">NSTimeInterval mar_handlerDelay</div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.h:58</div></div>
+<div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08_html_ac83e4894ae42430e6e0ceefd22afa03d"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#ac83e4894ae42430e6e0ceefd22afa03d">-[UIGestureRecognizer(MAREX_Block) mar_cancel]</a></div><div class="ttdeci">void mar_cancel()</div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.m:137</div></div>
+<div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x_08_html_a3c4dd9de6912147a75e39e0afd2ecc0f"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x_08.html#a3c4dd9de6912147a75e39e0afd2ecc0f">-[UIGestureRecognizer(MAREX) mar_removeAllActionBlocks]</a></div><div class="ttdeci">void mar_removeAllActionBlocks()</div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.m:55</div></div>
+<div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08_html_a8ebb4c7ba4fb4b70b6e6f5f580f10eda"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html#a8ebb4c7ba4fb4b70b6e6f5f580f10eda">UIGestureRecognizer(MAREX_Block)::mar_handler</a></div><div class="ttdeci">void(^ mar_handler)(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location)</div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.m:142</div></div>
+<div class="ttc" id="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08_html"><div class="ttname"><a href="category_u_i_gesture_recognizer_07_m_a_r_e_x___block_08.html">UIGestureRecognizer(MAREX_Block)</a></div><div class="ttdef"><b>Definition:</b> UIGestureRecognizer+MAREX.h:49</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

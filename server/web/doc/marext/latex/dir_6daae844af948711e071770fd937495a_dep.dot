@@ -1,0 +1,15 @@
+digraph "/Users/Martin/Dev/SourceTree/MAREXT/MAREX" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_f8d83dd4ad399eada900cbfc6beb8db3 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MAREXT" fontname="Helvetica", fontsize="10", URL="dir_f8d83dd4ad399eada900cbfc6beb8db3.html"]
+  subgraph clusterdir_6daae844af948711e071770fd937495a {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6daae844af948711e071770fd937495a.html"];
+    dir_6daae844af948711e071770fd937495a [shape=plaintext label="MAREX"];
+    dir_b932bfee56a058adac3470b82c4da045 [shape=box label="MARExtension" color="red" fillcolor="white" style="filled" URL="dir_b932bfee56a058adac3470b82c4da045.html"];
+    dir_2c915ccebe98acf9de351a972d847539 [shape=box label="MARModel" color="black" fillcolor="white" style="filled" URL="dir_2c915ccebe98acf9de351a972d847539.html"];
+  }
+  }
+  dir_b932bfee56a058adac3470b82c4da045->dir_2c915ccebe98acf9de351a972d847539 [headlabel="3", labeldistance=1.5 headhref="dir_000003_000011.html"];
+}

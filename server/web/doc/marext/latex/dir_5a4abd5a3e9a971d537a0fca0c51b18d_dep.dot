@@ -1,0 +1,9 @@
+digraph "/Users/Martin/Dev/SourceTree/MAREXT/MAREX/MARExtension/Utility" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b932bfee56a058adac3470b82c4da045 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MARExtension" fontname="Helvetica", fontsize="10", URL="dir_b932bfee56a058adac3470b82c4da045.html"]
+  dir_5a4abd5a3e9a971d537a0fca0c51b18d [shape=box, label="Utility", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5a4abd5a3e9a971d537a0fca0c51b18d.html"];
+  }
+}

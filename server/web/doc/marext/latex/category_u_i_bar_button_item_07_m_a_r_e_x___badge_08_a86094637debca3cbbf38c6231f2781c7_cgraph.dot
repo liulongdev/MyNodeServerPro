@@ -1,0 +1,17 @@
+digraph "-[UIBarButtonItem(MAREX_Badge) setMar_shouldHideBadgeAtZero:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node137 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_shouldHideBadge\lAtZero:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node137 -> Node138 [color="midnightblue",fontsize="10",style="solid"];
+  Node138 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_refreshBadge]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3ed88718fc074681665c92aeea9a92a1"];
+  Node138 -> Node139 [color="midnightblue",fontsize="10",style="solid"];
+  Node139 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeValue\lAnimated:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8e4f63b574d83ff31dd5b425cfbf00ed"];
+  Node139 -> Node140 [color="midnightblue",fontsize="10",style="solid"];
+  Node140 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeFrame]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3a93e76a12d66d2de66b9747635f7509"];
+  Node140 -> Node141 [color="midnightblue",fontsize="10",style="solid"];
+  Node141 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_badgeExpectedSize]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8dbc50b27262aa8ad25afd04f910d9aa"];
+  Node141 -> Node142 [color="midnightblue",fontsize="10",style="solid"];
+  Node142 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_duplicateLabel:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a988e768a61c0dbb1e1535d545f78357d"];
+}

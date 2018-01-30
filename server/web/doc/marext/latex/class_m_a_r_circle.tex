@@ -1,0 +1,31 @@
+\hypertarget{class_m_a_r_circle}{}\section{M\+A\+R\+Circle类 参考}
+\label{class_m_a_r_circle}\index{M\+A\+R\+Circle@{M\+A\+R\+Circle}}
+
+
+\subsection{详细描述}
+If you need to create instances of different classes during json-\/$>$object transform, use the method to choose custom class based on dictionary data.
+
+If the model implements this method, it will be called to determine resulting class during {\ttfamily +model\+With\+J\+S\+ON\+:}, {\ttfamily +model\+With\+Dictionary\+:}, conveting object of properties of parent objects (both singular and containers via {\ttfamily +mar\+\_\+model\+Container\+Property\+Generic\+Class}).
+
+Example\+: ;
+
+M\+A\+R\+Shape
+
+
+\begin{DoxyItemize}
+\item (Class)mar\+\_\+model\+Custom\+Class\+For\+Dictionary\+:(\+N\+S\+Dictionary$\ast$)dictionary \{ if (dictionary\mbox{[}"radius"\mbox{]} != nil) \{ return \mbox{[}\hyperlink{class_m_a_r_circle}{M\+A\+R\+Circle} class\mbox{]}; \} else if (dictionary\mbox{[}"width"\mbox{]} != nil) \{ return \mbox{[}M\+A\+R\+Rectangle class\mbox{]}; \} else if (dictionary\mbox{[}"y2"\mbox{]} != nil) \{ return \mbox{[}M\+A\+R\+Line class\mbox{]}; \} else \{ return \mbox{[}self class\mbox{]}; \} \}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{参数}
+{\em dictionary} & The json/kv dictionary.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Class to create from this dictionary, {\ttfamily nil} to use current class. 
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\hyperlink{_n_s_object_09_m_a_r_model_8h}{N\+S\+Object+\+M\+A\+R\+Model.\+h}\end{DoxyCompactItemize}

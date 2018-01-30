@@ -1,0 +1,9 @@
+digraph "+[NSFileManager(MAREX) mar_getSettings:objectForKey:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node93 [label="+[NSFileManager(MAREX)\l mar_getSettings:objectForKey:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node93 -> Node94 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node94 [label="+[NSFileManager(MAREX)\l mar_getAppSettingsForObject\lWithKey:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a4464b7dbe0f271a8a941f7c39487109e"];
+}

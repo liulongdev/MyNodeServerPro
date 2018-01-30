@@ -1,0 +1,13 @@
+digraph "-[UIBarButtonItem(JKBadge) setBadgePadding:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node106 [label="-[UIBarButtonItem(JKBadge)\l setBadgePadding:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node106 -> Node107 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node107 [label="-[UIBarButtonItem(JKBadge)\l jk_updateBadgeFrame]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_j_k_badge_08.html#aeb59608cf6422e9634056508562dc245"];
+  Node107 -> Node108 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node108 [label="-[UIBarButtonItem(JKBadge)\l jk_badgeExpectedSize]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_j_k_badge_08.html#a57f7453f0fd6c5b21e49651430c8db44"];
+  Node108 -> Node109 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node109 [label="-[UIBarButtonItem(JKBadge)\l jk_duplicateLabel:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_j_k_badge_08.html#a0513163bf3a362d851499ed10bb27cbd"];
+}

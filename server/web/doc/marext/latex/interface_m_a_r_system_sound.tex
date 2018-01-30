@@ -1,0 +1,119 @@
+\hypertarget{interface_m_a_r_system_sound}{}\section{M\+A\+R\+System\+Sound类 参考}
+\label{interface_m_a_r_system_sound}\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+
+
+{\ttfamily \#import $<$M\+A\+R\+System\+Sound.\+h$>$}
+
+类 M\+A\+R\+System\+Sound 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_m_a_r_system_sound}
+\end{center}
+\end{figure}
+\subsection*{构造函数}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_m_a_r_system_sound_abf84e563c880dd678ebd9dd2a67f56f0}{play}
+\end{DoxyCompactItemize}
+\subsection*{类方法}
+\begin{DoxyCompactItemize}
+\item 
+(void) + \hyperlink{interface_m_a_r_system_sound_a448d46b9614cdc1f3025f8913614f866}{play\+System\+Sound\+:}
+\item 
+(void) + \hyperlink{interface_m_a_r_system_sound_aea3446e3a4f0d2ee28fab4b35194726e}{play\+System\+Sound\+Vibrate}
+\item 
+(System\+Sound\+ID) + \hyperlink{interface_m_a_r_system_sound_a9d63a5ea24a218591e9e44c29d1723c2}{play\+Custom\+Sound\+:}
+\item 
+(B\+O\+OL) + \hyperlink{interface_m_a_r_system_sound_a30bf4cccadfe19fd039df934977358c0}{dispose\+Sound\+:}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+M\+A\+R\+Audio\+ID \hyperlink{interface_m_a_r_system_sound_a69d3a85e05747da3e53df0d5f8138bd3}{audio\+ID}
+\item 
+N\+S\+U\+RL $\ast$ \hyperlink{interface_m_a_r_system_sound_a374f05fe291063a7884a57e50a7477a6}{sound\+U\+RL}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+This class adds some useful methods to play system sounds 
+
+\subsection{函数文档}
+\mbox{\Hypertarget{interface_m_a_r_system_sound_a30bf4cccadfe19fd039df934977358c0}\label{interface_m_a_r_system_sound_a30bf4cccadfe19fd039df934977358c0}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!dispose\+Sound\+:@{dispose\+Sound\+:}}
+\index{dispose\+Sound\+:@{dispose\+Sound\+:}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{dispose\+Sound\+:()}{disposeSound:()}}
+{\footnotesize\ttfamily + (B\+O\+OL) dispose\+Sound\+: \begin{DoxyParamCaption}\item[{(System\+Sound\+ID)}]{sound\+ID }\end{DoxyParamCaption}}
+
+Dispose custom sound
+
+
+\begin{DoxyParams}{参数}
+{\em sound\+ID} & System\+Sound\+ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Returns Y\+ES if has been disposed, otherwise NO 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_m_a_r_system_sound_abf84e563c880dd678ebd9dd2a67f56f0}\label{interface_m_a_r_system_sound_abf84e563c880dd678ebd9dd2a67f56f0}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!play@{play}}
+\index{play@{play}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily -\/ (void) play \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+\mbox{\Hypertarget{interface_m_a_r_system_sound_a9d63a5ea24a218591e9e44c29d1723c2}\label{interface_m_a_r_system_sound_a9d63a5ea24a218591e9e44c29d1723c2}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!play\+Custom\+Sound\+:@{play\+Custom\+Sound\+:}}
+\index{play\+Custom\+Sound\+:@{play\+Custom\+Sound\+:}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{play\+Custom\+Sound\+:()}{playCustomSound:()}}
+{\footnotesize\ttfamily + (System\+Sound\+ID) play\+Custom\+Sound\+: \begin{DoxyParamCaption}\item[{(N\+S\+U\+RL $\ast$ \+\_\+\+Nonnull)}]{sound\+U\+RL }\end{DoxyParamCaption}}
+
+Play custom sound with url
+
+
+\begin{DoxyParams}{参数}
+{\em sound\+U\+RL} & Sound U\+RL\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+Returns the System\+Sound\+ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{interface_m_a_r_system_sound_a448d46b9614cdc1f3025f8913614f866}\label{interface_m_a_r_system_sound_a448d46b9614cdc1f3025f8913614f866}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!play\+System\+Sound\+:@{play\+System\+Sound\+:}}
+\index{play\+System\+Sound\+:@{play\+System\+Sound\+:}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{play\+System\+Sound\+:()}{playSystemSound:()}}
+{\footnotesize\ttfamily + (void) play\+System\+Sound\+: \begin{DoxyParamCaption}\item[{(M\+A\+R\+Audio\+ID)}]{audio\+ID }\end{DoxyParamCaption}}
+
+Play a system sound from the ID
+
+
+\begin{DoxyParams}{参数}
+{\em audio\+ID} & ID of system audio from the Audio\+ID enum \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_m_a_r_system_sound_aea3446e3a4f0d2ee28fab4b35194726e}\label{interface_m_a_r_system_sound_aea3446e3a4f0d2ee28fab4b35194726e}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!play\+System\+Sound\+Vibrate@{play\+System\+Sound\+Vibrate}}
+\index{play\+System\+Sound\+Vibrate@{play\+System\+Sound\+Vibrate}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{play\+System\+Sound\+Vibrate()}{playSystemSoundVibrate()}}
+{\footnotesize\ttfamily + (void) play\+System\+Sound\+Vibrate \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+Play system sound vibrate 
+
+\subsection{属性说明}
+\mbox{\Hypertarget{interface_m_a_r_system_sound_a69d3a85e05747da3e53df0d5f8138bd3}\label{interface_m_a_r_system_sound_a69d3a85e05747da3e53df0d5f8138bd3}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!audio\+ID@{audio\+ID}}
+\index{audio\+ID@{audio\+ID}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{audio\+ID}{audioID}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Audio\+ID) audio\+ID\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+\mbox{\Hypertarget{interface_m_a_r_system_sound_a374f05fe291063a7884a57e50a7477a6}\label{interface_m_a_r_system_sound_a374f05fe291063a7884a57e50a7477a6}} 
+\index{M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}!sound\+U\+RL@{sound\+U\+RL}}
+\index{sound\+U\+RL@{sound\+U\+RL}!M\+A\+R\+System\+Sound@{M\+A\+R\+System\+Sound}}
+\subsubsection{\texorpdfstring{sound\+U\+RL}{soundURL}}
+{\footnotesize\ttfamily -\/ (N\+S\+U\+RL$\ast$) sound\+U\+RL\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Foundation/\hyperlink{_m_a_r_system_sound_8h}{M\+A\+R\+System\+Sound.\+h}\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Foundation/\hyperlink{_m_a_r_system_sound_8m}{M\+A\+R\+System\+Sound.\+m}\end{DoxyCompactItemize}

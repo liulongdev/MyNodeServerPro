@@ -1,0 +1,10 @@
+digraph "/Users/Martin/Dev/SourceTree" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6ff6e638149d1e43152554a9a9ed4cd7 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6ff6e638149d1e43152554a9a9ed4cd7.html"];
+    dir_6ff6e638149d1e43152554a9a9ed4cd7 [shape=plaintext label="SourceTree"];
+    dir_f8d83dd4ad399eada900cbfc6beb8db3 [shape=box label="MAREXT" color="red" fillcolor="white" style="filled" URL="dir_f8d83dd4ad399eada900cbfc6beb8db3.html"];
+  }
+}

@@ -1,0 +1,81 @@
+\hypertarget{category_n_s_date_07_m_a_r_e_x__brief_time_08}{}\section{N\+S\+Date(M\+A\+R\+E\+X\+\_\+brief\+Time)分类 参考}
+\label{category_n_s_date_07_m_a_r_e_x__brief_time_08}\index{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}}
+
+
+{\ttfamily \#import $<$N\+S\+Date+\+M\+A\+R\+E\+X.\+h$>$}
+
+\subsection*{构造函数}
+\begin{DoxyCompactItemize}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{category_n_s_date_07_m_a_r_e_x__brief_time_08_a036722e23a4872ddf45b2fa7ade0fa73}{mar\+\_\+time\+In\+Words}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{category_n_s_date_07_m_a_r_e_x__brief_time_08_ab0e5ee3344f27424852f5aaa360e099c}{mar\+\_\+time\+In\+Words\+Including\+Seconds\+:}
+\end{DoxyCompactItemize}
+\subsection*{类方法}
+\begin{DoxyCompactItemize}
+\item 
+(N\+S\+String $\ast$) + \hyperlink{category_n_s_date_07_m_a_r_e_x__brief_time_08_a88fc6aa79deb4cb45bd563759c109c80}{mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:}
+\end{DoxyCompactItemize}
+
+
+\subsection{函数文档}
+\mbox{\Hypertarget{category_n_s_date_07_m_a_r_e_x__brief_time_08_a036722e23a4872ddf45b2fa7ade0fa73}\label{category_n_s_date_07_m_a_r_e_x__brief_time_08_a036722e23a4872ddf45b2fa7ade0fa73}} 
+\index{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}!mar\+\_\+time\+In\+Words@{mar\+\_\+time\+In\+Words}}
+\index{mar\+\_\+time\+In\+Words@{mar\+\_\+time\+In\+Words}!N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}}
+\subsubsection{\texorpdfstring{mar\+\_\+time\+In\+Words()}{mar\_timeInWords()}}
+{\footnotesize\ttfamily -\/ (N\+S\+String $\ast$) mar\+\_\+time\+In\+Words \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+\mbox{\Hypertarget{category_n_s_date_07_m_a_r_e_x__brief_time_08_a88fc6aa79deb4cb45bd563759c109c80}\label{category_n_s_date_07_m_a_r_e_x__brief_time_08_a88fc6aa79deb4cb45bd563759c109c80}} 
+\index{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}!mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:@{mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:}}
+\index{mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:@{mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:}!N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}}
+\subsubsection{\texorpdfstring{mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+:()}{mar\_timeInWordsFromTimeInterval:includingSeconds:()}}
+{\footnotesize\ttfamily + (N\+S\+String $\ast$) mar\+\_\+time\+In\+Words\+From\+Time\+Interval\+: \begin{DoxyParamCaption}\item[{(N\+S\+Time\+Interval)}]{interval\+In\+Seconds }\item[{includingSeconds:(B\+O\+OL)}]{include\+Seconds }\end{DoxyParamCaption}}
+
+Returns a string representing a time interval in words.
+
+The strings produced by this method will be similar to produced by Active\+Support\textquotesingle{}s {\ttfamily time\+\_\+ago\+\_\+in\+\_\+words} helper method.
+
+
+\begin{DoxyParams}{参数}
+{\em interval\+In\+Seconds} & The time interval to convert to a string\\
+\hline
+{\em include\+Seconds} & {\ttfamily Y\+ES} if seconds should be included. {\ttfamily NO} if they should not.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A string representing the time interval in words
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{参见}
+time\+In\+Words 
+
+time\+In\+Words\+Including\+Seconds\+: 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{category_n_s_date_07_m_a_r_e_x__brief_time_08_ab0e5ee3344f27424852f5aaa360e099c}\label{category_n_s_date_07_m_a_r_e_x__brief_time_08_ab0e5ee3344f27424852f5aaa360e099c}} 
+\index{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}!mar\+\_\+time\+In\+Words\+Including\+Seconds\+:@{mar\+\_\+time\+In\+Words\+Including\+Seconds\+:}}
+\index{mar\+\_\+time\+In\+Words\+Including\+Seconds\+:@{mar\+\_\+time\+In\+Words\+Including\+Seconds\+:}!N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)@{N\+S\+Date(\+M\+A\+R\+E\+X\+\_\+brief\+Time)}}
+\subsubsection{\texorpdfstring{mar\+\_\+time\+In\+Words\+Including\+Seconds\+:()}{mar\_timeInWordsIncludingSeconds:()}}
+{\footnotesize\ttfamily -\/ (N\+S\+String $\ast$) mar\+\_\+time\+In\+Words\+Including\+Seconds\+: \begin{DoxyParamCaption}\item[{(B\+O\+OL)}]{include\+Seconds }\end{DoxyParamCaption}}
+
+Returns a string representing the time interval from now in words.
+
+The strings produced by this method will be similar to produced by Active\+Support\textquotesingle{}s {\ttfamily time\+\_\+ago\+\_\+in\+\_\+words} helper method.
+
+
+\begin{DoxyParams}{参数}
+{\em include\+Seconds} & {\ttfamily Y\+ES} if seconds should be included. {\ttfamily NO} if they should not.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A string representing the time interval from now in words
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{参见}
+time\+In\+Words\+Including\+Seconds\+: 
+
+time\+In\+Words\+From\+Time\+Interval\+:including\+Seconds\+: 
+\end{DoxySeeAlso}
+
+
+该分类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Foundation/\hyperlink{_n_s_date_09_m_a_r_e_x_8h}{N\+S\+Date+\+M\+A\+R\+E\+X.\+h}\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Foundation/\hyperlink{_n_s_date_09_m_a_r_e_x_8m}{N\+S\+Date+\+M\+A\+R\+E\+X.\+m}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+digraph "-[MARIvar type]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node37 [label="-[MARIvar type]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node37 -> Node38 [color="midnightblue",fontsize="10",style="solid"];
+  Node38 [label="MAREncodingGetType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_class_info_8h.html#a23a318f8bad6311dcaf6b82ecb1f86d1"];
+  Node37 -> Node39 [color="midnightblue",fontsize="10",style="solid"];
+  Node39 [label="-[_MARObjCIvar typeEncoding]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___m_a_r_obj_c_ivar.html#ad2feb85addee2dd039ded28972747c0c"];
+}

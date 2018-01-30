@@ -1,0 +1,13 @@
+digraph "-[MARMethod isEqual:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node19 [label="-[MARMethod isEqual:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="-[MARMethod selector]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_method.html#a7f6933667f10c7a93cfc392cf75bb46b"];
+  Node19 -> Node21 [color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="-[MARMethod implementation]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_method.html#a64b5a4d139de5b478d368fa532f981c7"];
+  Node19 -> Node22 [color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="-[MARMethod signature]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_method.html#a95142a29169eb3b6d4b3c5e8d0db54a5"];
+}

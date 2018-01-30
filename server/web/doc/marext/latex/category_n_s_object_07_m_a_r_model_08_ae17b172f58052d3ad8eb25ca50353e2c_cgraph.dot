@@ -1,0 +1,11 @@
+digraph "-[NSObject(MARModel) mar_modelIsEqual:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node28 [label="-[NSObject(MARModel)\l mar_modelIsEqual:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node28 -> Node29 [color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="+[_MARModelMeta metaWith\lClass:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___m_a_r_model_meta.html#a0f5be1bdc51aaf26ec0163b69b672b1e",tooltip="Returns the cached model class meta "];
+  Node29 -> Node30 [color="midnightblue",fontsize="10",style="solid"];
+  Node30 [label="-[MARClassInfo needUpdate]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_class_info.html#ae70c6b93e18b3bb283bd5f5bcb25dae2"];
+}

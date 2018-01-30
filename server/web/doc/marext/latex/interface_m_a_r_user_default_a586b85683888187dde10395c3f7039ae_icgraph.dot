@@ -1,0 +1,9 @@
+digraph "+[MARUserDefault setObject:key:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node28 [label="+[MARUserDefault setObject\l:key:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="+[MARUserDefault setModel\l:key:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_user_default.html#a0f9cb3ecc37e4d521eb9021863485add"];
+}

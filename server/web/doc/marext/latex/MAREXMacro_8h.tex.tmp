@@ -1,0 +1,367 @@
+\hypertarget{MAREXMacro_8h}{}\section{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+E\+X\+Macro.h File Reference}
+\label{MAREXMacro_8h}\index{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+E\+X\+Macro.\+h@{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+E\+X\+Macro.\+h}}
+{\ttfamily \#import $<$U\+I\+Kit/\+U\+I\+Kit.\+h$>$}\newline
+{\ttfamily \#import $<$pthread.\+h$>$}\newline
+Include dependency graph for M\+A\+R\+E\+X\+Macro.\+h\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MAREXMacro_8h_ab44b37c8280e89c4f418256193702d63}{App\+Build\+Version}~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Version\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_aee700ded9a13ba5e5c1392c86312ced8}{A\+P\+P\+Bundle\+Identifier}~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Identifier\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_a908eaf96c968d37971f0090ff82e3a89}{A\+P\+P\+Display\+Name}~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Display\+Name\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_ac56dd948c6c565c9fffb4b443ec34438}{App\+Version}~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Short\+Version\+String\char`\"{}\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_ac4ec0a338c1546cbff3dfd95a3eac2de}{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}~\mbox{[}\mbox{[}\mbox{[}U\+I\+Device current\+Device\mbox{]} system\+Version\mbox{]} float\+Value\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_a9a25d14bb2f5e09c5c067df8262cd6fd}{D\+E\+V\+I\+C\+E\+U\+U\+ID}~\mbox{[}\mbox{[}\mbox{[}U\+I\+Device current\+Device\mbox{]} identifier\+For\+Vendor\mbox{]} U\+U\+I\+D\+String\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_a1720e5b6dee2f066002754cbe82e17e8}{I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER}~(N\+S\+Foundation\+Version\+Number $>$ N\+S\+Foundation\+Version\+Number\+\_\+i\+O\+S\+\_\+9\+\_\+x\+\_\+\+Max)?(Y\+ES)\+:(NO)
+\item 
+\#define \hyperlink{MAREXMacro_8h_aaeaa0b179b26223eafd721b39724dd90}{I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER}(\+\_\+value\+\_\+)~((\hyperlink{MAREXMacro_8h_ac4ec0a338c1546cbff3dfd95a3eac2de}{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}$>$=\+\_\+value\+\_\+) ? Y\+ES \+: NO)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a33585d9e115c259569510f3e0b94c3b9}{I\+S\+\_\+\+I\+P\+AD}()~(U\+I\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+D\+I\+OM() == U\+I\+User\+Interface\+Idiom\+Pad)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}()~(U\+I\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+D\+I\+OM() == U\+I\+User\+Interface\+Idiom\+Phone)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a20ffde8b460477f3927d5ce45d740043}{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size}()~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} $<$ 568.\+0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a6c5ff8bbff5a77fc56194699bd41eba6}{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size}()~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} == 568.\+0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a7b02098c2b54b87ee730f3e4bc553fbf}{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size}()~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} == 667.\+0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a3e4c950231ff51d786b359c98e5cbc12}{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size}()~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} $>$= 736.\+0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device}~(\mbox{[}U\+I\+Screen instances\+Respond\+To\+Selector\+:@selector(current\+Mode)\mbox{]} ? C\+G\+Size\+Equal\+To\+Size(C\+G\+Size\+Make(1125, 2436), \mbox{[}\mbox{[}U\+I\+Screen main\+Screen\mbox{]} current\+Mode\mbox{]}.size) \+: NO)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a70349d974344b2653144695d02c9debc}{I\+S\+\_\+\+R\+E\+T\+I\+NA}()~(\mbox{[}\mbox{[}U\+I\+Screen main\+Screen\mbox{]} scale\mbox{]} $>$= 2.\+0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_adb95c0c5702f667a1c70f6f4a7d9a193}{k\+Font\+S\+C\+A\+LE}(value)~\mbox{[}U\+I\+Font system\+Font\+Of\+Size\+:k\+S\+C\+A\+LE(value)\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_ab3bc099354fe72c44948f100e70c9c7c}{k\+S\+C\+A\+LE}(value)~(value $\ast$ (\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}/320.\+0f))
+\item 
+\#define \hyperlink{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}{k\+Screen\+H\+E\+I\+G\+HT}~(\mbox{[}U\+I\+Screen main\+Screen\mbox{]}.bounds.\+size.\+height)
+\item 
+\#define \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH}~(M\+AX(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}, \hyperlink{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}{k\+Screen\+H\+E\+I\+G\+HT}))
+\item 
+\#define \hyperlink{MAREXMacro_8h_a9e62a595abc06edd647a3e5fa04e299c}{k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH}~(M\+IN(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}, \hyperlink{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}{k\+Screen\+H\+E\+I\+G\+HT}))
+\item 
+\#define \hyperlink{MAREXMacro_8h_a9a823ab5fcacfba3c62dd8760dd4aea5}{k\+Screen\+One\+Pixel\+Size}~1.\+0f/\mbox{[}\mbox{[}\+U\+I\+Screen main\+Screen\mbox{]} scale\mbox{]}
+\item 
+\#define \hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}~(\mbox{[}U\+I\+Screen main\+Screen\mbox{]}.bounds.\+size.\+width)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a2e43651cb1ffd1adbe0a2d360e769406}{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN}
+\item 
+\#define \hyperlink{MAREXMacro_8h_a98167f4621a7f8fc66fd1ea5313ac337}{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND}
+\item 
+\#define \hyperlink{MAREXMacro_8h_accaa81aad095b7a2cde41f153402f8ec}{M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO}(scroll\+View,  vc)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a89682fbaec7ac94ce0511c56fde8f3f3}{M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin}~(\hyperlink{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device} \&\& U\+I\+Interface\+Orientation\+Is\+Portrait(\mbox{[}U\+I\+Application shared\+Application\mbox{]}.status\+Bar\+Orientation) ? 34 \+: 0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a68cbe598f2034a16ad1e3ff9e711221d}{M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin}~(\hyperlink{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device} \&\& U\+I\+Interface\+Orientation\+Is\+Landscape(\mbox{[}U\+I\+Application shared\+Application\mbox{]}.status\+Bar\+Orientation) ? 44 \+: 0)
+\item 
+\#define \hyperlink{MAREXMacro_8h_abc8fb15af9f59b615992581a643fc604}{M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK}(block)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a0f5a0f947a85bfe3ca3a3f924657f9ff}{M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS}(\+\_\+name\+\_\+)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a70de69db126b9219821a9766728e7405}{Need\+Scale\+Value}()~(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH} != 320)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a3e2cd1066dd3a0de73e3ea25134c6f20}{R\+G\+B\+A\+H\+EX}(\+\_\+hex,  \+\_\+alpha)
+\item 
+\#define \hyperlink{MAREXMacro_8h_a165abfc8b974e0c2fa7cca8bdcb0ad1c}{R\+G\+B\+H\+EX}(\+\_\+hex)
+\item 
+\#define \hyperlink{MAREXMacro_8h_ad3b4fc94d1816b143dd64b496b14179f}{U\+I\+Color\+From\+R\+GB}(rgb\+Value,  alpha\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{MAREXMacro_8h_a27b386ebf27fc7c3c9d3151d4038a361}{mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue} (void($^\wedge$block)())
+\item 
+static void \hyperlink{MAREXMacro_8h_a5888b04781ccdfe0e33d141a893614f6}{mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue} (void($^\wedge$block)())
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{MAREXMacro_8h_ab44b37c8280e89c4f418256193702d63}\label{MAREXMacro_8h_ab44b37c8280e89c4f418256193702d63}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!App\+Build\+Version@{App\+Build\+Version}}
+\index{App\+Build\+Version@{App\+Build\+Version}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{App\+Build\+Version}{AppBuildVersion}}
+{\footnotesize\ttfamily \#define App\+Build\+Version~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Version\char`\"{}\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_aee700ded9a13ba5e5c1392c86312ced8}\label{MAREXMacro_8h_aee700ded9a13ba5e5c1392c86312ced8}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!A\+P\+P\+Bundle\+Identifier@{A\+P\+P\+Bundle\+Identifier}}
+\index{A\+P\+P\+Bundle\+Identifier@{A\+P\+P\+Bundle\+Identifier}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+P\+Bundle\+Identifier}{APPBundleIdentifier}}
+{\footnotesize\ttfamily \#define A\+P\+P\+Bundle\+Identifier~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Identifier\char`\"{}\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a908eaf96c968d37971f0090ff82e3a89}\label{MAREXMacro_8h_a908eaf96c968d37971f0090ff82e3a89}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!A\+P\+P\+Display\+Name@{A\+P\+P\+Display\+Name}}
+\index{A\+P\+P\+Display\+Name@{A\+P\+P\+Display\+Name}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{A\+P\+P\+Display\+Name}{APPDisplayName}}
+{\footnotesize\ttfamily \#define A\+P\+P\+Display\+Name~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Display\+Name\char`\"{}\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_ac56dd948c6c565c9fffb4b443ec34438}\label{MAREXMacro_8h_ac56dd948c6c565c9fffb4b443ec34438}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!App\+Version@{App\+Version}}
+\index{App\+Version@{App\+Version}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{App\+Version}{AppVersion}}
+{\footnotesize\ttfamily \#define App\+Version~\mbox{[}\mbox{[}\mbox{[}N\+S\+Bundle main\+Bundle\mbox{]} info\+Dictionary\mbox{]} object\+For\+Key\+:@\char`\"{}C\+F\+Bundle\+Short\+Version\+String\char`\"{}\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_ac4ec0a338c1546cbff3dfd95a3eac2de}\label{MAREXMacro_8h_ac4ec0a338c1546cbff3dfd95a3eac2de}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}{CURRENT\_VERSION}}
+{\footnotesize\ttfamily \#define C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON~\mbox{[}\mbox{[}\mbox{[}U\+I\+Device current\+Device\mbox{]} system\+Version\mbox{]} float\+Value\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a9a25d14bb2f5e09c5c067df8262cd6fd}\label{MAREXMacro_8h_a9a25d14bb2f5e09c5c067df8262cd6fd}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!D\+E\+V\+I\+C\+E\+U\+U\+ID@{D\+E\+V\+I\+C\+E\+U\+U\+ID}}
+\index{D\+E\+V\+I\+C\+E\+U\+U\+ID@{D\+E\+V\+I\+C\+E\+U\+U\+ID}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+V\+I\+C\+E\+U\+U\+ID}{DEVICEUUID}}
+{\footnotesize\ttfamily \#define D\+E\+V\+I\+C\+E\+U\+U\+ID~\mbox{[}\mbox{[}\mbox{[}U\+I\+Device current\+Device\mbox{]} identifier\+For\+Vendor\mbox{]} U\+U\+I\+D\+String\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a1720e5b6dee2f066002754cbe82e17e8}\label{MAREXMacro_8h_a1720e5b6dee2f066002754cbe82e17e8}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER@{I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER}}
+\index{I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER@{I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER}{IOS\_VERSION\_10ORLATER}}
+{\footnotesize\ttfamily \#define I\+O\+S\+\_\+\+V\+E\+R\+S\+I\+O\+N\+\_\+10\+O\+R\+L\+A\+T\+ER~(N\+S\+Foundation\+Version\+Number $>$ N\+S\+Foundation\+Version\+Number\+\_\+i\+O\+S\+\_\+9\+\_\+x\+\_\+\+Max)?(Y\+ES)\+:(NO)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_aaeaa0b179b26223eafd721b39724dd90}\label{MAREXMacro_8h_aaeaa0b179b26223eafd721b39724dd90}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER@{I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER}}
+\index{I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER@{I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER}{IS\_IOSORLATER}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+O\+S\+O\+R\+L\+A\+T\+ER(\begin{DoxyParamCaption}\item[{}]{\+\_\+value\+\_\+ }\end{DoxyParamCaption})~((\hyperlink{MAREXMacro_8h_ac4ec0a338c1546cbff3dfd95a3eac2de}{C\+U\+R\+R\+E\+N\+T\+\_\+\+V\+E\+R\+S\+I\+ON}$>$=\+\_\+value\+\_\+) ? Y\+ES \+: NO)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a33585d9e115c259569510f3e0b94c3b9}\label{MAREXMacro_8h_a33585d9e115c259569510f3e0b94c3b9}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+AD@{I\+S\+\_\+\+I\+P\+AD}}
+\index{I\+S\+\_\+\+I\+P\+AD@{I\+S\+\_\+\+I\+P\+AD}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+AD}{IS\_IPAD}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+AD(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(U\+I\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+D\+I\+OM() == U\+I\+User\+Interface\+Idiom\+Pad)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}\label{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+H\+O\+NE@{I\+S\+\_\+\+I\+P\+H\+O\+NE}}
+\index{I\+S\+\_\+\+I\+P\+H\+O\+NE@{I\+S\+\_\+\+I\+P\+H\+O\+NE}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+H\+O\+NE}{IS\_IPHONE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+H\+O\+NE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(U\+I\+\_\+\+U\+S\+E\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+I\+D\+I\+OM() == U\+I\+User\+Interface\+Idiom\+Phone)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a20ffde8b460477f3927d5ce45d740043}\label{MAREXMacro_8h_a20ffde8b460477f3927d5ce45d740043}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size}}
+\index{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size}{IS\_IPHONE\_35Size}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+35\+Size(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} $<$ 568.\+0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a6c5ff8bbff5a77fc56194699bd41eba6}\label{MAREXMacro_8h_a6c5ff8bbff5a77fc56194699bd41eba6}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size}}
+\index{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size}{IS\_IPHONE\_40Size}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+40\+Size(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} == 568.\+0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a7b02098c2b54b87ee730f3e4bc553fbf}\label{MAREXMacro_8h_a7b02098c2b54b87ee730f3e4bc553fbf}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size}}
+\index{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size}{IS\_IPHONE\_47Size}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+47\+Size(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} == 667.\+0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a3e4c950231ff51d786b359c98e5cbc12}\label{MAREXMacro_8h_a3e4c950231ff51d786b359c98e5cbc12}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size}}
+\index{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size@{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size}{IS\_IPHONE\_55Size}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+H\+O\+N\+E\+\_\+55\+Size(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{MAREXMacro_8h_a29d5757750cfceaae8ff035689b17d44}{I\+S\+\_\+\+I\+P\+H\+O\+NE}() \&\& \hyperlink{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH} $>$= 736.\+0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}\label{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+i\+Phone\+X\+\_\+\+Device@{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device}}
+\index{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device@{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device}{IS\_iPhoneX\_Device}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+i\+Phone\+X\+\_\+\+Device~(\mbox{[}U\+I\+Screen instances\+Respond\+To\+Selector\+:@selector(current\+Mode)\mbox{]} ? C\+G\+Size\+Equal\+To\+Size(C\+G\+Size\+Make(1125, 2436), \mbox{[}\mbox{[}U\+I\+Screen main\+Screen\mbox{]} current\+Mode\mbox{]}.size) \+: NO)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a70349d974344b2653144695d02c9debc}\label{MAREXMacro_8h_a70349d974344b2653144695d02c9debc}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!I\+S\+\_\+\+R\+E\+T\+I\+NA@{I\+S\+\_\+\+R\+E\+T\+I\+NA}}
+\index{I\+S\+\_\+\+R\+E\+T\+I\+NA@{I\+S\+\_\+\+R\+E\+T\+I\+NA}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+R\+E\+T\+I\+NA}{IS\_RETINA}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+R\+E\+T\+I\+NA(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\mbox{[}\mbox{[}U\+I\+Screen main\+Screen\mbox{]} scale\mbox{]} $>$= 2.\+0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_adb95c0c5702f667a1c70f6f4a7d9a193}\label{MAREXMacro_8h_adb95c0c5702f667a1c70f6f4a7d9a193}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Font\+S\+C\+A\+LE@{k\+Font\+S\+C\+A\+LE}}
+\index{k\+Font\+S\+C\+A\+LE@{k\+Font\+S\+C\+A\+LE}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Font\+S\+C\+A\+LE}{kFontSCALE}}
+{\footnotesize\ttfamily \#define k\+Font\+S\+C\+A\+LE(\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})~\mbox{[}U\+I\+Font system\+Font\+Of\+Size\+:k\+S\+C\+A\+LE(value)\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_ab3bc099354fe72c44948f100e70c9c7c}\label{MAREXMacro_8h_ab3bc099354fe72c44948f100e70c9c7c}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+S\+C\+A\+LE@{k\+S\+C\+A\+LE}}
+\index{k\+S\+C\+A\+LE@{k\+S\+C\+A\+LE}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+S\+C\+A\+LE}{kSCALE}}
+{\footnotesize\ttfamily \#define k\+S\+C\+A\+LE(\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})~(value $\ast$ (\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}/320.\+0f))}
+
+\mbox{\Hypertarget{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}\label{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Screen\+H\+E\+I\+G\+HT@{k\+Screen\+H\+E\+I\+G\+HT}}
+\index{k\+Screen\+H\+E\+I\+G\+HT@{k\+Screen\+H\+E\+I\+G\+HT}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Screen\+H\+E\+I\+G\+HT}{kScreenHEIGHT}}
+{\footnotesize\ttfamily \#define k\+Screen\+H\+E\+I\+G\+HT~(\mbox{[}U\+I\+Screen main\+Screen\mbox{]}.bounds.\+size.\+height)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}\label{MAREXMacro_8h_af7d662d32c70f833cb9ff626b8e72fba}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH@{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH}}
+\index{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH@{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH}{kScreenMAXLENGTH}}
+{\footnotesize\ttfamily \#define k\+Screen\+M\+A\+X\+L\+E\+N\+G\+TH~(M\+AX(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}, \hyperlink{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}{k\+Screen\+H\+E\+I\+G\+HT}))}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a9e62a595abc06edd647a3e5fa04e299c}\label{MAREXMacro_8h_a9e62a595abc06edd647a3e5fa04e299c}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH@{k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH}}
+\index{k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH@{k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH}{kScreenMINLENGTH}}
+{\footnotesize\ttfamily \#define k\+Screen\+M\+I\+N\+L\+E\+N\+G\+TH~(M\+IN(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH}, \hyperlink{MAREXMacro_8h_add3e041a44a8faee88a869dd8fad780c}{k\+Screen\+H\+E\+I\+G\+HT}))}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a9a823ab5fcacfba3c62dd8760dd4aea5}\label{MAREXMacro_8h_a9a823ab5fcacfba3c62dd8760dd4aea5}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Screen\+One\+Pixel\+Size@{k\+Screen\+One\+Pixel\+Size}}
+\index{k\+Screen\+One\+Pixel\+Size@{k\+Screen\+One\+Pixel\+Size}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Screen\+One\+Pixel\+Size}{kScreenOnePixelSize}}
+{\footnotesize\ttfamily \#define k\+Screen\+One\+Pixel\+Size~1.\+0f/\mbox{[}\mbox{[}\+U\+I\+Screen main\+Screen\mbox{]} scale\mbox{]}}
+
+\mbox{\Hypertarget{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}\label{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!k\+Screen\+W\+I\+D\+TH@{k\+Screen\+W\+I\+D\+TH}}
+\index{k\+Screen\+W\+I\+D\+TH@{k\+Screen\+W\+I\+D\+TH}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{k\+Screen\+W\+I\+D\+TH}{kScreenWIDTH}}
+{\footnotesize\ttfamily \#define k\+Screen\+W\+I\+D\+TH~(\mbox{[}U\+I\+Screen main\+Screen\mbox{]}.bounds.\+size.\+width)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a2e43651cb1ffd1adbe0a2d360e769406}\label{MAREXMacro_8h_a2e43651cb1ffd1adbe0a2d360e769406}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN@{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN}}
+\index{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN@{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN}{MAR\_EXTERN\_C\_BEGIN}}
+{\footnotesize\ttfamily \#define M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a98167f4621a7f8fc66fd1ea5313ac337}\label{MAREXMacro_8h_a98167f4621a7f8fc66fd1ea5313ac337}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND@{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND}}
+\index{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND@{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND}{MAR\_EXTERN\_C\_END}}
+{\footnotesize\ttfamily \#define M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+E\+ND}
+
+\mbox{\Hypertarget{MAREXMacro_8h_accaa81aad095b7a2cde41f153402f8ec}\label{MAREXMacro_8h_accaa81aad095b7a2cde41f153402f8ec}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO@{M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO}}
+\index{M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO@{M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO}{MARAdjustsScrollViewInsets\_NO}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Adjusts\+Scroll\+View\+Insets\+\_\+\+NO(\begin{DoxyParamCaption}\item[{}]{scroll\+View,  }\item[{}]{vc }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+\_Pragma(\textcolor{stringliteral}{"clang diagnostic push"}) \(\backslash\)
+\_Pragma(\textcolor{stringliteral}{"clang diagnostic ignored \(\backslash\)"-Warc-performSelector-leaks\(\backslash\)""}) \(\backslash\)
+if ([UIScrollView instancesRespondToSelector:NSSelectorFromString(\textcolor{stringliteral}{@"setContentInsetAdjustmentBehavior:"})]) 
+      \{\(\backslash\)
+[scrollView   performSelector:NSSelectorFromString(\textcolor{stringliteral}{@"setContentInsetAdjustmentBehavior:"}) withObject:@(2)];
+      \(\backslash\)
+\} else \{\(\backslash\)
+vc.automaticallyAdjustsScrollViewInsets = NO;\(\backslash\)
+\}\(\backslash\)
+\_Pragma(\textcolor{stringliteral}{"clang diagnostic pop"}) \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{MAREXMacro_8h_a89682fbaec7ac94ce0511c56fde8f3f3}\label{MAREXMacro_8h_a89682fbaec7ac94ce0511c56fde8f3f3}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin@{M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin}}
+\index{M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin@{M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin}{MARiPhoneX\_BottomMargin}}
+{\footnotesize\ttfamily \#define M\+A\+Ri\+Phone\+X\+\_\+\+Bottom\+Margin~(\hyperlink{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device} \&\& U\+I\+Interface\+Orientation\+Is\+Portrait(\mbox{[}U\+I\+Application shared\+Application\mbox{]}.status\+Bar\+Orientation) ? 34 \+: 0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a68cbe598f2034a16ad1e3ff9e711221d}\label{MAREXMacro_8h_a68cbe598f2034a16ad1e3ff9e711221d}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin@{M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin}}
+\index{M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin@{M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin}{MARiPhoneX\_LeftMargin}}
+{\footnotesize\ttfamily \#define M\+A\+Ri\+Phone\+X\+\_\+\+Left\+Margin~(\hyperlink{MAREXMacro_8h_ad2ceaf4d842b017f077a5111f0f3000c}{I\+S\+\_\+i\+Phone\+X\+\_\+\+Device} \&\& U\+I\+Interface\+Orientation\+Is\+Landscape(\mbox{[}U\+I\+Application shared\+Application\mbox{]}.status\+Bar\+Orientation) ? 44 \+: 0)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_abc8fb15af9f59b615992581a643fc604}\label{MAREXMacro_8h_abc8fb15af9f59b615992581a643fc604}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK@{M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK}}
+\index{M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK@{M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK}{MARSINGLE\_INSTANCE\_USING\_BLOCK}}
+{\footnotesize\ttfamily \#define M\+A\+R\+S\+I\+N\+G\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+U\+S\+I\+N\+G\+\_\+\+B\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{block }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} dispatch\_once\_t pred = 0;        \(\backslash\)
+static \textcolor{keywordtype}{id} \_sharedObject = nil;          \(\backslash\)
+dispatch\_once(&pred, ^\{                 \(\backslash\)
+\_sharedObject = block();            \(\backslash\)
+\});                                     \(\backslash\)
+return \_sharedObject;
+\end{DoxyCode}
+单例宏方法
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+返回单例 
+\end{DoxyReturn}
+\mbox{\Hypertarget{MAREXMacro_8h_a0f5a0f947a85bfe3ca3a3f924657f9ff}\label{MAREXMacro_8h_a0f5a0f947a85bfe3ca3a3f924657f9ff}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS@{M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS}}
+\index{M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS@{M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS}{MARSYNTH\_DUMMY\_CLASS}}
+{\footnotesize\ttfamily \#define M\+A\+R\+S\+Y\+N\+T\+H\+\_\+\+D\+U\+M\+M\+Y\+\_\+\+C\+L\+A\+SS(\begin{DoxyParamCaption}\item[{}]{\+\_\+name\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{@interface }MARSYNTH\_DUMMY\_CLASS\_ ## \_name\_ : NSObject @end \(\backslash\)
+\textcolor{keyword}{@implementation }MARSYNTH\_DUMMY\_CLASS\_ ## \_name\_ \textcolor{keyword}{@end}
+\end{DoxyCode}
+\mbox{\Hypertarget{MAREXMacro_8h_a70de69db126b9219821a9766728e7405}\label{MAREXMacro_8h_a70de69db126b9219821a9766728e7405}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!Need\+Scale\+Value@{Need\+Scale\+Value}}
+\index{Need\+Scale\+Value@{Need\+Scale\+Value}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{Need\+Scale\+Value}{NeedScaleValue}}
+{\footnotesize\ttfamily \#define Need\+Scale\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{MAREXMacro_8h_ab049e1bb415c7d2dfb5b7def80ff8491}{k\+Screen\+W\+I\+D\+TH} != 320)}
+
+\mbox{\Hypertarget{MAREXMacro_8h_a3e2cd1066dd3a0de73e3ea25134c6f20}\label{MAREXMacro_8h_a3e2cd1066dd3a0de73e3ea25134c6f20}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!R\+G\+B\+A\+H\+EX@{R\+G\+B\+A\+H\+EX}}
+\index{R\+G\+B\+A\+H\+EX@{R\+G\+B\+A\+H\+EX}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{R\+G\+B\+A\+H\+EX}{RGBAHEX}}
+{\footnotesize\ttfamily \#define R\+G\+B\+A\+H\+EX(\begin{DoxyParamCaption}\item[{}]{\+\_\+hex,  }\item[{}]{\+\_\+alpha }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+[UIColor \(\backslash\)
+colorWithRed:((float)((\_hex & 0xFF0000) >> 16))/255.0 \(\backslash\)
+green:((float)((\_hex & 0xFF00) >> 8))/255.0 \(\backslash\)
+blue:((float)(\_hex & 0xFF))/255.0 alpha:\_alpha]
+\end{DoxyCode}
+\mbox{\Hypertarget{MAREXMacro_8h_a165abfc8b974e0c2fa7cca8bdcb0ad1c}\label{MAREXMacro_8h_a165abfc8b974e0c2fa7cca8bdcb0ad1c}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!R\+G\+B\+H\+EX@{R\+G\+B\+H\+EX}}
+\index{R\+G\+B\+H\+EX@{R\+G\+B\+H\+EX}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{R\+G\+B\+H\+EX}{RGBHEX}}
+{\footnotesize\ttfamily \#define R\+G\+B\+H\+EX(\begin{DoxyParamCaption}\item[{}]{\+\_\+hex }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+[UIColor \(\backslash\)
+colorWithRed:((float)((\_hex & 0xFF0000) >> 16))/255.0 \(\backslash\)
+green:((float)((\_hex & 0xFF00) >> 8))/255.0 \(\backslash\)
+blue:((float)(\_hex & 0xFF))/255.0 alpha:1]
+\end{DoxyCode}
+\mbox{\Hypertarget{MAREXMacro_8h_ad3b4fc94d1816b143dd64b496b14179f}\label{MAREXMacro_8h_ad3b4fc94d1816b143dd64b496b14179f}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!U\+I\+Color\+From\+R\+GB@{U\+I\+Color\+From\+R\+GB}}
+\index{U\+I\+Color\+From\+R\+GB@{U\+I\+Color\+From\+R\+GB}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{U\+I\+Color\+From\+R\+GB}{UIColorFromRGB}}
+{\footnotesize\ttfamily \#define U\+I\+Color\+From\+R\+GB(\begin{DoxyParamCaption}\item[{}]{rgb\+Value,  }\item[{}]{alpha\+Value }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+[UIColor \(\backslash\)
+colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \(\backslash\)
+green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \(\backslash\)
+blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
+\end{DoxyCode}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{MAREXMacro_8h_a27b386ebf27fc7c3c9d3151d4038a361}\label{MAREXMacro_8h_a27b386ebf27fc7c3c9d3151d4038a361}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue@{mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue}}
+\index{mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue@{mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue()}{mar\_dispatch\_async\_on\_main\_queue()}}
+{\footnotesize\ttfamily static void mar\+\_\+dispatch\+\_\+async\+\_\+on\+\_\+main\+\_\+queue (\begin{DoxyParamCaption}\item[{void($^\wedge$)()}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Submits a block for asynchronous execution on a main queue and returns immediately. \mbox{\Hypertarget{MAREXMacro_8h_a5888b04781ccdfe0e33d141a893614f6}\label{MAREXMacro_8h_a5888b04781ccdfe0e33d141a893614f6}} 
+\index{M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}!mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue@{mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue}}
+\index{mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue@{mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue}!M\+A\+R\+E\+X\+Macro.\+h@{M\+A\+R\+E\+X\+Macro.\+h}}
+\subsubsection{\texorpdfstring{mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue()}{mar\_dispatch\_sync\_on\_main\_queue()}}
+{\footnotesize\ttfamily static void mar\+\_\+dispatch\+\_\+sync\+\_\+on\+\_\+main\+\_\+queue (\begin{DoxyParamCaption}\item[{void($^\wedge$)()}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Submits a block for execution on a main queue and waits until the block completes. 

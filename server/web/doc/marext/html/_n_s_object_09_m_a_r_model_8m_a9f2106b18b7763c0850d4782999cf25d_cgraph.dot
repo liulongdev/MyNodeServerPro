@@ -1,0 +1,17 @@
+digraph "MARModelDescription"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node15 [label="MARModelDescription",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="+[_MARModelMeta metaWith\lClass:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___m_a_r_model_meta.html#a0f5be1bdc51aaf26ec0163b69b672b1e",tooltip="Returns the cached model class meta "];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="-[MARClassInfo needUpdate]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_class_info.html#ae70c6b93e18b3bb283bd5f5bcb25dae2"];
+  Node15 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="+[NSObject(DLIntrospection)\l properties]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_object_07_d_l_introspection_08.html#afa2db3720dc242aef02b1fb520a49e98"];
+  Node15 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="MARModelCreateNumberFrom\lProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a599bb18a2f59274003507f6178e35192"];
+  Node15 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="MARModelDescriptionAddIndent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#aebf8f2bba1f6bc0884ec85468c6df682",tooltip="Add indent to string (exclude first line) "];
+}

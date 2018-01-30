@@ -1,0 +1,29 @@
+digraph "-[NSString(MAREX_Regex) mar_isValidateByRegex:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node21 [label="-[NSString(MAREX_Regex)\l mar_isValidateByRegex:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="-[NSString(MAREX_Regex)\l mar_isMobileNumber]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a38ca5415d6d4ee4943f262a232574de3"];
+  Node21 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="-[NSString(MAREX_Regex)\l mar_isEmailAddress]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#afea8124d5d0d5f029f0c645b66e7a13b"];
+  Node21 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="-[NSString(MAREX_Regex)\l mar_simpleVerifyIdentityCardNum]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a82eaded6ce24cbdec74c7d30b5d48b8e"];
+  Node21 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node25 [label="-[NSString(MAREX_Regex)\l mar_isCarNumber]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a2f2b30c6304c5aaa8eb56131e8a18c0c"];
+  Node21 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node26 [label="-[NSString(MAREX_Regex)\l mar_isMacAddress]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a526eb28269dd25a40f7b95b8fdbf4d05"];
+  Node21 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node27 [label="-[NSString(MAREX_Regex)\l mar_isValidUrl]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#aebc34621ea4778423edbee0d8e7e7279"];
+  Node21 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="-[NSString(MAREX_Regex)\l mar_isValidChinese]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a86cd0b09c3b885773e47ca3a31b8bafc"];
+  Node21 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="-[NSString(MAREX_Regex)\l mar_isValidPostalcode]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#a6afeb630cb43a12d246a25c73e2a209c"];
+  Node21 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node30 [label="-[NSString(MAREX_Regex)\l mar_isValidTaxNo]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#aa9ebdc5b33851c249387ec2ea2628da0"];
+  Node21 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node31 [label="-[NSString(MAREX_Regex)\l mar_isValidWithMinLenth\l:maxLenth:containChinese\l:firstCannotBeDigtal:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#ae374f282a2b8ba9cad5acca1b0b63fd0",tooltip="是否符合最小长度、最长长度，是否包含中文,首字母是否可以为数字 "];
+  Node21 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node32 [label="-[NSString(MAREX_Regex)\l mar_isValidWithMinLenth\l:maxLenth:containChinese\l:containDigtal:containLetter\l:containOtherCharacter:firstCannotBe\lDigtal:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___regex_08.html#ae94d6578a2ec839c9a692ed742468c73",tooltip="是否符合最小长度、最长长度，是否包含中文,数字，字母，其他字符，首字母是否可以为数字 ..."];
+}

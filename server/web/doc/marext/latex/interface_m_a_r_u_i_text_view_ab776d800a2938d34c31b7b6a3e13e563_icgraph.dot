@@ -1,0 +1,11 @@
+digraph "-[MARUITextView _setup]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="-[MARUITextView _setup]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="-[MARUITextView initWith\lCoder:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_u_i_text_view.html#a2fbcefb7713dcee5928ab1dae4716229"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="-[MARUITextView initWith\lFrame:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_u_i_text_view.html#a610ef0613d4230267ebd0c54beb07c2f"];
+}

@@ -1,0 +1,11 @@
+digraph "MARModelDescriptionAddIndent"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="MARModelDescriptionAddIndent",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="MARModelDescription",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a9f2106b18b7763c0850d4782999cf25d",tooltip="Generaate a description string "];
+  Node25 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="-[NSObject(MARModel)\l mar_modelDescription]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_object_07_m_a_r_model_08.html#a0cf32b800bc93bfcf4592b1115e4645e"];
+}

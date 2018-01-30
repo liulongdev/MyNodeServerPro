@@ -1,0 +1,215 @@
+\hypertarget{_m_a_r_debug_8h}{}\section{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.h 文件参考}
+\label{_m_a_r_debug_8h}\index{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.\+h@{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.\+h}}
+{\ttfamily \#import $<$Foundation/\+Foundation.\+h$>$}\newline
+{\ttfamily \#import \char`\"{}M\+A\+R\+E\+X\+Macro.\+h\char`\"{}}\newline
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_m_a_r_debug}{M\+A\+R\+Debug}
+\end{DoxyCompactItemize}
+\subsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a38bc1b4a03b1b32cb8190124f1729b30}{M\+A\+R\+Debug\+Log}
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL}~\mbox{[}\hyperlink{interface_m_a_r_debug}{M\+A\+R\+Debug} debug\+Log\+Level\mbox{]}
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a54d6740038d28f1d3570b5b0f2988edc}{M\+A\+R\+Debug\+Could\+Log\+Info}()~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Info)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_ae7e5d499859e29bdc346fdd73472852b}{M\+A\+R\+Debug\+Could\+Log\+Warn}()~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Warn)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a862d5861baaa0c2e1e3a5d0299347eb1}{M\+A\+R\+Debug\+Could\+Log\+Error}()~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Error)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a8e1ab2c6e4eb656800adecb8dfb76360}{M\+A\+R\+Assert}(a,  s, ...)~N\+S\+Assert(!(a), @\char`\"{}\%s \mbox{[}Line \%d\mbox{]} \%@\char`\"{}, \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,\mbox{[}N\+S\+String string\+With\+Format\+:(s), \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\mbox{]} );
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a3a446843b55a911009eed0331b32e198}{M\+A\+R\+Info\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a8f3781efa417867fa7540d14f82591c8}{M\+A\+R\+Warn\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a013fa6af77d71d3c70893b478521ef1c}{M\+A\+R\+Error\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_aeff5fdbd17cd6e2efbce28536d49919f}{M\+A\+R\+Func\+Info\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a63751ce50b96a026277b3b77f981022e}{M\+A\+R\+Func\+Warn\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_a0531ae9421a9324fe64a0035600fd967}{M\+A\+R\+Func\+Error\+Log}(format,  args...)
+\item 
+\#define \hyperlink{_m_a_r_debug_8h_aa8d61d7c2b48e4df1cc1e16a6c7f84b1}{M\+A\+R\+Log}(format, ...)~\hyperlink{_m_a_r_debug_8h_a3a446843b55a911009eed0331b32e198}{M\+A\+R\+Info\+Log}(format, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{_m_a_r_debug_8h_a92ec43c46b1dddd4d532bb2ae8c9bf10}{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS} (N\+S\+U\+Integer, M\+A\+R\+Debug\+Log\+Level)
+\item 
+\hyperlink{_m_a_r_e_x_macro_8h_a2e43651cb1ffd1adbe0a2d360e769406}{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN} N\+S\+String $\ast$ \hyperlink{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}{M\+A\+R\+Debug\+Function\+Msg} (const char $\ast$func, const char $\ast$file, int line, N\+S\+String $\ast$fmt)
+\item 
+N\+S\+String $\ast$ \hyperlink{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}{M\+A\+R\+Debug\+Method\+Msg} (id obj, S\+EL sel, const char $\ast$file, int line, N\+S\+String $\ast$fmt)
+\end{DoxyCompactItemize}
+
+
+\subsection{宏定义说明}
+\mbox{\Hypertarget{_m_a_r_debug_8h_a8e1ab2c6e4eb656800adecb8dfb76360}\label{_m_a_r_debug_8h_a8e1ab2c6e4eb656800adecb8dfb76360}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Assert@{M\+A\+R\+Assert}}
+\index{M\+A\+R\+Assert@{M\+A\+R\+Assert}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Assert}{MARAssert}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Assert(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{s,  }\item[{}]{... }\end{DoxyParamCaption})~N\+S\+Assert(!(a), @\char`\"{}\%s \mbox{[}Line \%d\mbox{]} \%@\char`\"{}, \+\_\+\+\_\+\+P\+R\+E\+T\+T\+Y\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+,\mbox{[}N\+S\+String string\+With\+Format\+:(s), \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+\mbox{]} );}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_a862d5861baaa0c2e1e3a5d0299347eb1}\label{_m_a_r_debug_8h_a862d5861baaa0c2e1e3a5d0299347eb1}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Could\+Log\+Error@{M\+A\+R\+Debug\+Could\+Log\+Error}}
+\index{M\+A\+R\+Debug\+Could\+Log\+Error@{M\+A\+R\+Debug\+Could\+Log\+Error}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Could\+Log\+Error}{MARDebugCouldLogError}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Debug\+Could\+Log\+Error(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Error)}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_a54d6740038d28f1d3570b5b0f2988edc}\label{_m_a_r_debug_8h_a54d6740038d28f1d3570b5b0f2988edc}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Could\+Log\+Info@{M\+A\+R\+Debug\+Could\+Log\+Info}}
+\index{M\+A\+R\+Debug\+Could\+Log\+Info@{M\+A\+R\+Debug\+Could\+Log\+Info}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Could\+Log\+Info}{MARDebugCouldLogInfo}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Debug\+Could\+Log\+Info(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Info)}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_ae7e5d499859e29bdc346fdd73472852b}\label{_m_a_r_debug_8h_ae7e5d499859e29bdc346fdd73472852b}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Could\+Log\+Warn@{M\+A\+R\+Debug\+Could\+Log\+Warn}}
+\index{M\+A\+R\+Debug\+Could\+Log\+Warn@{M\+A\+R\+Debug\+Could\+Log\+Warn}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Could\+Log\+Warn}{MARDebugCouldLogWarn}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Debug\+Could\+Log\+Warn(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(\hyperlink{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL} \& M\+A\+R\+Debug\+Log\+Level\+Warn)}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_a38bc1b4a03b1b32cb8190124f1729b30}\label{_m_a_r_debug_8h_a38bc1b4a03b1b32cb8190124f1729b30}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Log@{M\+A\+R\+Debug\+Log}}
+\index{M\+A\+R\+Debug\+Log@{M\+A\+R\+Debug\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Log}{MARDebugLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Debug\+Log}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}\label{_m_a_r_debug_8h_ab0c4a8191e830c6a4fdd814318764a85}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL@{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL}}
+\index{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL@{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL}{MARDEBUGLOGLEVEL}}
+{\footnotesize\ttfamily \#define M\+A\+R\+D\+E\+B\+U\+G\+L\+O\+G\+L\+E\+V\+EL~\mbox{[}\hyperlink{interface_m_a_r_debug}{M\+A\+R\+Debug} debug\+Log\+Level\mbox{]}}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_a013fa6af77d71d3c70893b478521ef1c}\label{_m_a_r_debug_8h_a013fa6af77d71d3c70893b478521ef1c}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Error\+Log@{M\+A\+R\+Error\+Log}}
+\index{M\+A\+R\+Error\+Log@{M\+A\+R\+Error\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Error\+Log}{MARErrorLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Error\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_a862d5861baaa0c2e1e3a5d0299347eb1}{MARDebugCouldLogError}()) \{                      \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}{MARDebugMethodMsg}(                \(\backslash\)
+\textcolor{keyword}{self}, \_cmd, \_\_FILE\_\_, \_\_LINE\_\_,                 \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[error]%@"}, s);                         \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{_m_a_r_debug_8h_a0531ae9421a9324fe64a0035600fd967}\label{_m_a_r_debug_8h_a0531ae9421a9324fe64a0035600fd967}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Func\+Error\+Log@{M\+A\+R\+Func\+Error\+Log}}
+\index{M\+A\+R\+Func\+Error\+Log@{M\+A\+R\+Func\+Error\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Func\+Error\+Log}{MARFuncErrorLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Func\+Error\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_a862d5861baaa0c2e1e3a5d0299347eb1}{MARDebugCouldLogError}()) \{                      \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}{MARDebugFunctionMsg}(              \(\backslash\)
+\_\_PRETTY\_FUNCTION\_\_, \_\_FILE\_\_, \_\_LINE\_\_,        \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[error]%@"}, s);                         \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{_m_a_r_debug_8h_aeff5fdbd17cd6e2efbce28536d49919f}\label{_m_a_r_debug_8h_aeff5fdbd17cd6e2efbce28536d49919f}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Func\+Info\+Log@{M\+A\+R\+Func\+Info\+Log}}
+\index{M\+A\+R\+Func\+Info\+Log@{M\+A\+R\+Func\+Info\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Func\+Info\+Log}{MARFuncInfoLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Func\+Info\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_a54d6740038d28f1d3570b5b0f2988edc}{MARDebugCouldLogInfo}()) \{                       \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}{MARDebugFunctionMsg}(              \(\backslash\)
+\_\_PRETTY\_FUNCTION\_\_, \_\_FILE\_\_, \_\_LINE\_\_,        \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[info]%@"}, s);                          \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{_m_a_r_debug_8h_a63751ce50b96a026277b3b77f981022e}\label{_m_a_r_debug_8h_a63751ce50b96a026277b3b77f981022e}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Func\+Warn\+Log@{M\+A\+R\+Func\+Warn\+Log}}
+\index{M\+A\+R\+Func\+Warn\+Log@{M\+A\+R\+Func\+Warn\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Func\+Warn\+Log}{MARFuncWarnLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Func\+Warn\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_ae7e5d499859e29bdc346fdd73472852b}{MARDebugCouldLogWarn}()) \{                       \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}{MARDebugFunctionMsg}(              \(\backslash\)
+\_\_PRETTY\_FUNCTION\_\_, \_\_FILE\_\_, \_\_LINE\_\_,        \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[warn]%@"}, s);                          \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{_m_a_r_debug_8h_a3a446843b55a911009eed0331b32e198}\label{_m_a_r_debug_8h_a3a446843b55a911009eed0331b32e198}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Info\+Log@{M\+A\+R\+Info\+Log}}
+\index{M\+A\+R\+Info\+Log@{M\+A\+R\+Info\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Info\+Log}{MARInfoLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Info\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_a54d6740038d28f1d3570b5b0f2988edc}{MARDebugCouldLogInfo}()) \{                       \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}{MARDebugMethodMsg}(                \(\backslash\)
+\textcolor{keyword}{self}, \_cmd, \_\_FILE\_\_, \_\_LINE\_\_,                 \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[info]%@"}, s);                          \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+\mbox{\Hypertarget{_m_a_r_debug_8h_aa8d61d7c2b48e4df1cc1e16a6c7f84b1}\label{_m_a_r_debug_8h_aa8d61d7c2b48e4df1cc1e16a6c7f84b1}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Log@{M\+A\+R\+Log}}
+\index{M\+A\+R\+Log@{M\+A\+R\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Log}{MARLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{... }\end{DoxyParamCaption})~\hyperlink{_m_a_r_debug_8h_a3a446843b55a911009eed0331b32e198}{M\+A\+R\+Info\+Log}(format, \#\#\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+);}
+
+\mbox{\Hypertarget{_m_a_r_debug_8h_a8f3781efa417867fa7540d14f82591c8}\label{_m_a_r_debug_8h_a8f3781efa417867fa7540d14f82591c8}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Warn\+Log@{M\+A\+R\+Warn\+Log}}
+\index{M\+A\+R\+Warn\+Log@{M\+A\+R\+Warn\+Log}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Warn\+Log}{MARWarnLog}}
+{\footnotesize\ttfamily \#define M\+A\+R\+Warn\+Log(\begin{DoxyParamCaption}\item[{}]{format,  }\item[{}]{args... }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                                    \(\backslash\)
+if (\hyperlink{_m_a_r_debug_8h_ae7e5d499859e29bdc346fdd73472852b}{MARDebugCouldLogWarn}()) \{                       \(\backslash\)
+NSString *s = \hyperlink{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}{MARDebugMethodMsg}(                \(\backslash\)
+\textcolor{keyword}{self}, \_cmd, \_\_FILE\_\_, \_\_LINE\_\_,                 \(\backslash\)
+[NSString stringWithFormat: format, ##args]);   \(\backslash\)
+NSLog(\textcolor{stringliteral}{@"[warn]%@"}, s);                          \(\backslash\)
+\}                                                   \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}\label{_m_a_r_debug_8h_ad7fcfa8be0aa5e2971805b89ad37c7a9}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Function\+Msg@{M\+A\+R\+Debug\+Function\+Msg}}
+\index{M\+A\+R\+Debug\+Function\+Msg@{M\+A\+R\+Debug\+Function\+Msg}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Function\+Msg()}{MARDebugFunctionMsg()}}
+{\footnotesize\ttfamily \hyperlink{_m_a_r_e_x_macro_8h_a2e43651cb1ffd1adbe0a2d360e769406}{M\+A\+R\+\_\+\+E\+X\+T\+E\+R\+N\+\_\+\+C\+\_\+\+B\+E\+G\+IN} N\+S\+String$\ast$ M\+A\+R\+Debug\+Function\+Msg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{func,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{N\+S\+String $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+Used to produce a format string for logging a message with function location details. \mbox{\Hypertarget{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}\label{_m_a_r_debug_8h_ae88eb11af15e4c0e7896e8a91b02f449}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!M\+A\+R\+Debug\+Method\+Msg@{M\+A\+R\+Debug\+Method\+Msg}}
+\index{M\+A\+R\+Debug\+Method\+Msg@{M\+A\+R\+Debug\+Method\+Msg}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Method\+Msg()}{MARDebugMethodMsg()}}
+{\footnotesize\ttfamily N\+S\+String$\ast$ M\+A\+R\+Debug\+Method\+Msg (\begin{DoxyParamCaption}\item[{id}]{obj,  }\item[{S\+EL}]{sel,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{N\+S\+String $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+Used to produce a format string for logging a message with method location details. \mbox{\Hypertarget{_m_a_r_debug_8h_a92ec43c46b1dddd4d532bb2ae8c9bf10}\label{_m_a_r_debug_8h_a92ec43c46b1dddd4d532bb2ae8c9bf10}} 
+\index{M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}!N\+S\+\_\+\+O\+P\+T\+I\+O\+NS@{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS}}
+\index{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS@{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS}!M\+A\+R\+Debug.\+h@{M\+A\+R\+Debug.\+h}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+O\+P\+T\+I\+O\+N\+S()}{NS\_OPTIONS()}}
+{\footnotesize\ttfamily typedef N\+S\+\_\+\+O\+P\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{N\+S\+U\+Integer}]{,  }\item[{M\+A\+R\+Debug\+Log\+Level}]{ }\end{DoxyParamCaption})}
+

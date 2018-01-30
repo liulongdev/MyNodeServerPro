@@ -25,8 +25,8 @@ function mar_checkAPIRequest(req) {
     {
         const currentTimeTamp = _(_.now() / 1000).toInteger();
         const callTimeTamp = _(params['timeStamp']).toInteger();
-        // 时间戳要在一分钟之内
-        if (Math.abs(currentTimeTamp - callTimeTamp) < 60) {
+        // 时间戳要在12小时内
+        if (Math.abs(currentTimeTamp - callTimeTamp) < 86400) {
             let originalSignatureStr = 'appVersion' + params['appVersion']
                 + 'deviceType' + params['deviceType']
                 + 'deviceUUID' + params['deviceUUID']

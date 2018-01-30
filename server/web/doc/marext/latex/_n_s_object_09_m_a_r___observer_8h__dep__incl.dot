@@ -1,0 +1,10 @@
+digraph "/Users/Martin/Dev/SourceTree/MAREXT/MAREX/MARExtension/Foundation/NSObject+MAR_Observer.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/Foundation/NSObject+MAR_Observer.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/Foundation/NSObject+MAR_Observer.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r___observer_8m.html"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/MARCategory.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_category_8h.html"];
+}

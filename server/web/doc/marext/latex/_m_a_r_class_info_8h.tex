@@ -1,0 +1,130 @@
+\hypertarget{_m_a_r_class_info_8h}{}\section{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\+M\+A\+R\+Class\+Info.h 文件参考}
+\label{_m_a_r_class_info_8h}\index{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\+M\+A\+R\+Class\+Info.\+h@{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\+M\+A\+R\+Class\+Info.\+h}}
+{\ttfamily \#import $<$Foundation/\+Foundation.\+h$>$}\newline
+{\ttfamily \#import $<$objc/runtime.\+h$>$}\newline
+\subsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{interface_m_a_r_class_ivar_info}{M\+A\+R\+Class\+Ivar\+Info}
+\item 
+class \hyperlink{interface_m_a_r_class_method_info}{M\+A\+R\+Class\+Method\+Info}
+\item 
+class \hyperlink{interface_m_a_r_class_property_info}{M\+A\+R\+Class\+Property\+Info}
+\item 
+class \hyperlink{interface_m_a_r_class_info}{M\+A\+R\+Class\+Info}
+\end{DoxyCompactItemize}
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+N\+O\+N\+N\+U\+L\+L\+\_\+\+B\+E\+G\+IN typedef \hyperlink{_m_a_r_class_info_8h_ae2ce273746ea36d7659b307e97e67751}{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS} (N\+S\+U\+Integer, M\+A\+R\+Encoding\+Type)
+\item 
+M\+A\+R\+Encoding\+Type \hyperlink{_m_a_r_class_info_8h_a23a318f8bad6311dcaf6b82ecb1f86d1}{M\+A\+R\+Encoding\+Get\+Type} (const char $\ast$type\+Encoding)
+\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{_m_a_r_class_info_8h_a23a318f8bad6311dcaf6b82ecb1f86d1}\label{_m_a_r_class_info_8h_a23a318f8bad6311dcaf6b82ecb1f86d1}} 
+\index{M\+A\+R\+Class\+Info.\+h@{M\+A\+R\+Class\+Info.\+h}!M\+A\+R\+Encoding\+Get\+Type@{M\+A\+R\+Encoding\+Get\+Type}}
+\index{M\+A\+R\+Encoding\+Get\+Type@{M\+A\+R\+Encoding\+Get\+Type}!M\+A\+R\+Class\+Info.\+h@{M\+A\+R\+Class\+Info.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Encoding\+Get\+Type()}{MAREncodingGetType()}}
+{\footnotesize\ttfamily M\+A\+R\+Encoding\+Type M\+A\+R\+Encoding\+Get\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{type\+Encoding }\end{DoxyParamCaption})}
+
+Get the type from a Type-\/\+Encoding string.
+
+See also\+: \href{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html}{\tt https\+://developer.\+apple.\+com/library/mac/documentation/\+Cocoa/\+Conceptual/\+Obj\+C\+Runtime\+Guide/\+Articles/ocrt\+Type\+Encodings.\+html} \href{https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtPropertyIntrospection.html}{\tt https\+://developer.\+apple.\+com/library/mac/documentation/\+Cocoa/\+Conceptual/\+Obj\+C\+Runtime\+Guide/\+Articles/ocrt\+Property\+Introspection.\+html}
+
+
+\begin{DoxyParams}{参数}
+{\em type\+Encoding} & A Type-\/\+Encoding string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+The encoding type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_m_a_r_class_info_8h_ae2ce273746ea36d7659b307e97e67751}\label{_m_a_r_class_info_8h_ae2ce273746ea36d7659b307e97e67751}} 
+\index{M\+A\+R\+Class\+Info.\+h@{M\+A\+R\+Class\+Info.\+h}!N\+S\+\_\+\+O\+P\+T\+I\+O\+NS@{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS}}
+\index{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS@{N\+S\+\_\+\+O\+P\+T\+I\+O\+NS}!M\+A\+R\+Class\+Info.\+h@{M\+A\+R\+Class\+Info.\+h}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+O\+P\+T\+I\+O\+N\+S()}{NS\_OPTIONS()}}
+{\footnotesize\ttfamily N\+S\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+N\+O\+N\+N\+U\+L\+L\+\_\+\+B\+E\+G\+IN typedef N\+S\+\_\+\+O\+P\+T\+I\+O\+NS (\begin{DoxyParamCaption}\item[{N\+S\+U\+Integer}]{,  }\item[{M\+A\+R\+Encoding\+Type}]{ }\end{DoxyParamCaption})}
+
+Between N\+S\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+N\+O\+N\+N\+U\+L\+L\+\_\+\+B\+E\+G\+IN and N\+S\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+N\+O\+N\+N\+U\+L\+L\+\_\+\+E\+ND assum property nonnull default, if don\textquotesingle{}t should add nullabel Type encoding\textquotesingle{}s type. $<$ mask of type value
+
+$<$ unknown
+
+$<$ void
+
+$<$ bool
+
+$<$ char / B\+O\+OL
+
+$<$ unsigned char
+
+$<$ short
+
+$<$ unsigned short
+
+$<$ int
+
+$<$ unsigned int
+
+$<$ long long
+
+$<$ unsigned long long
+
+$<$ float
+
+$<$ double
+
+$<$ long double
+
+$<$ id
+
+$<$ Class
+
+$<$ S\+EL
+
+$<$ block
+
+$<$ void$\ast$
+
+$<$ struct
+
+$<$ union
+
+$<$ char$\ast$
+
+$<$ char\mbox{[}10\mbox{]} (for example)
+
+$<$ mask of qualifier
+
+$<$ const
+
+$<$ in
+
+$<$ inout
+
+$<$ out
+
+$<$ bycopy
+
+$<$ byref
+
+$<$ oneway
+
+$<$ mask of property
+
+$<$ readonly
+
+$<$ copy
+
+$<$ retain
+
+$<$ nonatomic
+
+$<$ weak
+
+$<$ getter=
+
+$<$ setter=
+
+$<$  

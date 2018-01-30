@@ -1,0 +1,29 @@
+digraph "+[NSFileManager(MAREX) mar_getLibraryDirectoryForFile:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node78 [label="+[NSFileManager(MAREX)\l mar_getLibraryDirectoryFor\lFile:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node78 -> Node79 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node79 [label="+[NSFileManager(MAREX)\l mar_saveArrayToPath\l:withFilename:array:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a3b9744dbfce7094347afad11a64fef35"];
+  Node78 -> Node80 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node80 [label="+[NSFileManager(MAREX)\l mar_loadArrayFromPath\l:withFilename:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#ab821176cefef4a942dfe15f7e144b42c"];
+  Node78 -> Node81 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node81 [label="+[NSFileManager(MAREX)\l mar_fileSize:fromDirectory:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a2b6ca963f97ef62f68eb60a5f7bdb175"];
+  Node78 -> Node82 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node82 [label="+[NSFileManager(MAREX)\l mar_deleteFile:fromDirectory:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#ab547dd4af4e305d944b72c7ed8ef73da"];
+  Node78 -> Node83 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node83 [label="+[NSFileManager(MAREX)\l mar_moveLocalFile:fromDirectory\l:toDirectory:withFolderName:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a38e43ad9efe39a7edd96c8bd3dcce0d0"];
+  Node83 -> Node84 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node84 [label="+[NSFileManager(MAREX)\l mar_moveLocalFile:fromDirectory\l:toDirectory:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#af00a05aea9bfaf3e97d84a3c30beb1bd"];
+  Node78 -> Node85 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node85 [label="+[NSFileManager(MAREX)\l mar_renameFileFromDirectory\l:atPath:withOldName:andNewName:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a1b0741c9779a481247320ca490837a06"];
+  Node78 -> Node86 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node86 [label="+[NSFileManager(MAREX)\l mar_getSettings:objectForKey:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#afd1c2711d46813edd85bc8a6ca453460"];
+  Node86 -> Node87 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node87 [label="+[NSFileManager(MAREX)\l mar_getAppSettingsForObject\lWithKey:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a4464b7dbe0f271a8a941f7c39487109e"];
+  Node78 -> Node88 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node88 [label="+[NSFileManager(MAREX)\l mar_setSettings:object\l:forKey:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a1cab4f868f67e0b4dbffed9d39dffebd"];
+  Node88 -> Node89 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node89 [label="+[NSFileManager(MAREX)\l mar_setAppSettingsForObject\l:forKey:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_file_manager_07_m_a_r_e_x_08.html#a3f1aeb8e4554b64c34c4deb3b804f2f4"];
+}

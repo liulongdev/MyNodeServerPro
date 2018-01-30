@@ -1,0 +1,9 @@
+digraph "CGPointPixelRound"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node56 [label="CGPointPixelRound",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node56 -> Node57 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node57 [label="CGRectPixelRound",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_c_g_utilities_8h.html#acabf5bbbb46b27e13e26a88d0206a18f",tooltip="round point value for pixel-aligned "];
+}

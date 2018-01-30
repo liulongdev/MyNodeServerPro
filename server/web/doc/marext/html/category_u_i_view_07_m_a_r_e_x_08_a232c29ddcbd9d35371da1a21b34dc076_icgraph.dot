@@ -1,0 +1,9 @@
+digraph "-[UIView(MAREX) mar_snapshotImage]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node41 [label="-[UIView(MAREX) mar\l_snapshotImage]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node41 -> Node42 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="-[UIView(MAREX) mar\l_snapshotImageAfterScreenUpdates:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_view_07_m_a_r_e_x_08.html#aa97274c96618d7290460e1d7032a2d2b"];
+}

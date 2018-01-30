@@ -1,0 +1,40 @@
+\hypertarget{_m_a_r_debug_8m}{}\section{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.m 文件参考}
+\label{_m_a_r_debug_8m}\index{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.\+m@{/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Debug/\+M\+A\+R\+Debug.\+m}}
+{\ttfamily \#import \char`\"{}M\+A\+R\+Debug.\+h\char`\"{}}\newline
+{\ttfamily \#import $<$objc/runtime.\+h$>$}\newline
+\subsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+String $\ast$ \hyperlink{_m_a_r_debug_8m_acd9e6a2924ec25c718881318994db1c0}{M\+A\+R\+Debug\+Function\+Msg} (const char $\ast$func, const char $\ast$file, int line, N\+S\+String $\ast$fmt)
+\item 
+N\+S\+String $\ast$ \hyperlink{_m_a_r_debug_8m_ae88eb11af15e4c0e7896e8a91b02f449}{M\+A\+R\+Debug\+Method\+Msg} (id obj, S\+EL sel, const char $\ast$file, int line, N\+S\+String $\ast$fmt)
+\end{DoxyCompactItemize}
+\subsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+static M\+A\+R\+Debug\+Log\+Level \hyperlink{_m_a_r_debug_8m_a2b166765bc07ccb856f37061f2bf98d4}{\+\_\+debug\+Log\+Level}
+\end{DoxyCompactItemize}
+
+
+\subsection{函数说明}
+\mbox{\Hypertarget{_m_a_r_debug_8m_acd9e6a2924ec25c718881318994db1c0}\label{_m_a_r_debug_8m_acd9e6a2924ec25c718881318994db1c0}} 
+\index{M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}!M\+A\+R\+Debug\+Function\+Msg@{M\+A\+R\+Debug\+Function\+Msg}}
+\index{M\+A\+R\+Debug\+Function\+Msg@{M\+A\+R\+Debug\+Function\+Msg}!M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Function\+Msg()}{MARDebugFunctionMsg()}}
+{\footnotesize\ttfamily N\+S\+String$\ast$ M\+A\+R\+Debug\+Function\+Msg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{func,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{N\+S\+String $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+Used to produce a format string for logging a message with function location details. \mbox{\Hypertarget{_m_a_r_debug_8m_ae88eb11af15e4c0e7896e8a91b02f449}\label{_m_a_r_debug_8m_ae88eb11af15e4c0e7896e8a91b02f449}} 
+\index{M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}!M\+A\+R\+Debug\+Method\+Msg@{M\+A\+R\+Debug\+Method\+Msg}}
+\index{M\+A\+R\+Debug\+Method\+Msg@{M\+A\+R\+Debug\+Method\+Msg}!M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}}
+\subsubsection{\texorpdfstring{M\+A\+R\+Debug\+Method\+Msg()}{MARDebugMethodMsg()}}
+{\footnotesize\ttfamily N\+S\+String$\ast$ M\+A\+R\+Debug\+Method\+Msg (\begin{DoxyParamCaption}\item[{id}]{obj,  }\item[{S\+EL}]{sel,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{N\+S\+String $\ast$}]{fmt }\end{DoxyParamCaption})}
+
+Used to produce a format string for logging a message with method location details. 
+
+\subsection{变量说明}
+\mbox{\Hypertarget{_m_a_r_debug_8m_a2b166765bc07ccb856f37061f2bf98d4}\label{_m_a_r_debug_8m_a2b166765bc07ccb856f37061f2bf98d4}} 
+\index{M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}!\+\_\+debug\+Log\+Level@{\+\_\+debug\+Log\+Level}}
+\index{\+\_\+debug\+Log\+Level@{\+\_\+debug\+Log\+Level}!M\+A\+R\+Debug.\+m@{M\+A\+R\+Debug.\+m}}
+\subsubsection{\texorpdfstring{\+\_\+debug\+Log\+Level}{\_debugLogLevel}}
+{\footnotesize\ttfamily M\+A\+R\+Debug\+Log\+Level \+\_\+debug\+Log\+Level\hspace{0.3cm}{\ttfamily [static]}}
+

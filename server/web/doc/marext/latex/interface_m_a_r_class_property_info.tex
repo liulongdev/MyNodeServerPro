@@ -1,0 +1,159 @@
+\hypertarget{interface_m_a_r_class_property_info}{}\section{M\+A\+R\+Class\+Property\+Info类 参考}
+\label{interface_m_a_r_class_property_info}\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+
+
+{\ttfamily \#import $<$M\+A\+R\+Class\+Info.\+h$>$}
+
+类 M\+A\+R\+Class\+Property\+Info 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_m_a_r_class_property_info}
+\end{center}
+\end{figure}
+\subsection*{构造函数}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) -\/ \hyperlink{interface_m_a_r_class_property_info_afa1f3862f32fdfe20c54eab41ad7f63b}{init\+With\+Property\+:}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+objc\+\_\+property\+\_\+t \hyperlink{interface_m_a_r_class_property_info_a30d9f591e6d05f5432f1f24654296111}{property}
+\begin{DoxyCompactList}\small\item\em property\textquotesingle{}s opaque struct \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_m_a_r_class_property_info_aedc5c86476921ce285141b3ac6de04c5}{name}
+\begin{DoxyCompactList}\small\item\em property\textquotesingle{}s name \end{DoxyCompactList}\item 
+M\+A\+R\+Encoding\+Type \hyperlink{interface_m_a_r_class_property_info_a6959f16236a3ba5fb5f912c8df5b5055}{type}
+\begin{DoxyCompactList}\small\item\em property\textquotesingle{}s type \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_m_a_r_class_property_info_a2cc7316bac321439ca369e2fb44cc9f3}{type\+Encoding}
+\begin{DoxyCompactList}\small\item\em property\textquotesingle{}s encoding value \end{DoxyCompactList}\item 
+N\+S\+String $\ast$ \hyperlink{interface_m_a_r_class_property_info_ac14b2b00995190177a9a4962d04269ab}{ivar\+Name}
+\begin{DoxyCompactList}\small\item\em property\textquotesingle{}s ivar name \end{DoxyCompactList}\item 
+Class \hyperlink{interface_m_a_r_class_property_info_a703b535aa974de24490e5699968663a6}{cls}
+\begin{DoxyCompactList}\small\item\em may be nil \end{DoxyCompactList}\item 
+N\+S\+Array$<$ N\+S\+String $\ast$ $>$ $\ast$ \hyperlink{interface_m_a_r_class_property_info_a8ab085cd93eaa1973920faaf27a4311c}{protocols}
+\begin{DoxyCompactList}\small\item\em may nil \end{DoxyCompactList}\item 
+S\+EL \hyperlink{interface_m_a_r_class_property_info_a51e491e6475d0516acb38541a3c90c7d}{getter}
+\begin{DoxyCompactList}\small\item\em getter (nonnull) \end{DoxyCompactList}\item 
+S\+EL \hyperlink{interface_m_a_r_class_property_info_a983d6c85e309ba731597a89a4452602c}{setter}
+\begin{DoxyCompactList}\small\item\em setter (nonnull) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+Property information. 
+
+\subsection{函数文档}
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_afa1f3862f32fdfe20c54eab41ad7f63b}\label{interface_m_a_r_class_property_info_afa1f3862f32fdfe20c54eab41ad7f63b}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!init\+With\+Property\+:@{init\+With\+Property\+:}}
+\index{init\+With\+Property\+:@{init\+With\+Property\+:}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{init\+With\+Property\+:()}{initWithProperty:()}}
+{\footnotesize\ttfamily -\/ (instancetype) init\+With\+Property\+: \begin{DoxyParamCaption}\item[{(objc\+\_\+property\+\_\+t)}]{property }\end{DoxyParamCaption}}
+
+Creates and returns a property info object.
+
+
+\begin{DoxyParams}{参数}
+{\em property} & property opaque struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+A new object, or nil if an error occurs. 
+\end{DoxyReturn}
+
+
+\subsection{属性说明}
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a703b535aa974de24490e5699968663a6}\label{interface_m_a_r_class_property_info_a703b535aa974de24490e5699968663a6}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!cls@{cls}}
+\index{cls@{cls}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{cls}{cls}}
+{\footnotesize\ttfamily -\/ (Class) cls\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+may be nil 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a51e491e6475d0516acb38541a3c90c7d}\label{interface_m_a_r_class_property_info_a51e491e6475d0516acb38541a3c90c7d}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!getter@{getter}}
+\index{getter@{getter}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{getter}{getter}}
+{\footnotesize\ttfamily -\/ (S\+EL) getter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+getter (nonnull) 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_ac14b2b00995190177a9a4962d04269ab}\label{interface_m_a_r_class_property_info_ac14b2b00995190177a9a4962d04269ab}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!ivar\+Name@{ivar\+Name}}
+\index{ivar\+Name@{ivar\+Name}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{ivar\+Name}{ivarName}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) ivar\+Name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+property\textquotesingle{}s ivar name 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_aedc5c86476921ce285141b3ac6de04c5}\label{interface_m_a_r_class_property_info_aedc5c86476921ce285141b3ac6de04c5}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!name@{name}}
+\index{name@{name}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+property\textquotesingle{}s name 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a30d9f591e6d05f5432f1f24654296111}\label{interface_m_a_r_class_property_info_a30d9f591e6d05f5432f1f24654296111}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!property@{property}}
+\index{property@{property}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{property}{property}}
+{\footnotesize\ttfamily -\/ (objc\+\_\+property\+\_\+t) property\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+property\textquotesingle{}s opaque struct 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a8ab085cd93eaa1973920faaf27a4311c}\label{interface_m_a_r_class_property_info_a8ab085cd93eaa1973920faaf27a4311c}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!protocols@{protocols}}
+\index{protocols@{protocols}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{protocols}{protocols}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$<$N\+S\+String $\ast$$>$$\ast$) protocols\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+may nil 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a983d6c85e309ba731597a89a4452602c}\label{interface_m_a_r_class_property_info_a983d6c85e309ba731597a89a4452602c}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!setter@{setter}}
+\index{setter@{setter}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{setter}{setter}}
+{\footnotesize\ttfamily -\/ (S\+EL) setter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+setter (nonnull) 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a6959f16236a3ba5fb5f912c8df5b5055}\label{interface_m_a_r_class_property_info_a6959f16236a3ba5fb5f912c8df5b5055}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!type@{type}}
+\index{type@{type}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Encoding\+Type) type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+property\textquotesingle{}s type 
+
+\mbox{\Hypertarget{interface_m_a_r_class_property_info_a2cc7316bac321439ca369e2fb44cc9f3}\label{interface_m_a_r_class_property_info_a2cc7316bac321439ca369e2fb44cc9f3}} 
+\index{M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}!type\+Encoding@{type\+Encoding}}
+\index{type\+Encoding@{type\+Encoding}!M\+A\+R\+Class\+Property\+Info@{M\+A\+R\+Class\+Property\+Info}}
+\subsubsection{\texorpdfstring{type\+Encoding}{typeEncoding}}
+{\footnotesize\ttfamily -\/ (N\+S\+String$\ast$) type\+Encoding\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}
+
+
+
+property\textquotesingle{}s encoding value 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\hyperlink{_m_a_r_class_info_8h}{M\+A\+R\+Class\+Info.\+h}\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\hyperlink{_m_a_r_class_info_8m}{M\+A\+R\+Class\+Info.\+m}\end{DoxyCompactItemize}

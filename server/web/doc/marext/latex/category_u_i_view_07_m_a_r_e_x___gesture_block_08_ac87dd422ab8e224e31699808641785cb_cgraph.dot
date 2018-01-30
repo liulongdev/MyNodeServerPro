@@ -1,0 +1,9 @@
+digraph "-[UIView(MAREX_GestureBlock) mar_whenDoubleTapped:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="-[UIView(MAREX_GestureBlock)\l mar_whenDoubleTapped:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="-[UIView(MAREX_GestureBlock)\l mar_whenTouches:tapped\l:handler:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_view_07_m_a_r_e_x___gesture_block_08.html#a4c9a3fceb9b732e8f367d7b0bc0eb6b3"];
+}

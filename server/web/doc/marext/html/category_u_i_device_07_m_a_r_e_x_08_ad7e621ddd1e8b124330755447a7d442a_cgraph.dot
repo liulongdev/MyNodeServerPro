@@ -1,0 +1,9 @@
+digraph "+[UIDevice(MAREX) mar_get_net_interface_counter]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="+[UIDevice(MAREX) mar\l_get_net_interface_counter]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="+[UIDevice(MAREX) mar\l_net_counter_add]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_device_07_m_a_r_e_x_08.html#aea1f85cddfeb5c77009673b1da0c8d2b"];
+}

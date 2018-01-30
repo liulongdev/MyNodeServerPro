@@ -1,0 +1,9 @@
+digraph "NS_ENUM_AVAILABLE_IOS"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="NS_ENUM_AVAILABLE_IOS",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="NS_ENUM",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_touch_i_d_8h.html#aa9f02f0774a67daddf122e541abf4585"];
+}

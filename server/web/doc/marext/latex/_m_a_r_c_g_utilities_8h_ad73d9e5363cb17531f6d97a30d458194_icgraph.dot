@@ -1,0 +1,11 @@
+digraph "CGPointPixelCeil"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node42 [label="CGPointPixelCeil",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node42 -> Node43 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node43 [label="CGRectPixelFloor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_c_g_utilities_8h.html#adbf0da352bb1f181e4bd5a87f7168b48",tooltip="floor point value for pixel-aligned "];
+  Node42 -> Node44 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node44 [label="CGRectPixelCeil",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_c_g_utilities_8h.html#aedfa1fcc3497f79ba944dccdc7e34bdf",tooltip="ceil point value for pixel-aligned "];
+}

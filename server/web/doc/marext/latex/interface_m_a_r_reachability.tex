@@ -1,0 +1,249 @@
+\hypertarget{interface_m_a_r_reachability}{}\section{M\+A\+R\+Reachability类 参考}
+\label{interface_m_a_r_reachability}\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+
+
+{\ttfamily \#import $<$M\+A\+R\+Reachability.\+h$>$}
+
+类 M\+A\+R\+Reachability 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_m_a_r_reachability}
+\end{center}
+\end{figure}
+\subsection*{构造函数}
+\begin{DoxyCompactItemize}
+\item 
+(M\+A\+R\+Reachability\+W\+W\+A\+N\+Status \hyperlink{interface_m_a_r_reachability_a7c116d20e2a6072f3521ce7d53d033b9}{wwan\+Status}) -\/ \hyperlink{interface_m_a_r_reachability_a54d3eee2e017ed0eb16f9f187c92e64a}{N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS}
+\begin{DoxyCompactList}\small\item\em Current W\+W\+AN status. \end{DoxyCompactList}\item 
+(instancetype) -\/ \hyperlink{interface_m_a_r_reachability_a394738059b07f690a829f2c1a1556d4b}{init}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(instancetype) -\/ \hyperlink{interface_m_a_r_reachability_aeef8a85afd735d970144a6f0d36b71f0}{init\+With\+Ref\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_m_a_r_reachability_a5c52363b677fa0ac30ecb4a92a707b11}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_m_a_r_reachability_a9fec680eafeaa0a2047b90c8507bba0d}{set\+Scheduled\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(M\+A\+R\+Reachability\+W\+W\+A\+N\+Status) -\/ \hyperlink{interface_m_a_r_reachability_a7c116d20e2a6072f3521ce7d53d033b9}{wwan\+Status}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(B\+O\+OL) -\/ \hyperlink{interface_m_a_r_reachability_ae3321738fab3aa1aff0b9b38c1694640}{is\+Reachable}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_m_a_r_reachability_af67ad59328fec034a21ecda91131c2db}{set\+Notify\+Block\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{类方法}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) + \hyperlink{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}{reachability}
+\begin{DoxyCompactList}\small\item\em Create an object to check the reachability of the default route. \end{DoxyCompactList}\item 
+(\char`\"{}unnecessary and potentially harmful\char`\"{}) + \hyperlink{interface_m_a_r_reachability_a52766c60081736ecc8b4217c4ebd503a}{D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}
+\begin{DoxyCompactList}\small\item\em Create an object to check the reachability of the local W\+I-\/\+FI. \end{DoxyCompactList}\item 
+(nullable instancetype) + \hyperlink{interface_m_a_r_reachability_a51361d8879b07756e6606da49af4a2a7}{reachability\+With\+Hostname\+:}
+\begin{DoxyCompactList}\small\item\em Create an object to check the reachability of a given host name. \end{DoxyCompactList}\item 
+(nullable instancetype) + \hyperlink{interface_m_a_r_reachability_abf53893fed79ab36e7e1d439a7763226}{reachability\+With\+Address\+:}
+\item 
+(dispatch\+\_\+queue\+\_\+t) + \hyperlink{interface_m_a_r_reachability_a48b584d6d0261105cb2d5c4e50158833}{shared\+Queue}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(instancetype) + \hyperlink{interface_m_a_r_reachability_a706357e0b7f514d9604406ee6b9a485d}{reachability\+For\+Local\+Wifi}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{属性}
+\begin{DoxyCompactItemize}
+\item 
+S\+C\+Network\+Reachability\+Flags \hyperlink{interface_m_a_r_reachability_a5609e9b8862a463872d79be768d5c75c}{flags}
+\begin{DoxyCompactList}\small\item\em Current flags. \end{DoxyCompactList}\item 
+M\+A\+R\+Reachability\+Status \hyperlink{interface_m_a_r_reachability_a016228b173329e79b0857ca50c29ddc8}{status}
+\begin{DoxyCompactList}\small\item\em Current status. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface_m_a_r_reachability_a423d1d55fdbc1866c41bcaaf433aa982}{reachable}
+\begin{DoxyCompactList}\small\item\em Current reachable status. \end{DoxyCompactList}\item 
+void($^\wedge$ \hyperlink{interface_m_a_r_reachability_a139ed1358b13ec8fa7386ff02b611cdb}{notify\+Block} )(\hyperlink{interface_m_a_r_reachability}{M\+A\+R\+Reachability} $\ast$\hyperlink{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}{reachability})
+\begin{DoxyCompactList}\small\item\em Notify block which will be called on main thread when network changed. \end{DoxyCompactList}\item 
+S\+C\+Network\+Reachability\+Ref \hyperlink{interface_m_a_r_reachability_a9c8a836f1b3f522197e8499e233a177a}{ref}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+B\+O\+OL \hyperlink{interface_m_a_r_reachability_a762a351206245fb37b72f2e043c72a31}{scheduled}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+B\+O\+OL \hyperlink{interface_m_a_r_reachability_a19f1023342e583c6c42ab685098801a8}{allow\+W\+W\+AN}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+C\+T\+Telephony\+Network\+Info $\ast$ \hyperlink{interface_m_a_r_reachability_a0a578dd8e75987a6a245834b48bd50b5}{network\+Info}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+{\ttfamily \hyperlink{interface_m_a_r_reachability}{M\+A\+R\+Reachability}} can used to monitor the network status of an i\+OS device. 
+
+\subsection{函数文档}
+\mbox{\Hypertarget{interface_m_a_r_reachability_a5c52363b677fa0ac30ecb4a92a707b11}\label{interface_m_a_r_reachability_a5c52363b677fa0ac30ecb4a92a707b11}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{dealloc()}{dealloc()}}
+{\footnotesize\ttfamily -\/ (void) dealloc \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a52766c60081736ecc8b4217c4ebd503a}\label{interface_m_a_r_reachability_a52766c60081736ecc8b4217c4ebd503a}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE@{D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}}
+\index{D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE@{D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E()}{DEPRECATED\_MSG\_ATTRIBUTE()}}
+{\footnotesize\ttfamily + (\char`\"{}unnecessary and potentially harmful\char`\"{}) D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+M\+S\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Create an object to check the reachability of the local W\+I-\/\+FI. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a394738059b07f690a829f2c1a1556d4b}\label{interface_m_a_r_reachability_a394738059b07f690a829f2c1a1556d4b}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!init@{init}}
+\index{init@{init}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily -\/ (instancetype) init \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_aeef8a85afd735d970144a6f0d36b71f0}\label{interface_m_a_r_reachability_aeef8a85afd735d970144a6f0d36b71f0}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!init\+With\+Ref\+:@{init\+With\+Ref\+:}}
+\index{init\+With\+Ref\+:@{init\+With\+Ref\+:}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{init\+With\+Ref\+:()}{initWithRef:()}}
+{\footnotesize\ttfamily -\/ (instancetype) init\+With\+Ref\+: \begin{DoxyParamCaption}\item[{(S\+C\+Network\+Reachability\+Ref)}]{ref }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_ae3321738fab3aa1aff0b9b38c1694640}\label{interface_m_a_r_reachability_ae3321738fab3aa1aff0b9b38c1694640}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!is\+Reachable@{is\+Reachable}}
+\index{is\+Reachable@{is\+Reachable}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{is\+Reachable()}{isReachable()}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) is\+Reachable \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a54d3eee2e017ed0eb16f9f187c92e64a}\label{interface_m_a_r_reachability_a54d3eee2e017ed0eb16f9f187c92e64a}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS@{N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS}}
+\index{N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS@{N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+O\+S()}{NS\_AVAILABLE\_IOS()}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Reachability\+W\+W\+A\+N\+Status \hyperlink{interface_m_a_r_reachability_a7c116d20e2a6072f3521ce7d53d033b9}{wwan\+Status}) N\+S\+\_\+\+A\+V\+A\+I\+L\+A\+B\+L\+E\+\_\+\+I\+OS \begin{DoxyParamCaption}\item[{(7\+\_\+0)}]{ }\end{DoxyParamCaption}}
+
+
+
+Current W\+W\+AN status. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}\label{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!reachability@{reachability}}
+\index{reachability@{reachability}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{reachability()}{reachability()}}
+{\footnotesize\ttfamily + (instancetype) reachability \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}}
+
+
+
+Create an object to check the reachability of the default route. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a706357e0b7f514d9604406ee6b9a485d}\label{interface_m_a_r_reachability_a706357e0b7f514d9604406ee6b9a485d}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!reachability\+For\+Local\+Wifi@{reachability\+For\+Local\+Wifi}}
+\index{reachability\+For\+Local\+Wifi@{reachability\+For\+Local\+Wifi}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+For\+Local\+Wifi()}{reachabilityForLocalWifi()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+For\+Local\+Wifi \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_abf53893fed79ab36e7e1d439a7763226}\label{interface_m_a_r_reachability_abf53893fed79ab36e7e1d439a7763226}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!reachability\+With\+Address\+:@{reachability\+With\+Address\+:}}
+\index{reachability\+With\+Address\+:@{reachability\+With\+Address\+:}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+With\+Address\+:()}{reachabilityWithAddress:()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+With\+Address\+: \begin{DoxyParamCaption}\item[{(const struct sockaddr $\ast$)}]{host\+Address }\end{DoxyParamCaption}}
+
+Create an object to check the reachability of a given IP address 
+\begin{DoxyParams}{参数}
+{\em host\+Address} & You may pass {\ttfamily struct sockaddr\+\_\+in} for I\+Pv4 address or {\ttfamily struct sockaddr\+\_\+in6} for I\+Pv6 address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interface_m_a_r_reachability_a51361d8879b07756e6606da49af4a2a7}\label{interface_m_a_r_reachability_a51361d8879b07756e6606da49af4a2a7}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!reachability\+With\+Hostname\+:@{reachability\+With\+Hostname\+:}}
+\index{reachability\+With\+Hostname\+:@{reachability\+With\+Hostname\+:}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{reachability\+With\+Hostname\+:()}{reachabilityWithHostname:()}}
+{\footnotesize\ttfamily + (instancetype) reachability\+With\+Hostname\+: \begin{DoxyParamCaption}\item[{(N\+S\+String $\ast$)}]{hostname }\end{DoxyParamCaption}}
+
+
+
+Create an object to check the reachability of a given host name. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_af67ad59328fec034a21ecda91131c2db}\label{interface_m_a_r_reachability_af67ad59328fec034a21ecda91131c2db}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!set\+Notify\+Block\+:@{set\+Notify\+Block\+:}}
+\index{set\+Notify\+Block\+:@{set\+Notify\+Block\+:}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{set\+Notify\+Block\+:()}{setNotifyBlock:()}}
+{\footnotesize\ttfamily -\/ (void) set\+Notify\+Block\+: \begin{DoxyParamCaption}\item[{(void($^\wedge$)(\hyperlink{interface_m_a_r_reachability}{M\+A\+R\+Reachability} $\ast$\hyperlink{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}{reachability}))}]{notify\+Block }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a9fec680eafeaa0a2047b90c8507bba0d}\label{interface_m_a_r_reachability_a9fec680eafeaa0a2047b90c8507bba0d}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!set\+Scheduled\+:@{set\+Scheduled\+:}}
+\index{set\+Scheduled\+:@{set\+Scheduled\+:}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{set\+Scheduled\+:()}{setScheduled:()}}
+{\footnotesize\ttfamily -\/ (void) set\+Scheduled\+: \begin{DoxyParamCaption}\item[{(B\+O\+OL)}]{scheduled }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a48b584d6d0261105cb2d5c4e50158833}\label{interface_m_a_r_reachability_a48b584d6d0261105cb2d5c4e50158833}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!shared\+Queue@{shared\+Queue}}
+\index{shared\+Queue@{shared\+Queue}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{shared\+Queue()}{sharedQueue()}}
+{\footnotesize\ttfamily + (dispatch\+\_\+queue\+\_\+t) shared\+Queue \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a7c116d20e2a6072f3521ce7d53d033b9}\label{interface_m_a_r_reachability_a7c116d20e2a6072f3521ce7d53d033b9}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!wwan\+Status@{wwan\+Status}}
+\index{wwan\+Status@{wwan\+Status}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{wwan\+Status()}{wwanStatus()}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Reachability\+W\+W\+A\+N\+Status) wwan\+Status \begin{DoxyParamCaption}{ }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+
+
+\subsection{属性说明}
+\mbox{\Hypertarget{interface_m_a_r_reachability_a19f1023342e583c6c42ab685098801a8}\label{interface_m_a_r_reachability_a19f1023342e583c6c42ab685098801a8}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!allow\+W\+W\+AN@{allow\+W\+W\+AN}}
+\index{allow\+W\+W\+AN@{allow\+W\+W\+AN}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{allow\+W\+W\+AN}{allowWWAN}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) allow\+W\+W\+AN\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}, {\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a5609e9b8862a463872d79be768d5c75c}\label{interface_m_a_r_reachability_a5609e9b8862a463872d79be768d5c75c}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!flags@{flags}}
+\index{flags@{flags}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily -\/ (S\+C\+Network\+Reachability\+Flags) flags\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Current flags. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a0a578dd8e75987a6a245834b48bd50b5}\label{interface_m_a_r_reachability_a0a578dd8e75987a6a245834b48bd50b5}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!network\+Info@{network\+Info}}
+\index{network\+Info@{network\+Info}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{network\+Info}{networkInfo}}
+{\footnotesize\ttfamily -\/ (C\+T\+Telephony\+Network\+Info$\ast$) network\+Info\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}, {\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a139ed1358b13ec8fa7386ff02b611cdb}\label{interface_m_a_r_reachability_a139ed1358b13ec8fa7386ff02b611cdb}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!notify\+Block@{notify\+Block}}
+\index{notify\+Block@{notify\+Block}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{notify\+Block}{notifyBlock}}
+{\footnotesize\ttfamily -\/ (void($^\wedge$ notify\+Block) (\hyperlink{interface_m_a_r_reachability}{M\+A\+R\+Reachability} $\ast$\hyperlink{interface_m_a_r_reachability_ad46b6909f162c589339d3a22b72d056d}{reachability}))\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [copy]}}
+
+
+
+Notify block which will be called on main thread when network changed. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a423d1d55fdbc1866c41bcaaf433aa982}\label{interface_m_a_r_reachability_a423d1d55fdbc1866c41bcaaf433aa982}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!reachable@{reachable}}
+\index{reachable@{reachable}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{reachable}{reachable}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) reachable\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Current reachable status. 
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a9c8a836f1b3f522197e8499e233a177a}\label{interface_m_a_r_reachability_a9c8a836f1b3f522197e8499e233a177a}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!ref@{ref}}
+\index{ref@{ref}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{ref}{ref}}
+{\footnotesize\ttfamily -\/ (S\+C\+Network\+Reachability\+Ref) ref\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}, {\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a762a351206245fb37b72f2e043c72a31}\label{interface_m_a_r_reachability_a762a351206245fb37b72f2e043c72a31}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!scheduled@{scheduled}}
+\index{scheduled@{scheduled}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{scheduled}{scheduled}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) scheduled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}, {\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface_m_a_r_reachability_a016228b173329e79b0857ca50c29ddc8}\label{interface_m_a_r_reachability_a016228b173329e79b0857ca50c29ddc8}} 
+\index{M\+A\+R\+Reachability@{M\+A\+R\+Reachability}!status@{status}}
+\index{status@{status}!M\+A\+R\+Reachability@{M\+A\+R\+Reachability}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Reachability\+Status) status\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}
+
+
+
+Current status. 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Utility/\hyperlink{_m_a_r_reachability_8h}{M\+A\+R\+Reachability.\+h}\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Extension/\+Utility/\hyperlink{_m_a_r_reachability_8m}{M\+A\+R\+Reachability.\+m}\end{DoxyCompactItemize}

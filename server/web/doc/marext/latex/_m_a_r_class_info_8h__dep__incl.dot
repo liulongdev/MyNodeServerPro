@@ -1,0 +1,25 @@
+digraph "/Users/Martin/Dev/SourceTree/MAREXT/MAREX/MARModel/MARClassInfo.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARModel\l/MARClassInfo.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARIvar.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_ivar_8h.html"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARIvar.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_ivar_8m.html"];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARUnregisteredClass.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_unregistered_class_8h.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARRunimeOBJ.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_runime_o_b_j_8h.html"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARUnregisteredClass.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_unregistered_class_8m.html"];
+  Node3 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARProperty.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_property_8h.html"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARExtension\l/RuntimeOBJ/MARProperty.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_property_8m.html"];
+  Node9 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARModel\l/MARClassInfo.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_m_a_r_class_info_8m.html"];
+  Node3 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="/Users/Martin/Dev/Source\lTree/MAREXT/MAREX/MARModel\l/NSObject+MARModel.m",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html"];
+}

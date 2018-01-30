@@ -1,0 +1,9 @@
+digraph "-[NSData(MAREX_Type) mar_typeDic]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="-[NSData(MAREX_Type)\l mar_typeDic]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="-[NSData(MAREX_Type)\l mar_dataType]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_data_07_m_a_r_e_x___type_08.html#a11922531b318f260e1d02e72572df244"];
+}

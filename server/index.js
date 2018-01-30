@@ -167,7 +167,7 @@ function testQueryTrain() {
     console.log('>>>>> test ');
     let url = 'https://kyfw.12306.cn/otn/leftTicket/query?leftTicketDTO.train_date=2017-12-18&leftTicketDTO.from_station=SZH&leftTicketDTO.to_station=SHH&purpose_codes=ADULT';
     let queryParams = {
-        'leftTicketDTO.train_date': '2018-01-06',
+        'leftTicketDTO.train_date': '2018-01-27',
         'leftTicketDTO.from_station': 'SZH',
         'leftTicketDTO.to_station': 'SHH',
         'purpose_codes': 'ADULT'
@@ -199,6 +199,7 @@ function  testWangyiXin() {
     url = "https://c.m.163.com/recommend/getChanListNews?channel=T1457068979049&subtab=Video_Recom&passport=&devId=4q9wyqO%2BqQBTBHM8f1fMsbVhBeT2jN%2BpF2piB1fvCVBW8vGHludHKO1HgHn4Q%2BQf&version=31.0&spever=false&net=wifi&lat=CTVtEvU9h%2B%2Bh5zacKMVTrA%3D%3D&lon=9EoiG%2BcFCaYhcgFCoEmb2w%3D%3D&ts=1515782236&sign=0wajItdSjKo2ICaGivynYmo62uLj1wYkfOcODn7p%2BnB48ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=1";
     // url = "https://c.m.163.com/recommend/getChanListNews?channel=T1456112438822&passport=&devId=4q9wyqO%2BqQBTBHM8f1fMsbVhBeT2jN%2BpF2piB1fvCVBW8vGHludHKO1HgHn4Q%2BQf&version=31.0&spever=false&net=wifi&lat=h4oCMn4567dmFOuemqUYsw%3D%3D&lon=thiEhYUT/OmIwZnpr9nr1A%3D%3D&ts=1515226754&sign=HdjOz40v0FJZW3%2B298s1AUZtrCVm%2BmHAuGmN8nwcfD948ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=1";
     // url = "https://c.m.163.com/recommend/getChanListNews?channel=T1457068979049&subtab=Video_Beauty&passport=&devId=I9mEvOjEpr7x6qKZ0E/jqz%2BXNYccr98jb6FUP/c34MDLszEoKIcbpbZWUwpshTwP&version=31.0&spever=false&net=wifi&lat=Db%2By8mQzKvnL76zse8k%2BFw%3D%3D&lon=YUz/CebUbKsPIsBavk9JUg%3D%3D&ts=1515393095&sign=7eFT5nh9qzmonv%2BiOvKmqmk6ziKtcFHuolPv9o5qzst48ErR02zJ6/KXOnxX046I&encryption=1&canal=appstore&offset=0&size=10&fn=2";
+    // url = "https://comment.api.163.com/api/v1/products/a2869674571f77b5a0867c3d71db5856/threads/M7OLO5I6050835RB/app/comments/newList?format=building&headLimit=3&ibc=newsappios&offset=10&limit=10&tailLimit=2&showLevelThreshold=5";
     request.get(url)
         // .set('Host', 'c.m.163.com')
         // .set('Accept-Language', 'zh-Hans;q=1.0')

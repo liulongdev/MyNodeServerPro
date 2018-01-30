@@ -1,0 +1,13 @@
+digraph "-[UIBarButtonItem(MAREX_Badge) mar_updateBadgeValueAnimated:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node67 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeValue\lAnimated:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node67 -> Node68 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node68 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeFrame]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3a93e76a12d66d2de66b9747635f7509"];
+  Node68 -> Node69 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node69 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_badgeExpectedSize]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8dbc50b27262aa8ad25afd04f910d9aa"];
+  Node69 -> Node70 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node70 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_duplicateLabel:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a988e768a61c0dbb1e1535d545f78357d"];
+}

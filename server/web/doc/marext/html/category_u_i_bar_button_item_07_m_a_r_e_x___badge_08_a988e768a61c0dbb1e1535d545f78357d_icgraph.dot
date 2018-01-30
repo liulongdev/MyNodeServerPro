@@ -1,0 +1,36 @@
+digraph "-[UIBarButtonItem(MAREX_Badge) mar_duplicateLabel:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node20 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_duplicateLabel:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_badgeExpectedSize]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8dbc50b27262aa8ad25afd04f910d9aa"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeFrame]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3a93e76a12d66d2de66b9747635f7509"];
+  Node22 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_updateBadgeValue\lAnimated:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8e4f63b574d83ff31dd5b425cfbf00ed"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="-[UIBarButtonItem(MAREX\l_Badge) mar_refreshBadge]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3ed88718fc074681665c92aeea9a92a1"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgeValue:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a32868cad1e1e1ce998dccc786fb4c41d"];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgeBGColor:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3bc2fbc69e0e15daba18e523aed8e45e"];
+  Node24 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgeTextColor:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#abd221afcba1982d9744d16d975a36f8d"];
+  Node24 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgeFont:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#ad6583ac515e06f49a394ffab67123216"];
+  Node24 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_shouldHideBadge\lAtZero:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a86094637debca3cbbf38c6231f2781c7"];
+  Node24 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_shouldAnimate\lBadge:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#ac562e75d05ad860c15a3498ce6d9ed8f"];
+  Node23 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgePadding:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#ae89bc1df2557158cd65b7846e619eebc"];
+  Node22 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="-[UIBarButtonItem(MAREX\l_Badge) setmar_badgeMinSize:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a8d5ba3097194e81b4f78be4ae89ce9aa"];
+  Node22 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="-[UIBarButtonItem(MAREX\l_Badge) setMar_badgeOriginX:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a9ecc22b43333a9da99de376cef9844e4"];
+  Node22 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="-[UIBarButtonItem(MAREX\l_Badge) setmar_badgeOriginY:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_u_i_bar_button_item_07_m_a_r_e_x___badge_08.html#a3997341b54732cc51c3c5d1e6508e63d"];
+}

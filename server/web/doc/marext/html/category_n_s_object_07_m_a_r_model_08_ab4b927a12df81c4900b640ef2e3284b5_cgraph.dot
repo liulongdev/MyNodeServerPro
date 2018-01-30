@@ -1,0 +1,31 @@
+digraph "-[NSObject(MARModel) mar_modelSetWithDictionary:]"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node32 [label="-[NSObject(MARModel)\l mar_modelSetWithDictionary:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node32 -> Node33 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="+[_MARModelMeta metaWith\lClass:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___m_a_r_model_meta.html#a0f5be1bdc51aaf26ec0163b69b672b1e",tooltip="Returns the cached model class meta "];
+  Node33 -> Node34 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="-[MARClassInfo needUpdate]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface_m_a_r_class_info.html#ae70c6b93e18b3bb283bd5f5bcb25dae2"];
+  Node32 -> Node35 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node35 [label="ModelSetWithDictionaryFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a78978ed6e09e573fedc5f9084ecb745b"];
+  Node35 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node36 [label="MARModelSetValueForProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#aa754e97d3fdf6dbfd977ccc07f47a02e"];
+  Node36 -> Node37 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node37 [label="MARNSNumberCreateFromID",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a87f6a8d11fe9115ec467e2b7f96d0959",tooltip="Parse a number value from &#39;id&#39;. "];
+  Node36 -> Node38 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node38 [label="MARModelSetNumberToProperty",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#affb00203964a2b1b35023cea534e4ddb"];
+  Node36 -> Node39 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="MARNSDateFromString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a6480bce025acf83d66cb3444b9c382b7",tooltip="Parse string to date. "];
+  Node36 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="MARNSBlockClass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a7965e1f89027547318ab2608959f3db2",tooltip="Get the &#39;NSBlock&#39; class. "];
+  Node32 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="MARModelSetWithPropertyMeta\lArrayFunction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a086d3419ee2e9e415e43451e119ef0c2"];
+  Node41 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="MARValueForMultiKeys",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#ac137d433fe8dbb382e98ce2348601422"];
+  Node42 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="MARValueForKeyPath",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_s_object_09_m_a_r_model_8m.html#a4e2d3bc658abf3cdc5dedcfc853e9d1a"];
+  Node41 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 -> Node36 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

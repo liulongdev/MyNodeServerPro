@@ -1,0 +1,168 @@
+\hypertarget{interface___m_a_r_model_meta}{}\section{\+\_\+\+M\+A\+R\+Model\+Meta类 参考}
+\label{interface___m_a_r_model_meta}\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+
+
+A class info in object model.  
+
+
+类 \+\_\+\+M\+A\+R\+Model\+Meta 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface___m_a_r_model_meta}
+\end{center}
+\end{figure}
+\subsection*{构造函数}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) -\/ \hyperlink{interface___m_a_r_model_meta_a67ce54090c69f7372e1f1edf677589ec}{init\+With\+Class\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{类方法}
+\begin{DoxyCompactItemize}
+\item 
+(instancetype) + \hyperlink{interface___m_a_r_model_meta_a0f5be1bdc51aaf26ec0163b69b672b1e}{meta\+With\+Class\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the cached model class meta \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected 属性}
+\begin{DoxyCompactItemize}
+\item 
+package \hyperlink{interface_m_a_r_class_info}{M\+A\+R\+Class\+Info} $\ast$ \hyperlink{interface___m_a_r_model_meta_a204d0925156617e17a1fe593057ffdf0}{\+\_\+class\+Info}
+\item 
+N\+S\+Dictionary $\ast$ \hyperlink{interface___m_a_r_model_meta_af00312d68b9271700afe0c978de3fca9}{\+\_\+mapper}
+\begin{DoxyCompactList}\small\item\em Key\+:mapped key and key path, Value\+:\hyperlink{interface___m_a_r_model_property_meta}{\+\_\+\+M\+A\+R\+Model\+Property\+Meta}. \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface___m_a_r_model_meta_a0175dc46a22e059fa22a7851673c9555}{\+\_\+all\+Property\+Metas}
+\begin{DoxyCompactList}\small\item\em Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, all property meta of this model. \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface___m_a_r_model_meta_a0916478f905728482fe617131c4a3196}{\+\_\+key\+Path\+Property\+Metas}
+\begin{DoxyCompactList}\small\item\em Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, property meta which is mapped to a key path. \end{DoxyCompactList}\item 
+N\+S\+Array $\ast$ \hyperlink{interface___m_a_r_model_meta_a599aa3e73277c70a71d195288afa184a}{\+\_\+multi\+Keys\+Property\+Metas}
+\begin{DoxyCompactList}\small\item\em Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, property meta which is mapped to multi keys. \end{DoxyCompactList}\item 
+N\+S\+U\+Integer \hyperlink{interface___m_a_r_model_meta_a9eaedf54204c713bb9a4ea724fc63224}{\+\_\+key\+Mapped\+Count}
+\begin{DoxyCompactList}\small\item\em The number of mapped key (and key path), same to \+\_\+mapper.\+count. \end{DoxyCompactList}\item 
+M\+A\+R\+Encoding\+N\+S\+Type \hyperlink{interface___m_a_r_model_meta_a2310ec6db8b508fd0327bd52df954ea0}{\+\_\+ns\+Type}
+\begin{DoxyCompactList}\small\item\em Model class type. \end{DoxyCompactList}\item 
+B\+O\+OL \hyperlink{interface___m_a_r_model_meta_a0b16a403f1ff758a5051484e58b1150f}{\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary}
+\item 
+B\+O\+OL \hyperlink{interface___m_a_r_model_meta_afa3ec0e75a108ab24fdcde86ffc8a65c}{\+\_\+has\+Custom\+Transform\+From\+Dictionary}
+\item 
+B\+O\+OL \hyperlink{interface___m_a_r_model_meta_a9160e5bca83b6255e617dcaa228e22ed}{\+\_\+has\+Custom\+Transform\+To\+Dictionary}
+\item 
+B\+O\+OL \hyperlink{interface___m_a_r_model_meta_ad3ace5baf8bfa301be04aa0a9308c948}{\+\_\+has\+Custom\+Class\+From\+Dictionary}
+\end{DoxyCompactItemize}
+
+
+\subsection{详细描述}
+A class info in object model. 
+
+\subsection{函数文档}
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a67ce54090c69f7372e1f1edf677589ec}\label{interface___m_a_r_model_meta_a67ce54090c69f7372e1f1edf677589ec}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!init\+With\+Class\+:@{init\+With\+Class\+:}}
+\index{init\+With\+Class\+:@{init\+With\+Class\+:}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{init\+With\+Class\+:()}{initWithClass:()}}
+{\footnotesize\ttfamily -\/ (instancetype) init\+With\+Class\+: \begin{DoxyParamCaption}\item[{(Class)}]{cls }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a0f5be1bdc51aaf26ec0163b69b672b1e}\label{interface___m_a_r_model_meta_a0f5be1bdc51aaf26ec0163b69b672b1e}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!meta\+With\+Class\+:@{meta\+With\+Class\+:}}
+\index{meta\+With\+Class\+:@{meta\+With\+Class\+:}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{meta\+With\+Class\+:()}{metaWithClass:()}}
+{\footnotesize\ttfamily + (instancetype) meta\+With\+Class\+: \begin{DoxyParamCaption}\item[{(Class)}]{cls }\end{DoxyParamCaption}\hspace{0.3cm}{\ttfamily [implementation]}}
+
+
+
+Returns the cached model class meta 
+
+
+
+\subsection{类成员变量说明}
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a0175dc46a22e059fa22a7851673c9555}\label{interface___m_a_r_model_meta_a0175dc46a22e059fa22a7851673c9555}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+all\+Property\+Metas@{\+\_\+all\+Property\+Metas}}
+\index{\+\_\+all\+Property\+Metas@{\+\_\+all\+Property\+Metas}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+all\+Property\+Metas}{\_allPropertyMetas}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) \+\_\+all\+Property\+Metas\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, all property meta of this model. 
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a204d0925156617e17a1fe593057ffdf0}\label{interface___m_a_r_model_meta_a204d0925156617e17a1fe593057ffdf0}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+class\+Info@{\+\_\+class\+Info}}
+\index{\+\_\+class\+Info@{\+\_\+class\+Info}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+class\+Info}{\_classInfo}}
+{\footnotesize\ttfamily -\/ (package \hyperlink{interface_m_a_r_class_info}{M\+A\+R\+Class\+Info}$\ast$) \+\_\+class\+Info\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_ad3ace5baf8bfa301be04aa0a9308c948}\label{interface___m_a_r_model_meta_ad3ace5baf8bfa301be04aa0a9308c948}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+has\+Custom\+Class\+From\+Dictionary@{\+\_\+has\+Custom\+Class\+From\+Dictionary}}
+\index{\+\_\+has\+Custom\+Class\+From\+Dictionary@{\+\_\+has\+Custom\+Class\+From\+Dictionary}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+has\+Custom\+Class\+From\+Dictionary}{\_hasCustomClassFromDictionary}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) \+\_\+has\+Custom\+Class\+From\+Dictionary\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_afa3ec0e75a108ab24fdcde86ffc8a65c}\label{interface___m_a_r_model_meta_afa3ec0e75a108ab24fdcde86ffc8a65c}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+has\+Custom\+Transform\+From\+Dictionary@{\+\_\+has\+Custom\+Transform\+From\+Dictionary}}
+\index{\+\_\+has\+Custom\+Transform\+From\+Dictionary@{\+\_\+has\+Custom\+Transform\+From\+Dictionary}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+has\+Custom\+Transform\+From\+Dictionary}{\_hasCustomTransformFromDictionary}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) \+\_\+has\+Custom\+Transform\+From\+Dictionary\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a9160e5bca83b6255e617dcaa228e22ed}\label{interface___m_a_r_model_meta_a9160e5bca83b6255e617dcaa228e22ed}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+has\+Custom\+Transform\+To\+Dictionary@{\+\_\+has\+Custom\+Transform\+To\+Dictionary}}
+\index{\+\_\+has\+Custom\+Transform\+To\+Dictionary@{\+\_\+has\+Custom\+Transform\+To\+Dictionary}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+has\+Custom\+Transform\+To\+Dictionary}{\_hasCustomTransformToDictionary}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) \+\_\+has\+Custom\+Transform\+To\+Dictionary\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a0b16a403f1ff758a5051484e58b1150f}\label{interface___m_a_r_model_meta_a0b16a403f1ff758a5051484e58b1150f}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary@{\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary}}
+\index{\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary@{\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary}{\_hasCustomWillTransformFromDictionary}}
+{\footnotesize\ttfamily -\/ (B\+O\+OL) \+\_\+has\+Custom\+Will\+Transform\+From\+Dictionary\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a9eaedf54204c713bb9a4ea724fc63224}\label{interface___m_a_r_model_meta_a9eaedf54204c713bb9a4ea724fc63224}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+key\+Mapped\+Count@{\+\_\+key\+Mapped\+Count}}
+\index{\+\_\+key\+Mapped\+Count@{\+\_\+key\+Mapped\+Count}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+key\+Mapped\+Count}{\_keyMappedCount}}
+{\footnotesize\ttfamily -\/ (N\+S\+U\+Integer) \+\_\+key\+Mapped\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of mapped key (and key path), same to \+\_\+mapper.\+count. 
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a0916478f905728482fe617131c4a3196}\label{interface___m_a_r_model_meta_a0916478f905728482fe617131c4a3196}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+key\+Path\+Property\+Metas@{\+\_\+key\+Path\+Property\+Metas}}
+\index{\+\_\+key\+Path\+Property\+Metas@{\+\_\+key\+Path\+Property\+Metas}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+key\+Path\+Property\+Metas}{\_keyPathPropertyMetas}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) \+\_\+key\+Path\+Property\+Metas\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, property meta which is mapped to a key path. 
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_af00312d68b9271700afe0c978de3fca9}\label{interface___m_a_r_model_meta_af00312d68b9271700afe0c978de3fca9}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+mapper@{\+\_\+mapper}}
+\index{\+\_\+mapper@{\+\_\+mapper}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+mapper}{\_mapper}}
+{\footnotesize\ttfamily -\/ (N\+S\+Dictionary$\ast$) \+\_\+mapper\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Key\+:mapped key and key path, Value\+:\hyperlink{interface___m_a_r_model_property_meta}{\+\_\+\+M\+A\+R\+Model\+Property\+Meta}. 
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a599aa3e73277c70a71d195288afa184a}\label{interface___m_a_r_model_meta_a599aa3e73277c70a71d195288afa184a}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+multi\+Keys\+Property\+Metas@{\+\_\+multi\+Keys\+Property\+Metas}}
+\index{\+\_\+multi\+Keys\+Property\+Metas@{\+\_\+multi\+Keys\+Property\+Metas}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+multi\+Keys\+Property\+Metas}{\_multiKeysPropertyMetas}}
+{\footnotesize\ttfamily -\/ (N\+S\+Array$\ast$) \+\_\+multi\+Keys\+Property\+Metas\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Array$<$\+\_\+\+M\+A\+R\+Model\+Property\+Meta$>$, property meta which is mapped to multi keys. 
+
+\mbox{\Hypertarget{interface___m_a_r_model_meta_a2310ec6db8b508fd0327bd52df954ea0}\label{interface___m_a_r_model_meta_a2310ec6db8b508fd0327bd52df954ea0}} 
+\index{\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}!\+\_\+ns\+Type@{\+\_\+ns\+Type}}
+\index{\+\_\+ns\+Type@{\+\_\+ns\+Type}!\+\_\+\+M\+A\+R\+Model\+Meta@{\+\_\+\+M\+A\+R\+Model\+Meta}}
+\subsubsection{\texorpdfstring{\+\_\+ns\+Type}{\_nsType}}
+{\footnotesize\ttfamily -\/ (M\+A\+R\+Encoding\+N\+S\+Type) \+\_\+ns\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Model class type. 
+
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Martin/\+Dev/\+Source\+Tree/\+M\+A\+R\+E\+X\+T/\+M\+A\+R\+E\+X/\+M\+A\+R\+Model/\hyperlink{_n_s_object_09_m_a_r_model_8m}{N\+S\+Object+\+M\+A\+R\+Model.\+m}\end{DoxyCompactItemize}
