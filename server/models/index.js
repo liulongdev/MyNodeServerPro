@@ -5,7 +5,7 @@
 const mongoose = require('mongoose');
 const schemaTables = require('../data/schema/schema');
 const MXRResponseModel = require('./mxr_response_model');
-const conn = mongoose.createConnection('mongodb://martin:martin2015@liulong.site/mardatabase', {useMongoClient: true, promiseLibrary: require('bluebird')});
+const conn = mongoose.createConnection('mongodb://martin:martin2015@18.219.165.1/mardatabase', {useMongoClient: true, promiseLibrary: require('bluebird')});
 
 module.exports = {
     mongooseModelTable:{
@@ -19,6 +19,10 @@ module.exports = {
         MARWYVideoNewCollectionModel : conn.model('mar_wy_video_new_collection_model', schemaTables.mar_wy_video_new_collection_table),
 
         MARTestModel: conn.model('mar_test_model', schemaTables.mar_test_table),
+        /*马小丁群聊*/
+        MARMXDChatUserModel: conn.model('mar_mxd_chat_user_table', schemaTables.mar_mxd_chat_user_table),
+        MARMXDChatMessageModel: conn.model('mar_mxd_chat_message_table', schemaTables.mar_mxd_chat_message_table),
+
 
     },
     MXRResponseModel: MXRResponseModel,

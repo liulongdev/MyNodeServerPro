@@ -1,0 +1,36 @@
+@startuml
+title 点击下载按钮的付费方式 MXRBookManager
+(*) -->"点击下载图书按钮"
+--> "判断BookInfo.bookType"
+if "判断是否需要付费" then
+    --> [bookType==BOOK_TYPE_DIY diy图书] "无付费锁" as NotPay
+    --> === 结束 ===
+    --> "下载图书"
+    -->(*)
+else
+    --> "调用图书详情接口，获取图书信息"
+    if "判断unlockType" then
+        -->[1.unlockType == MXRBookUnlockTypeNone] NotPay
+    else
+        -->[2.unlockType == MXRBookUnlockTypeAccount] "美慧树授权登录"
+        --> === 结束 ===
+    else
+        if "3.是否在购买记录中" then
+            -->[在购买记录中] NotPay
+        else
+            -->[不在购买记录中] "调用购买方式接口，获取购买方式信息"
+            -->"根据购买信息，获得图书下载需要的锁类型"
+            if "图书类型是否是绘本或者识字卡片-百科、火箭" then
+                -->[是] NotPay
+            else
+                -->[不是] "弹出付费组合框"
+                if "付费结果" then
+                    -->[付费成功] === 结束 ===
+                else
+                    -->[付费失败] "无操作"
+                endif
+            endif
+        endif
+    endif
+endif
+@enduml

@@ -156,4 +156,34 @@ module.exports = {
         date: {type: Date},
         myMixed: {type: Mixed},
     }),
+
+    /* 马小丁群聊 */
+    mar_mxd_chat_user_table: new Schema({
+        deviceUUID: {type: String, require: true},     // 设备唯一标识
+        userNickName: {type: String, default: '游客'},
+        userImageIcon: {type: String},
+        password: {type: String},
+        email: {type: String},
+        createTime: {type: Date},
+        updateTime: {type: Date},
+        age: {type: Number},
+        sex: {type: Number, default: 0},         // 0：female， 1：male
+        gender: {type: String, default: '女'},   // 0：female， 1：male
+    },{
+        strict: false,
+    }),
+
+    mar_mxd_chat_message_table: new Schema({
+        userId: {type: String, require: true},     // 设备唯一标识
+        userNickName: {type: String, default: '游客'},
+        chatRoomId: {type: String},
+        content: {type: String},
+        contentType: {type: Number, default: 0},
+        msgType: {type: Number, default: 0},
+        msgStatus: {type: Number, default: 0},
+        createTime: {type: Date},
+        updateTime: {type: Date},
+    },{
+        strict: false,
+    }),
 };

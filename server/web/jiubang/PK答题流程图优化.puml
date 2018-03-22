@@ -1,0 +1,31 @@
+/*
+    MXRPKAnswerVC.m
+*/
+
+@startUml
+title PK答题
+start
+: 开始答题;
+: 随机打乱用户题目顺序;
+while (是否有下一题) is (yes)
+    : "显示该题题目";
+    fork
+        : 随机[2-7]秒显示对手该题题目结果;
+        while(随机时间是否到) is (no)
+        endWhile(yes)
+        : 显示对方该题答题结果;
+    fork again
+    : 答题倒计时20秒等待用户答题;
+    while (答题时间到或者用户已经选好答案") is (no)
+    endWhile (yes)
+    : 显示用户该题答题结果;
+    endfork
+    if (用户与对方都显示了答题结果) then (yes)
+        : 等待1.5秒;
+    endif
+endWhile (no)
+: 提交答案;
+
+stop
+@endUml
+

@@ -522,6 +522,50 @@ function mxr_express_server(app) {
         });
     });
 
+    /*创建或者更新简单的用户信息
+    *
+    * */
+    app.post(AllUrl.SERVER_URL_UpdateMXDCUserInfo, function (req, res, next) {
+        let result = new MARResponseModel();
+        let paramJSON = MARUtil.reqParamJson(req);
+        if (!paramJSON['userNickName'] && !paramJSON['deviceUUID'])
+        {
+            result.header.errCode = 500;
+            result.header.errMsg = '缺少参数';
+            res.json(result.toResponseJSON());
+            return;
+        }
+        dbOp.user.updateMXDCUser(paramJSON, function (err, userModel) {
+            if (err)
+            {
+                result.header.errCode = 1;
+                result.header.errMsg = '用户信息上传失败';
+            }
+            else
+            {
+                result.body = JSON.stringify(userModel);
+            }
+            res.json(result.toResponseJSON());
+        })
+    });
+
+    /*发送群聊信息
+     *
+     * */
+    app.post(AllUrl.SERVER_URL_PostMXDCMessage, function (req, res, next) {
+        let result = new MARResponseModel();
+        let paramJSON = MARUtil.reqParamJson(req);
+
+        dbOp.user.postMXDChatMsg(paramJSON, function (error, MXDCMsgModel) {
+            if (error)
+            {
+                result.header.errCode = 1;
+                result.header.errMsg = '发送失败';
+            }
+            res.json(result.toResponseJSON());
+        })
+
+    });
 }
 
 module.exports = mxr_express_server;

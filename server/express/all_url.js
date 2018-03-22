@@ -20,4 +20,8 @@ module.exports = Object.freeze({
     SERVER_URL_RemoveAllWYVideoNewRecord:   '/api/core/v1/wy/new/removeAllVideoNewRecord',     // 增加所有浏览的视频新闻记录
     SERVER_URL_RemoveAllWYVideoNewCollection:'/api/core/v1/wy/new/removeAllVideoNewCollection', // 删除所有视频新闻收藏
     SERVER_URL_GetAllWYVideoNewCollection:  '/api/core/v1/wy/new/getAllVideoNewCollection',     // 获取所有视频新闻列表
+
+    /*马小丁聊天相关*/
+    SERVER_URL_UpdateMXDCUserInfo:          '/api/core/v1/mxdChat/updateMXDCUserInfo',              // 创建或者更新简单的用户信息
+    SERVER_URL_PostMXDCMessage:             '/api/core/v1/mxdChat/new/postMXDCMessage',             // 发送群聊信息
 });

@@ -1,0 +1,21 @@
+/*
+	MXRISLINetworkManager.m
+*/
+@startUml
+start
+
+: "点击图书按钮";/
+If (是否是ISLI按钮) then (yes)
+    : "调用ISLI接口进行验证";/
+    if (验证结果) then (验证成功或者请求失败或超时3秒)
+        : 按钮行为;/
+    else (no)
+        : 无操作;
+        detach
+    endif
+else (no)
+    : 按钮行为;/
+endif
+
+stop
+@endUml

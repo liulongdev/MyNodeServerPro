@@ -28,6 +28,10 @@ const user = {
     saveUserLoginActiveWithLoginJSON: saveUserLoginActiveWithLoginJSON,
 
     getUserLoginActiveWithParamJSON: getUserLoginActiveWithParamJSON,
+
+    updateMXDCUser: updateMXDCUser,
+
+    postMXDChatMsg: postMXDChatMsg,
 };
 
 function createUser(userJSON, callback) {
@@ -168,6 +172,32 @@ function saveUserLoginActiveWithLoginJSON(loginJSON, callback) {
         }
 
     });
+}
+
+function updateMXDCUser(paramJSON, callback) {
+    const user = models.mongooseModelTable.MARMXDChatUserModel.findOne({deviceUUID: paramJSON['deviceUUID']}, callback);
+    if (user == null)
+    {
+        const userModel = new models.mongooseModelTable.MARMXDChatUserModel(paramJSON);
+        userModel.save(callback);
+    }
+    else
+    {
+        const userModel = new models.mongooseModelTable.MARMXDChatUserModel(paramJSON);
+        models.mongooseModelTable.MARLoginActiveModel.update({_id: paramJSON['userID']}, {$set: paramJSON}, function (err) {
+            if (!err) {
+                callback(null, userModel);
+            }
+            else {
+                callback(err);
+            }
+        });
+    }
+
+}
+
+function postMXDChatMsg(paramJSON, callback) {
+    new models.mongooseModelTable.MARMXDChatMessageModel(paramJSON).save(callback);
 }
 
 /* 根据userId  和 设备标识，检验是否被抢登
