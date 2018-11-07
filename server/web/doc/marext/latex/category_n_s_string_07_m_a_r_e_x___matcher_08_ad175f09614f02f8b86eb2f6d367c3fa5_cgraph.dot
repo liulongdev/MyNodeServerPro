@@ -1,9 +1,0 @@
-digraph "-[NSString(MAREX_Matcher) mar_matchWithRegex:]"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node8 [label="-[NSString(MAREX_Matcher)\l mar_matchWithRegex:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
-  Node9 [label="-[NSString(MAREX_Matcher)\l mar_firstMatchedResultWithRegex:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x___matcher_08.html#a6b887e98ff8183f99ddeebfb23689792"];
-}

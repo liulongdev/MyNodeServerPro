@@ -1,7 +1,0 @@
-digraph "类继承关系图"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="NSDate(MAREX_briefTime)",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_date_07_m_a_r_e_x__brief_time_08.html"];
-}

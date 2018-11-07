@@ -24,4 +24,15 @@ module.exports = Object.freeze({
     /*马小丁聊天相关*/
     SERVER_URL_UpdateMXDCUserInfo:          '/api/core/v1/mxdChat/updateMXDCUserInfo',              // 创建或者更新简单的用户信息
     SERVER_URL_PostMXDCMessage:             '/api/core/v1/mxdChat/new/postMXDCMessage',             // 发送群聊信息
+
+
+
+    // 网易信用到的
+    SERVER_WYXURL_:                         'api/core/wyx/v1',       //
+
+
+
+    // 梦想人加解密
+    SERVER_URL_MXREncoder:              '/api/mxr/core/mxr/v1/encoder',      // 梦想人加密
+    SERVER_URL_MXRDecoder:              '/api/mxr/core/mxr/v1/decoder',      // 梦想人解密
 });

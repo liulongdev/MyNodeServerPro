@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MXREncryptionApp">
+<head>
+    <script src="../../jquery/jquery_3.2.1.min.js"></script>
+    <link rel="stylesheet" href="encryption.css" type="text/css">
+    <meta charset="UTF-8">
+    <title>梦想人加解密</title>
+</head>
+<body id="myEncryptionId">
+    <div ng-controller="MXREncryptionController">
+
+        <button class="encodeBtn" ng-click="encodeFun()">加密</button>
+
+        <button class="decodeBtn" ng-click="decodeFun()">解密</button>
+
+        <a target="_blank" href="https://www.json.cn" style="margin-left: 50px">json解析</a>
+        <p></p>
+
+        <textarea ng-model="firstText" placeholder="Martin提供"></textarea>
+        <hr>
+
+        <p></p>
+
+        <textarea ng-model="resultText" readonly="readonly"></textarea>
+
+    </div>
+    <script src="../../angular/angular.min.js"></script>
+    <script src="./MXREncryptionApp.js"></script>
+</body>
+</html>

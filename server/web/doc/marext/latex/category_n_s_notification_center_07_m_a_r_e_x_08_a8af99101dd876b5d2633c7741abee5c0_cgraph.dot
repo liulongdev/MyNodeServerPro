@@ -1,9 +1,0 @@
-digraph "-[NSNotificationCenter(MAREX) mar_postNotificationOnMainThread:]"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node4 [label="-[NSNotificationCenter\l(MAREX) mar_postNotification\lOnMainThread:]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
-  Node5 [label="-[NSNotificationCenter\l(MAREX) mar_postNotification\lOnMainThread:waitUntilDone:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_notification_center_07_m_a_r_e_x_08.html#a21bd5a7944ec24f31ba617331d709c52"];
-}

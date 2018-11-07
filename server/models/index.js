@@ -5,7 +5,7 @@
 const mongoose = require('mongoose');
 const schemaTables = require('../data/schema/schema');
 const MXRResponseModel = require('./mxr_response_model');
-const conn = mongoose.createConnection('mongodb://martin:martin2015@18.219.165.1/mardatabase', {useMongoClient: true, promiseLibrary: require('bluebird')});
+const conn = mongoose.createConnection('mongodb://martin:martin2015@39.106.7.121/mardatabase', {useMongoClient: true, promiseLibrary: require('bluebird')});
 
 module.exports = {
     mongooseModelTable:{

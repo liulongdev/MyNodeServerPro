@@ -29,6 +29,10 @@ let MARUtil = {
     reqHeaderSignatureJSON: reqHeaderSignatureJSON,
     /*判断手机号是否符合格式  用法： MARUtil.checkPhone(phone)*/
     checkPhone : checkPhone,
+
+    mxrEncoder: mxrEncoder,
+
+    mxrDecoder: mxrDecoder,
 };
 
 function verifyParams(params, keyArray) {
@@ -71,6 +75,44 @@ function reqHeaderSignatureJSON(req) {
     {
         return headerSignatureJSON;
     }
+}
+
+function mxrEncoder(str) {
+    const PACKET_HEADER_SIZE = 5;
+    let strBuf = new Buffer(str, 'utf-8');
+    const strBufLength = strBuf.length;
+    const random = Math.ceil(Math.random()*127);
+    let chunk = [];
+    for (let bufIndex = 0; bufIndex < strBufLength; bufIndex ++)
+    {
+        strBuf[bufIndex] = (strBuf[bufIndex] + (bufIndex ^ random)) ^ (random ^ (strBufLength - bufIndex));
+    }
+
+    let myBuffer = new Buffer(PACKET_HEADER_SIZE);
+    myBuffer[0] = random;
+    myBuffer[1] = PACKET_HEADER_SIZE + strBufLength;
+
+    let newBuffer = Buffer.concat([myBuffer, strBuf], PACKET_HEADER_SIZE + strBuf.length);
+    return newBuffer.toString('base64', 0, PACKET_HEADER_SIZE + strBufLength);
+}
+
+function mxrDecoder(str) {
+    const PACKET_HEADER_SIZE = 5;
+    let buffer = new Buffer(str, 'base64');
+    const bufferLength = buffer.length;
+    if (bufferLength <= PACKET_HEADER_SIZE)
+        return undefined;
+
+    const random = buffer[0];
+
+    const size = bufferLength - PACKET_HEADER_SIZE;
+    let retBuf = new Buffer(size);
+    for (let bufIndex = 0; bufIndex < size; bufIndex++)
+    {
+        retBuf[bufIndex] = (buffer[PACKET_HEADER_SIZE + bufIndex] ^ (random ^ (size - bufIndex))) - (bufIndex ^ random);
+    }
+
+    return retBuf.toString();
 }
 
 

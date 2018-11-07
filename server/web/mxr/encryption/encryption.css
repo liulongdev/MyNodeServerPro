@@ -1,0 +1,32 @@
+body{
+    background: #f4f4f4;
+    padding-top: 50px;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.encodeBtn {
+    margin-left: 50px;
+}
+
+.decodeBtn {
+    margin-left: 50px;
+}
+
+.encodeBtn, .decodeBtn{
+    max-height: 100px;
+    height: 40px;
+    width: 120px;
+    border-radius: 10px;
+    background: #f2f3f5;
+    font-size: 14px;
+}
+
+textarea{
+    min-width: 100px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 40%;
+    font-size: 14px;
+}

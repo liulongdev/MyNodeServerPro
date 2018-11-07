@@ -1,9 +1,0 @@
-digraph "-[_MARComponentsIvar typeEncoding]"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node14 [label="-[_MARComponentsIvar\l typeEncoding]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node15 [label="-[_MARComponentsIvar\l initWithName:typeEncoding:]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$interface___m_a_r_components_ivar.html#a191697e16f4a9d4c2aca202ce702b959"];
-}

@@ -1,9 +1,0 @@
-digraph "-[NSString(MAREX) mar_jsonValueDecoded]"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node36 [label="-[NSString(MAREX) mar\l_jsonValueDecoded]",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node36 -> Node37 [color="midnightblue",fontsize="10",style="solid"];
-  Node37 [label="-[NSString(MAREX) mar\l_dataValue]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$category_n_s_string_07_m_a_r_e_x_08.html#a98e0a13c8a61f86719023356a728e10f"];
-}
