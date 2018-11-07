@@ -107,107 +107,172 @@ function  testWangyiXin() {
 
 // testQueryTrain();
 // /Users/Martin/Dev/huochedianbao.xls
+//
+// function  testBuff() {
+//     console.log('hello');
+// }
+//
+// const PACKET_HEADER_SIZE = 5;
+//
+//
+// let param = '刘 loin 高厉害了';
+//
+// const random = Math.ceil(Math.random()*127);
+// let iSize = param.length;
+// let array = [];
+// array[0] = String.fromCharCode(random);
+// array[1] = String.fromCharCode(PACKET_HEADER_SIZE + iSize);
+// array[2] = String.fromCharCode(0);
+// array[3] = String.fromCharCode(0);
+// array[4] = String.fromCharCode(0);
+//
+//
+// let index = 0;
+// for (; index < iSize; index++)
+// {
+//     // console.log(param.charCodeAt(0));
+//     console.log('===== start ====');
+//     console.log((param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index)));
+//     array[PACKET_HEADER_SIZE + index] = String.fromCharCode(((param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index))) & 0b1111);
+// }
+//
+// // console.log('' + String.fromCharCode(65));
+// // console.log(array);
+//
+//
+// console.log(param.length);
+// // testBuff();
+//
+// let buffer = new Buffer(PACKET_HEADER_SIZE + iSize);
+//
+// let i = 0;
+// buffer[0] = random;
+// buffer[1] = PACKET_HEADER_SIZE + param.length;
+// buffer[2] = 0;
+// buffer[3] = 0;
+// buffer[4] = 0;
+// for (; i < iSize; i++)
+// {
+//     console.log(i);
+//     buffer[PACKET_HEADER_SIZE + i] = (param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index));
+// }
+// console.log('>>>>>>>> ', buffer);
+// console.log(buffer.toString('base64', 0, PACKET_HEADER_SIZE + iSize));
+//
+// let  paramBuf = new Buffer(param, 'utf-8');
+// iSize = paramBuf.length;
+// let chunk = [];
+// for (let bufIndex = 0; bufIndex < paramBuf.length; bufIndex ++)
+// {
+//     paramBuf[bufIndex] = (paramBuf[bufIndex] + (bufIndex ^ random)) ^ (random ^ (iSize - bufIndex));
+// }
+//
+//
+// let myBuffer = new Buffer(PACKET_HEADER_SIZE);
+// myBuffer[0] = random;
+// myBuffer[1] = PACKET_HEADER_SIZE + param.length;
+//
+//
+// let newBuffer = Buffer.concat([myBuffer, paramBuf], PACKET_HEADER_SIZE + paramBuf.length);
+//
+// // myBuffer = myBuffer + paramBuf;
+//
+// console.log(newBuffer);
+// console.log(newBuffer.toString('base64', 0, PACKET_HEADER_SIZE + iSize))
+// console.log(newBuffer.length);
+// const  MARUtil = require('./lib/util');
+// console.log(MARUtil.mxrEncoder('刘龙个大帅比'));
+//
+//
+// function mxrDecoder(str) {
+//     const PACKET_HEADER_SIZE = 5;
+//     let buffer = new Buffer(str, 'base64');
+//     const bufferLength = buffer.length;
+//     if (bufferLength <= PACKET_HEADER_SIZE)
+//         return 'error';
+//
+//     const random = buffer[0];
+//
+//     const size = bufferLength - PACKET_HEADER_SIZE;
+//     console.log('>>>>>');
+//     console.log(random);
+//     console.log(size);
+//     console.log(buffer);
+//     let retBuf = new Buffer(size);
+//     for (let bufIndex = 0; bufIndex < size; bufIndex++)
+//     {
+//         retBuf[bufIndex] = (buffer[PACKET_HEADER_SIZE + bufIndex] ^ (random ^ (size - bufIndex))) - (bufIndex ^ random);
+//     }
+//
+//     return retBuf.toString();
+// }
+//
+// console.log(mxrDecoder('JgwAAAC4q6m6pqOh'));
 
-function  testBuff() {
-    console.log('hello');
-}
+const MxrHost = 'https://bs-api.mxrcorp.cn';
+let MxrHeader = {'userId':'122934',
+    'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
+    'region':'0',
+    'appVersion':'5.17.0',
+    'osType':'1',
+    'deviceUnique':'D52B7383-C486-4686-A7E8-5E857E78F936',
+    'appId':'10000000000000000000000000000001',
+                };
 
-const PACKET_HEADER_SIZE = 5;
+const MARUtil = require('./lib/util');
+const MXRResponseModel = require('../src/mxr/model/mxr_network_response_mdoel');
 
+let encoderHeader = MARUtil.mxrEncoder(JSON.stringify(MxrHeader));
+let header = {'mxr-key':encoderHeader};
 
-let param = '刘 loin 高厉害了';
+let url = MxrHost + '/core/home/1';
+let param = {
+    'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
+    'page':'1',
+    'param':'0',
+    'region':'0',
+    'rows':'50',
+    'search':'normal',
+    'topNums':'20',
+    'uid':MARUtil.mxrEncoder('122934')
+};
+console.log(url);
+request.get(url)
+    .set('mxr-key', encoderHeader)
+    .query(param)
+    .end(function (err, res) {
+       console.log('err >>> ', err);
+       console.log('res >>> ', JSON.parse(res.text).Header);
+       let responseModel = MXRResponseModel.builderWithResponse(res.text);
+       console.log(responseModel.header);
+       console.log('res >>> ', responseModel.body);
 
-const random = Math.ceil(Math.random()*127);
-let iSize = param.length;
-let array = [];
-array[0] = String.fromCharCode(random);
-array[1] = String.fromCharCode(PACKET_HEADER_SIZE + iSize);
-array[2] = String.fromCharCode(0);
-array[3] = String.fromCharCode(0);
-array[4] = String.fromCharCode(0);
-
-
-let index = 0;
-for (; index < iSize; index++)
-{
-    // console.log(param.charCodeAt(0));
-    console.log('===== start ====');
-    console.log((param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index)));
-    array[PACKET_HEADER_SIZE + index] = String.fromCharCode(((param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index))) & 0b1111);
-}
-
-// console.log('' + String.fromCharCode(65));
-// console.log(array);
-
-
-console.log(param.length);
-// testBuff();
-
-let buffer = new Buffer(PACKET_HEADER_SIZE + iSize);
-
-let i = 0;
-buffer[0] = random;
-buffer[1] = PACKET_HEADER_SIZE + param.length;
-buffer[2] = 0;
-buffer[3] = 0;
-buffer[4] = 0;
-for (; i < iSize; i++)
-{
-    console.log(i);
-    buffer[PACKET_HEADER_SIZE + i] = (param.charCodeAt(index) + (index ^ random))  ^ (random ^ (iSize - index));
-}
-console.log('>>>>>>>> ', buffer);
-console.log(buffer.toString('base64', 0, PACKET_HEADER_SIZE + iSize));
-
-let  paramBuf = new Buffer(param, 'utf-8');
-iSize = paramBuf.length;
-let chunk = [];
-for (let bufIndex = 0; bufIndex < paramBuf.length; bufIndex ++)
-{
-    paramBuf[bufIndex] = (paramBuf[bufIndex] + (bufIndex ^ random)) ^ (random ^ (iSize - bufIndex));
-}
+    });
 
 
-let myBuffer = new Buffer(PACKET_HEADER_SIZE);
-myBuffer[0] = random;
-myBuffer[1] = PACKET_HEADER_SIZE + param.length;
+var num  = 123;
+var str  = 'abcdef';
+var bool = true;
+var arr  = [1, 2, 3, 4];
+var json = {name:'wenzi', age:25};
+var func = function(){ console.log('this is function'); }
+var und  = undefined;
+var nul  = null;
+var date = new Date();
+var reg  = /^[a-zA-Z]{5,20}$/;
+var error= new Error();
 
 
-let newBuffer = Buffer.concat([myBuffer, paramBuf], PACKET_HEADER_SIZE + paramBuf.length);
-
-// myBuffer = myBuffer + paramBuf;
-
-console.log(newBuffer);
-console.log(newBuffer.toString('base64', 0, PACKET_HEADER_SIZE + iSize))
-console.log(newBuffer.length);
-const  MARUtil = require('./lib/util');
-console.log(MARUtil.mxrEncoder('刘龙个大帅比'));
-
-
-function mxrDecoder(str) {
-    const PACKET_HEADER_SIZE = 5;
-    let buffer = new Buffer(str, 'base64');
-    const bufferLength = buffer.length;
-    if (bufferLength <= PACKET_HEADER_SIZE)
-        return 'error';
-
-    const random = buffer[0];
-
-    const size = bufferLength - PACKET_HEADER_SIZE;
-    console.log('>>>>>');
-    console.log(random);
-    console.log(size);
-    console.log(buffer);
-    let retBuf = new Buffer(size);
-    for (let bufIndex = 0; bufIndex < size; bufIndex++)
-    {
-        retBuf[bufIndex] = (buffer[PACKET_HEADER_SIZE + bufIndex] ^ (random ^ (size - bufIndex))) - (bufIndex ^ random);
-    }
-
-    return retBuf.toString();
-}
-
-console.log(mxrDecoder('JgwAAAC4q6m6pqOh'));
-
-
-
+console.log(
+    typeof num,
+    typeof str,
+    typeof bool,
+    typeof arr,
+    typeof json + '',
+    typeof func,
+    typeof und,
+    typeof nul,
+    typeof date,
+    typeof reg,
+    typeof error
+    );
