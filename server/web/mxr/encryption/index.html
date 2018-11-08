@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="MXREncryptionApp">
 <head>
+
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap_4.0.1.min.css">
     <script src="../../jquery/jquery_3.2.1.min.js"></script>
+    <script src="../../bootstrap/bootstrap_4.0.0.min.js"></script>
     <link rel="stylesheet" href="encryption.css" type="text/css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>梦想人加解密</title>
 </head>
 <body id="myEncryptionId">
-    <div ng-controller="MXREncryptionController">
+    <div ng-controller="MXREncryptionController" class="jumbotron container">
+        <div class="row">
 
-        <button class="encodeBtn" ng-click="encodeFun()">加密</button>
+            <button class="encodeBtn btn btn-primary col-2" ng-click="encodeFun()">加密</button>
 
-        <button class="decodeBtn" ng-click="decodeFun()">解密</button>
+            <button class="decodeBtn  btn btn-primary col-2" ng-click="decodeFun()">解密</button>
 
-        <a target="_blank" href="https://www.json.cn" style="margin-left: 50px">json解析</a>
-        <p></p>
-
+            <a class="col-2" target="_blank" href="https://www.json.cn" style="margin-left: 50px">json解析</a>
+        </div>
+        <p/>
+        <br/>
         <textarea ng-model="firstText" placeholder="Martin提供"></textarea>
-        <hr>
+        <hr/>
 
-        <p></p>
+        <p/>
 
         <textarea ng-model="resultText" readonly="readonly"></textarea>
 
     </div>
-    <script src="../../angular/angular.min.js"></script>
+    <script src="../../angular/angular_1.4.6.min.js"></script>
     <script src="./MXREncryptionApp.js"></script>
 </body>
 </html>

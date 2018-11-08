@@ -245,7 +245,7 @@ request.get(url)
        console.log('res >>> ', JSON.parse(res.text).Header);
        let responseModel = MXRResponseModel.builderWithResponse(res.text);
        console.log(responseModel.header);
-       console.log('res >>> ', responseModel.body);
+       console.log('res >>> ', responseModel.originalBody);
 
     });
 

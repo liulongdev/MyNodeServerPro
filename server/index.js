@@ -21,10 +21,10 @@ const app = express();
 // var client = new OAuth(wxAppId, wxSecret);
 const bodyParser = require('body-parser');
 // app.use(bodyParser());
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({limit:'50mb',extended: false }));
 // app.use(express.static(__dirname));
 app.use(express.static(__dirname + '/web'));
 
@@ -140,7 +140,7 @@ const httpServer = http.createServer(app);
 
 
 
-httpServer.listen(3000, function() {
+httpServer.listen(80, function() {
     console.log('HTTP Server is running on: http://localhost:%s', 80);
 });
 
@@ -151,7 +151,7 @@ if (ExpressUseCredentials) {
     const certificate = fs.readFileSync(path.resolve('./server/cer/maxiaoding.pem'), 'utf8');
     const credentials = {key: privateKey, cert: certificate};
     const httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(3001, function() {
+    httpsServer.listen(443, function() {
         console.log('HTTPS Server is running on: https://localhost:%s', 443);
     });
 }
