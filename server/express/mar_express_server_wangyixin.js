@@ -68,6 +68,11 @@ function mxr_express_server_wangyixin(app) {
             }
         });
 
+    app.get('/wy/test', function (req, res, next) {
+       console.log(req);
+       res.end('Hello , martin');
+    });
+
 }
 
 module.exports = mxr_express_server_wangyixin;

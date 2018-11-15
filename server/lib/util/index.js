@@ -79,6 +79,8 @@ function reqHeaderSignatureJSON(req) {
 
 function mxrEncoder(str) {
     const PACKET_HEADER_SIZE = 5;
+    if (typeof str === "object")
+        str = JSON.stringify(str);
     let strBuf = new Buffer(str, 'utf-8');
     const strBufLength = strBuf.length;
     const random = Math.ceil(Math.random()*127);
@@ -98,6 +100,8 @@ function mxrEncoder(str) {
 
 function mxrDecoder(str) {
     const PACKET_HEADER_SIZE = 5;
+    if (typeof str === "object")
+        str = JSON.stringify(str);
     let buffer = new Buffer(str, 'base64');
     const bufferLength = buffer.length;
     if (bufferLength <= PACKET_HEADER_SIZE)

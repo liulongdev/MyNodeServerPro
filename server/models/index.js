@@ -23,6 +23,10 @@ module.exports = {
         MARMXDChatUserModel: conn.model('mar_mxd_chat_user_table', schemaTables.mar_mxd_chat_user_table),
         MARMXDChatMessageModel: conn.model('mar_mxd_chat_message_table', schemaTables.mar_mxd_chat_message_table),
 
+        // 梦想人url测试
+        MXRNetworkTestApiModel: conn.model('mxr_network_test_api_table', schemaTables.mxr_network_test_api_table),
+
+
 
     },
     MXRResponseModel: MXRResponseModel,

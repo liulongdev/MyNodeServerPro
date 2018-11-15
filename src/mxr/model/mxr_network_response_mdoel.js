@@ -10,7 +10,7 @@ class MXRResponseModel
     }
 
     static builderWithResponse(json) {
-        let responseModel = new MXRResponseHeaderModel();
+        let responseModel = new MXRResponseModel();
         if (typeof json === "object") {
             responseModel.header = MXRResponseHeaderModel.builderWithResponseHeader(json.Header);
             responseModel.body = Util.mxrDecoder(json.Body);

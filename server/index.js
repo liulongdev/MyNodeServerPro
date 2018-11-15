@@ -6,9 +6,10 @@ process.on('uncaughtException', function (err) {
     console.error(err);
 });
 
+process.env.TZ = 'Asia/Shanghai';
+
 const wxAppId = '';
 const wxSecret = '';
-
 const wxToken = 'Martin201710232344';
 const crypto = require('crypto');
 const _ = require('lodash');
@@ -140,7 +141,7 @@ const httpServer = http.createServer(app);
 
 
 
-httpServer.listen(80, function() {
+httpServer.listen(3000, function() {
     console.log('HTTP Server is running on: http://localhost:%s', 80);
 });
 
@@ -151,7 +152,7 @@ if (ExpressUseCredentials) {
     const certificate = fs.readFileSync(path.resolve('./server/cer/maxiaoding.pem'), 'utf8');
     const credentials = {key: privateKey, cert: certificate};
     const httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(443, function() {
+    httpsServer.listen(3001, function() {
         console.log('HTTPS Server is running on: https://localhost:%s', 443);
     });
 }
@@ -163,3 +164,6 @@ if (ExpressUseCredentials) {
 // });
 
 require('./setupsocket')();
+
+// 打开钉钉Schedule
+require('../src/mxr/schedule/dingdingschedule')();

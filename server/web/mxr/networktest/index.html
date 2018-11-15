@@ -1,17 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="MXRNetworkTest">
+<html lang="en" ng-app="MXRNetworkTestApp">
 <head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap_4.0.1.min.css">
     <script src="../../jquery/jquery_3.2.1.min.js"></script>
-    <link rel="stylesheet" href="network_test.css" type="text/css">
+    <script src="../../bootstrap/bootstrap_4.0.0.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接口测试</title>
 </head>
 <body>
-    <div ng-controller="MXRNetworkTestController">
+    <div ng-controller="MXRNetworkTestController" class="container">
+        {{apiRouter}}
+        <span>选择服务器 : </span><select ng-change="changeHostFun()" ng-model="selectHost" ng-options="x.site for x in hosts"></select>
+        <p/>
+        name:{{selectHost.site}}
+        <br/>
+        host:{{selectHost.host}}
 
+        <p/>
+
+        <select ng-change="apiUrlChangeFun()" ng-model="selectApiUrl" ng-options="x.description for x in apiUrls">
+        </select>
+
+        <p/>
+
+        <span>URL : </span><input class="col-8" type="text" ng-model="requestUrl" id="requestUrl">
+
+        <p/>
+
+        <span>Method : </span><select ng-model="selectApiMethod" ng-options="x for x in apiMethods"></select>
+
+        <p/>
+
+        <!--  请求头展示 -->
+        <span>请求头部分:</span>  <span class="ml-2">隐藏</span><input class="ml-1" type="checkbox" ng-model="isHiddenMxrHeader">
+        <div ng-hide="isHiddenMxrHeader">
+            <table class="table table-striped table-bordered table-hover table-sm">
+                <th>key</th><th>value</th><th>delete</th>
+                <tr ng-repeat="(keyT, value) in mxrHeader">
+                    <td>{{keyT}}</td>
+                    <td>{{value}}</td>
+                    <td><button class="btn-primary" ng-click="deleteMxrHeaderFun(keyT)"> delete </button></td>
+                </tr>
+            </table>
+
+            <br/>
+            <!-- 添加请求头 -->
+            <div>
+                <table class="table table-bordered table-striped table-sm">
+                    <th>key</th><th>value</th>
+                    <tr>
+                        <td>key</td>
+                        <td><input type="text" ng-model="addHeaderKey"></td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td><input type="text" ng-model="addHeaderValue"></td>
+                    </tr>
+                </table>
+
+                <button class="btn-primary" ng-click="addMxrHeaderKayValueFun()">add</button>
+            </div>
+        </div>
+
+        <!--  参数展示 -->
+        <span>参数部分:</span>  <span class="ml-2">隐藏</span><input class="ml-1" type="checkbox" ng-model="isHiddenMxrParam">
+        <div ng-hide="isHiddenMxrParam">
+            <table class="table table-striped table-bordered table-hover table-sm">
+                <th>key</th><th>value</th>
+                <tr ng-repeat="(key, value) in requestJson">
+                    <td>{{key}}</td>
+                    <td><input id="{{'mxr-request-key-'+key}}" type="text" ng-model="value" ng-change="changeRequestJsonValue(key)"/></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <p/>
+        <button class="btn-primary" ng-click="testRequestFun()">request</button>
+        <br/>
+        <br/>
+
+        <span>Status:</span><span>{{responseStatus}}</span>
+        <br/>
+        <textarea class="col-10" ng-model="responseConfig" placeholder="responseConfig" readonly="readonly"></textarea>
+        <br/>
+        <textarea class="col-10" style="height: 500px;" ng-model="responseData" placeholder="responseData" readonly="readonly"></textarea>
 
     </div>
-
 
     <script src="../../angular/angular_1.4.6.min.js"></script>
     <script src="./MXRNetworkTestApp.js"></script>

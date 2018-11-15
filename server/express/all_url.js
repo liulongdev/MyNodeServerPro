@@ -35,4 +35,9 @@ module.exports = Object.freeze({
     // 梦想人加解密
     SERVER_URL_MXREncoder:              '/api/mxr/core/mxr/v1/encoder',      // 梦想人加密
     SERVER_URL_MXRDecoder:              '/api/mxr/core/mxr/v1/decoder',      // 梦想人解密
+
+
+    SERVER_URL_MXRTestUrl:              '/api/mxr/core/mxr/v1/test',        // 梦想人测试接口
+    SERVER_URL_MXRNetworkTestAddApi:    '/api/mxr/core/mxr/v1/network/add', // 增加接口
+    SERVER_URL_MXRGetAllApi:            '/api/mxr/core/mxr/v1/network/getAll' // 获取所有的接口
 });

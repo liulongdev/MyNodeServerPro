@@ -100,6 +100,30 @@ function  testWangyiXin() {
             }
         });
 }
+//
+// let myBody = {
+//     "msgtype": "text",
+//     "text": {
+//         "content": "大家可以去吃火锅啦"
+//     },
+//     "at": {
+//         "isAtAll": true
+//     }
+// };
+//
+//
+// request.post('https://oapi.dingtalk.com/robot/send?access_token=65b13b1768d5b63892a77ed5f4c9fea858bea51d1c57a045d5a081d2588346b5')
+//     .send(myBody)
+//     .set("Content-Type", "application/json; charset=utf-8")
+//     .end((err, res) => {
+//        if (err)
+//            console.log('err : ', err);
+//        else
+//        {
+//            console.log('res >>> ', res);
+//            console.log('res text>>> ', res.text);
+//        }
+//     });
 
 // testWangyiXin();
 
@@ -209,45 +233,46 @@ function  testWangyiXin() {
 //
 // console.log(mxrDecoder('JgwAAAC4q6m6pqOh'));
 
-const MxrHost = 'https://bs-api.mxrcorp.cn';
-let MxrHeader = {'userId':'122934',
-    'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
-    'region':'0',
-    'appVersion':'5.17.0',
-    'osType':'1',
-    'deviceUnique':'D52B7383-C486-4686-A7E8-5E857E78F936',
-    'appId':'10000000000000000000000000000001',
-                };
-
-const MARUtil = require('./lib/util');
-const MXRResponseModel = require('../src/mxr/model/mxr_network_response_mdoel');
-
-let encoderHeader = MARUtil.mxrEncoder(JSON.stringify(MxrHeader));
-let header = {'mxr-key':encoderHeader};
-
-let url = MxrHost + '/core/home/1';
-let param = {
-    'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
-    'page':'1',
-    'param':'0',
-    'region':'0',
-    'rows':'50',
-    'search':'normal',
-    'topNums':'20',
-    'uid':MARUtil.mxrEncoder('122934')
-};
-console.log(url);
-request.get(url)
-    .set('mxr-key', encoderHeader)
-    .query(param)
-    .end(function (err, res) {
-       console.log('err >>> ', err);
-       console.log('res >>> ', JSON.parse(res.text).Header);
-       let responseModel = MXRResponseModel.builderWithResponse(res.text);
-       console.log(responseModel.header);
-       console.log('res >>> ', responseModel.originalBody);
-
-    });
+//
+// const MxrHost = 'https://bs-api.mxrcorp.cn';
+// let MxrHeader = {'userId':'122934',
+//     'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
+//     'region':'0',
+//     'appVersion':'5.17.0',
+//     'osType':'1',
+//     'deviceUnique':'D52B7383-C486-4686-A7E8-5E857E78F936',
+//     'appId':'10000000000000000000000000000001',
+//                 };
+//
+// const MARUtil = require('./lib/util');
+// const MXRResponseModel = require('../src/mxr/model/mxr_network_response_mdoel');
+//
+// let encoderHeader = MARUtil.mxrEncoder(JSON.stringify(MxrHeader));
+// let header = {'mxr-key':encoderHeader};
+//
+// let url = MxrHost + '/core/home/1';
+// let param = {
+//     'deviceId':'1D4F381D-F2BC-4C94-B0B1-42CC3EDFB059',
+//     'page':'1',
+//     'param':'0',
+//     'region':'0',
+//     'rows':'50',
+//     'search':'normal',
+//     'topNums':'20',
+//     'uid':MARUtil.mxrEncoder('122934')
+// };
+// console.log(url);
+// request.get(url)
+//     .set('mxr-key', encoderHeader)
+//     .query(param)
+//     .end(function (err, res) {
+//        console.log('err >>> ', err);
+//        console.log('res >>> ', JSON.parse(res.text).Header);
+//        let responseModel = MXRResponseModel.builderWithResponse(res.text);
+//        console.log(responseModel.header);
+//        console.log('res >>> ', responseModel.originalBody);
+//
+//     });
 
 
 var num  = 123;

@@ -186,4 +186,23 @@ module.exports = {
     },{
         strict: false,
     }),
+
+
+    mxr_network_test_api_table: new Schema({
+        route: {type: String, require: true},   // 路由
+        description: {type: String, require: true},        //   接口描述
+        /*
+        * {
+        *   keyN:{description:'',
+        *           dataType:'',    // number, string, boolean
+        *           }
+        * }
+        * */
+        params: {type: Mixed},      // 接口参数
+        author: {type: String},     // 接口负责人
+        needMxrHeader: {type: Boolean},    // 是否需要梦想人请求头
+        module: {type: String},         // 属于那个模块
+        method: {type: String},         // 请求类型
+        disable: {type: Boolean},       // 是否不可用
+    }),
 };

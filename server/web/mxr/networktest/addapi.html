@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MXRNetworkTestAddApiApp">
+<head>
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap_4.0.1.min.css">
+    <script src="../../jquery/jquery_3.2.1.min.js"></script>
+    <script src="../../bootstrap/bootstrap_4.0.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>增加接口</title>
+</head>
+<body>
+    <div ng-controller="MXRNetworkTestAddApiController" class="container">
+
+        <form class="mt-4" name="addApiForm" novalidate>
+            <div class="form-group">
+                <label class="col-2">路由:</label>
+                <input class="col-4" type="text" name="apiRoute" ng-model="apiRoute" required placeholder="路由,如/api/core/user/info"/>
+                <span class="ml-1" style="color: #f00">*</span>
+                <span style="color: #f00;" ng-show="addApiForm.apiRoute.$error.required">必填</span>
+                <!--<span ng-show="addApiForm.apiRoute.$dirty && addApiForm.apiRoute.$invalid">-->
+                <!--<span class="bg-warning" ng-show="addApiForm.apiRoute.$error.required">必填</span>-->
+                <!--</span>-->
+            </div>
+
+            <div class="form-group">
+                <label class="col-2">路由描述:</label>
+                <input class="col-4" type="text" name="apiRouteDescription" ng-model="apiRouteDescription" required/>
+                <span class="ml-1" style="color: #f00">*</span>
+                <span style="color: #f00;" ng-show="addApiForm.apiRouteDescription.$error.required">必填</span>
+            </div>
+
+            <div class="form-group">
+                <label class="col-2">请求类型:</label>
+                <select ng-model="selectApiMethod" ng-options="x for x in apiMethods"></select>
+            </div>
+
+
+            <div class="border p-2">
+                <div class="form-group">
+                    <label  class="col-2">参数:</label>
+                    <input class="col-4" type="text" name="apiParamKey" ng-model="apiParamKey">
+                </div>
+                <div class="form-group">
+                    <label class="col-2">描述:</label>
+                    <input class="col-4" ng-model="paramDescription" type="text" placeholder="参数描述"/>
+                </div>
+                <div class="form-group">
+                    <label class="col-2">类型:</label>
+                    <select ng-model="selectDataType" ng-options="x for x in paramDataTypeArray"></select>
+                </div>
+                <div class="form-group">
+                    <button class="btn-primary col-2" ng-click="addParamFun()">Add param</button>
+                </div>
+            </div>
+
+            <div class="form-group" ng-hide="hiddenParamTableView">
+                <label class="col-2">参数:</label>
+                <table class="table table-bordered table-sm">
+                    <th>key</th><th>dataType</th><th>description</th>
+                    <tr ng-repeat="(key, value) in paramDictionary">
+                        <td>{{key}}</td>
+                        <td>{{value.dataType}}</td>
+                        <td>{{value.description}}</td>
+                        <!--<td><input id="{{'mxr-request-key-'+key}}" type="text" ng-model="value" ng-change="changeRequestJsonValue(key)"/></td>-->
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="form-group">
+                <label class="col-2">模块:</label>
+                <input class="col-4" type="text" ng-model="apiModule"/>
+            </div>
+            <div class="form-group">
+                <label class="col-2">负责人:</label>
+                <input class="col-4" type="text" ng-model="apiAuthor">
+            </div>
+
+            <div class="form-group">
+                <label class="col-2">需要请求头:</label>
+                <input type="checkbox" ng-model="needMxrHeader">
+            </div>
+
+            <div class="form-group">
+                <button class="col-2" ng-click="addApiRouteFun()">增加一条接口</button>
+            </div>
+        </form>
+
+
+    </div>
+    <script src="../../angular/angular_1.4.6.min.js"></script>
+    <script src="./MXRNetworkTestAddApiApp.js"></script>
+</body>
+</html>
