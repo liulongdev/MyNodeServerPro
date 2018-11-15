@@ -45,7 +45,7 @@ function mxr_express_mxr_encryption(app){
     app.all(AllUrl.SERVER_URL_MXRTestUrl, function (req, response, next) {
 
         const method = ('' + req.method).toUpperCase();
-        console.log('method : ', method);
+        // console.log('method : ', method);
         if (method === 'POST')
         {
             const result = new MARResponseModel();
@@ -57,16 +57,16 @@ function mxr_express_mxr_encryption(app){
                 response.json(result.toResponseJSON());
                 return;
             }
-            let mxrHeader = req.headers['mxr-key'];
+            let mxrHeader = req.body.headers['mxr-key'];
             if (mxrHeader !== undefined)
             {
-                mxrHeader = MARUtil.mxrEncoder(JSON.stringify(mxrHeader));
+                mxrHeader = MARUtil.mxrEncoder(mxrHeader);
             }
             let url = params['mxrUrl'];
-
             let encoderParams = MARUtil.mxrEncoder(JSON.stringify(params));
             request.post(url)
                 .send(encoderParams)
+                .set('mxr-key', mxrHeader)
                 .end((err, res) => {
                     // response.status(res.status);
                     if (err) {
@@ -80,7 +80,7 @@ function mxr_express_mxr_encryption(app){
                         response.json(result.toResponseJSON());
                     }
                     else{
-                        console.log(res.text);
+                        // console.log(res.text);
                         let responseModel = MXRResponseModel.builderWithResponse(res.text);
                         response.json(responseModel.toResponseJSON());
                     }
@@ -99,7 +99,7 @@ function mxr_express_mxr_encryption(app){
             let mxrHeader = req.headers['mxr-key'];
             if (mxrHeader !== undefined)
             {
-                mxrHeader = MARUtil.mxrEncoder(JSON.stringify(mxrHeader));
+                mxrHeader = MARUtil.mxrEncoder(mxrHeader);
             }
             let url = params['mxrUrl'];
             request.get(url)

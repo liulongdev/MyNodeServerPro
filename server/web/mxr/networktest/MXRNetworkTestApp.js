@@ -17,7 +17,7 @@ mxrNetworkTestApp.controller('MXRNetworkTestController', ['$scope', '$http', fun
     $scope.apiMethods = ['GET', 'POST'];
     $scope.selectApiMethod = $scope.apiMethods[0];
 
-    let getAllApiConfig = {headers: {'mxr-key':$scope.mxrHeader},
+    let getAllApiConfig = {headers: {'mxr-key':JSON.stringify($scope.mxrHeader)},
         method: 'GET',
         params: $scope.requestJson,
         timeout: 20000,
@@ -115,7 +115,7 @@ mxrNetworkTestApp.controller('MXRNetworkTestController', ['$scope', '$http', fun
         let apiUrl = $scope.selectHost.host + $scope.selectApiUrl.route;
         $scope.requestJson['mxrUrl'] = $('#requestUrl').val(); // apiUrl;
         let config = {
-            headers: {'mxr-key': $scope.mxrHeader},
+            headers: {'mxr-key': JSON.stringify($scope.mxrHeader)},
             method: $scope.selectApiMethod,
             params: $scope.requestJson,
             timeout: 20000,
