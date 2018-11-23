@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WebSocketAPP">
+<head>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap_4.0.1.min.css">
+    <script src="../jquery/jquery_3.2.1.min.js"></script>
+    <script src="../bootstrap/bootstrap_4.0.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>websocket</title>
+</head>
+<body>
+    <div ng-controller="WebSocketController" class="container col-12">
+        <div class="" style="height: 100%; width: 100%; padding-top: 60px; padding-bottom: 60px;">
+            <div class="fixed-top p-2 bg-light" style="height: 49px;">
+                <input id="wsUrl" type="text" class="rounded" ng-model="websocketUrl">
+                <button class="btn btn-success ml-2" ng-click="connectFun()" ng-disabled="!connectEnabled">连接</button>
+                <button class="btn btn-danger ml-2" ng-click="disConnectFun()" ng-disabled="!disConnectEnabled">断开</button>
+            </div>
+
+            <div class="col-12 bg-light" style="height: 100%">
+            <div id="wsMsgContainerId">
+
+            </div>
+
+            </div>
+        </div>
+
+        <div class="fixed-bottom bg-light" style="height: 49px;">
+            <div class="mt-2 pl-3">
+                <span id="currentStateId" class="text-success"></span>
+                <div class="float-right mr-2">
+                    <button class="ml-2 btn btn-info" ng-click="sendMsgFun()">发送</button>
+                </div>
+                <div class="float-right">
+                    <input type="text" class="rounded" ng-model="sendMsgText" placeholder="要发送的消息">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="../angular/angular_1.4.6.min.js"></script>
+    <script src="./websocketapp.js"></script>
+</body>
+</html>

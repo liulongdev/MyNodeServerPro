@@ -1,6 +1,6 @@
 let mxrNetworkTestApp = angular.module('MXRNetworkTestApp', []);
 
-mxrNetworkTestApp.controller('MXRNetworkTestController', ['$scope', '$http', function ($scope, $http) {
+mxrNetworkTestApp.controller('MXRNetworkTestController', ['$scope', '$http', function ($scope, $http, $timeout) {
 
     $scope.hosts = [{'site':'内网125测试', 'host':'http://192.168.0.125:20000'},
         {'site':'内网145测试', 'host':'http://192.168.0.145:20000'},
@@ -148,8 +148,4 @@ mxrNetworkTestApp.controller('MXRNetworkTestController', ['$scope', '$http', fun
                 });
         }
     };
-
-    // 书城首页
-    // $scope.bookStoreModel = {};
-
 }]);

@@ -10,6 +10,7 @@
 </head>
 <body>
     <div ng-controller="MXRNetworkTestController" class="container">
+        <br/>
         {{apiRouter}}
         <span>选择服务器 : </span><select ng-change="changeHostFun()" ng-model="selectHost" ng-options="x.site for x in hosts"></select>
         <p/>

@@ -6,8 +6,7 @@ function startDingDingSchedule() {
     let daKaRule = new Schedule.RecurrenceRule();
     daKaRule.dayOfWeek = new Schedule.Range(1, 5);
     daKaRule.hour = 8;
-    daKaRule.minute = 35;
-    daKaRule.second = 0;
+    daKaRule.minute = 30;
     let daKaSchedule = Schedule.scheduleJob(daKaRule, function () {
         dingRobotNoticeText('打卡提醒：上班从打卡开始， 别忘记打卡哦 ～');
     });
@@ -16,8 +15,7 @@ function startDingDingSchedule() {
     let xiaBanRule = new Schedule.RecurrenceRule();
     xiaBanRule.dayOfWeek = new Schedule.Range(1, 5);
     xiaBanRule.hour = 18;
-    daKaRule.minute = 0;
-    xiaBanRule.second = 0;
+    xiaBanRule.minute = 0;
     let xiaBanSchedule = Schedule.scheduleJob(xiaBanRule, function () {
         dingRobotNoticeText('友情提醒：大家别忘记下班前把日报和阐道的任务清一下， 还有打卡别忘记了呢 ～');
     });
@@ -26,11 +24,9 @@ function startDingDingSchedule() {
     // 提醒下班燃尽图和日报、打卡
     let zhouBaoRule = new Schedule.RecurrenceRule();
     zhouBaoRule.dayOfWeek = 5;
-    zhouBaoRule.hour = [18, 20];
-    daKaRule.minute = 0;
-    zhouBaoRule.second = 0;
+    zhouBaoRule.hour = [19, 20];
+    zhouBaoRule.minute = 0;
     let zhouBaoSchedule = Schedule.scheduleJob(zhouBaoRule, function () {
-        console.log('hello 4 >>>> ', new Date().toLocaleString());
         dingRobotNoticeText('友情提醒：一个愉快的周末从写完周报开始，大家记得写周报哟 ～');
     });
 
