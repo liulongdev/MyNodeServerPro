@@ -3,7 +3,6 @@
 let mxrEncryptionApp = angular.module('MXREncryptionApp', []);
 
 mxrEncryptionApp.controller('MXREncryptionController', ['$scope', '$http', function ($scope, $http) {
-
     $scope.firstText = '';
     $scope.encoderStr = '';
     $scope.resultText = '';

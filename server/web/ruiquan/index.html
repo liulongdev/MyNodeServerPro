@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap_4.0.1.min.css">
+    <link rel="stylesheet" href="./bootstrapmarex.css">
+    <script src="../jquery/jquery_3.2.1.min.js"></script>
+    <script src="../bootstrap/bootstrap_4.0.0.min.js"></script>
+    <script src="./ruiquan.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>瑞全OA</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row row-offcanvas row-offcanvas-left">
+            <!-- 左边菜单  -->
+            <div id="sidebar" class="column col-sm-3 col-lg-2 sidebar-offcanvas hidden-sm p-0">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card border-0">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Layout
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body p-0">
+                                <div class="list-group rounded-0" id="list-tab" role="tablist">
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5 border-top-0" id="list-menu-overview" href="#list-content-overview" data-toggle="list" role="tab" >
+                                        Overview
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5" id="list-menu-grid" href="#list-content-grid" data-toggle="list" role="tab" aria-controls="Components">
+                                        Grid
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5" id="list-menu-mediaObject" href="#list-content-mediaObject" data-toggle="list" role="tab" aria-controls="messages">
+                                        Media object
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5 border-bottom-0" id="list-menu-utilitiesForLayout" href="#list-content-utilitiesForLayout" data-toggle="list" role="tab" aria-controls="settings">
+                                        Utilities for layout
+                                    </a>
+                                    <div class="border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Component
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body p-0">
+                                <div class="list-group rounded-0" id="list-tab-component" role="tablist">
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5 border-top-0" id="list-menu-component-alert" href="#list-content-component-alert" data-toggle="list" role="tab" >
+                                        Alert
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5" id="list-menu-component-badge" href="#list-content-component-badge" data-toggle="list" role="tab" aria-controls="Components">
+                                        Badge
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5" id="list-menu-component-buttons" href="#list-content-component-buttons" data-toggle="list" role="tab" aria-controls="messages">
+                                        Buttons
+                                    </a>
+                                    <a class="list-group-item list-group-item-action rounded-0 pl-lg-5 border-bottom-0" id="list-menu-component-card" href="#list-content-component-card" data-toggle="list" role="tab" aria-controls="settings">
+                                        Card
+                                    </a>
+                                    <div class="border"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Content
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Hello
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <!-- 主窗口 -->
+            <div id="main" class="column col-sm-9 col-lg-10 p-0">
+
+                <nav class="p-0" style="height: 30px">
+                    <div>
+                        <div id="sidebarToggle" class="">
+                            <button class="btn btn-secondary btn-sm" onclick="toggleSlideBar()">
+                                菜单
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+
+
+                <div class="tab-content p-4" id="nav-tabContent">
+                    <div class="tab-pane fade" id="list-content-overview" role="tabpanel" aria-labelledby="list-menu-overview">
+                        layout overview
+                    </div>
+                    <div class="tab-pane fade" id="list-content-grid" role="tabpanel" aria-labelledby="list-menu-grid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md bg-info border">
+                                    One of three columns
+                                </div>
+                                <div class="col-md bg-info border">
+                                    One of three columns
+                                </div>
+                                <div class="col-md bg-info border">
+                                    One of three columns
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/><br/>
+                        <h3>Auto-layout columns</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col bg-info border">
+                                    1 of 2
+                                </div>
+                                <div class="col bg-info border">
+                                    2 of 2
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col bg-info border">
+                                    1 of 3
+                                </div>
+                                <div class="col bg-info border">
+                                    2 of 3
+                                </div>
+                                <div class="col bg-info border">
+                                    3 of 3
+                                </div>
+                            </div>
+                        </div>
+
+                        <br/><br/>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col bg-info border">Column</div>
+                                <div class="col bg-info border">Column</div>
+                                <div class="w-100 btn-danger border"></div>
+                                <div class="col bg-info border">Column</div>
+                                <div class="col bg-info border">Column</div>
+                            </div>
+                        </div>
+
+                        <br/><br/>
+                        <h3>Setting one column width</h3>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col bg-info border">
+                                    1 of 3
+                                </div>
+                                <div class="col-6 bg-info border">
+                                    2 of 3 (wider)
+                                </div>
+                                <div class="col bg-info border">
+                                    3 of 3
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col bg-info border">
+                                    1 of 3
+                                </div>
+                                <div class="col-5 bg-info border">
+                                    2 of 3 (wider)
+                                </div>
+                                <div class="col bg-info border">
+                                    3 of 3
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-content-mediaObject" role="tabpanel" aria-labelledby="list-menu-mediaObject">
+                        layout media object
+                    </div>
+                    <div class="tab-pane fade" id="list-content-utilitiesForLayout" role="tabpanel" aria-labelledby="list-menu-utilitiesForLayout">
+                        layout utilities for layout
+                    </div>
+
+
+
+                    <div class="tab-pane fade" id="list-content-component-alert" role="tabpanel" aria-labelledby="list-menu-component-alert">
+                        <!--component alert-->
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert—check it out!
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert—check it out!
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert—check it out!
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert—check it out!
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert—check it out!
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert—check it out!
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert—check it out!
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert—check it out!
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <h3>Link color</h3>
+                        <div class="alert alert-primary" role="alert">
+                            A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <h3>Additional content</h3>
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                            <hr>
+                            <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <h3>Dismissing</h3>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="list-content-component-badge" role="tabpanel" aria-labelledby="list-menu-component-badge">
+                        <!--component badge-->
+                        <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+                        <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+                        <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+                        <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+                        <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+                        <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+
+                        <br/>
+                        <br/>
+                        <button type="button" class="btn btn-primary">
+                            Notifications <span class="badge badge-light">4</span>
+                        </button>
+
+                        <button type="button" class="btn btn-primary">
+                            Profile <span class="badge badge-light">9</span>
+                            <span class="sr-only">unread messages</span>
+                        </button>
+
+                        <br/>
+                        <br/>
+                        <h3>Contextual variations</h3>
+                        <span class="badge badge-primary">Primary</span>
+                        <span class="badge badge-secondary">Secondary</span>
+                        <span class="badge badge-success">Success</span>
+                        <span class="badge badge-danger">Danger</span>
+                        <span class="badge badge-warning">Warning</span>
+                        <span class="badge badge-info">Info</span>
+                        <span class="badge badge-light">Light</span>
+                        <span class="badge badge-dark">Dark</span>
+
+
+                        <br/>
+                        <br/>
+                        <h3>Pill badges</h3>
+                        <span class="badge badge-pill badge-primary">Primary</span>
+                        <span class="badge badge-pill badge-secondary">Secondary</span>
+                        <span class="badge badge-pill badge-success">Success</span>
+                        <span class="badge badge-pill badge-danger">Danger</span>
+                        <span class="badge badge-pill badge-warning">Warning</span>
+                        <span class="badge badge-pill badge-info">Info</span>
+                        <span class="badge badge-pill badge-light">Light</span>
+                        <span class="badge badge-pill badge-dark">Dark</span>
+
+                        <br/>
+                        <br/>
+                        <h3>Links</h3>
+                        <a href="#" class="badge badge-primary">Primary</a>
+                        <a href="#" class="badge badge-secondary">Secondary</a>
+                        <a href="#" class="badge badge-success">Success</a>
+                        <a href="#" class="badge badge-danger">Danger</a>
+                        <a href="#" class="badge badge-warning">Warning</a>
+                        <a href="#" class="badge badge-info">Info</a>
+                        <a href="#" class="badge badge-light">Light</a>
+                        <a href="#" class="badge badge-dark">Dark</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-content-component-buttons" role="tabpanel" aria-labelledby="list-menu-component-buttons">
+                        <!--component buttons-->
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+                        <button type="button" class="btn btn-link">Link</button>
+
+                        <br/><br/>
+                        <h3>Button tags</h3>
+                        <a class="btn btn-primary" href="#" role="button">Link</a>
+                        <button class="btn btn-primary" type="submit">Button</button>
+                        <input class="btn btn-primary" type="button" value="Input">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                        <input class="btn btn-primary" type="reset" value="Reset">
+
+                        <br/><br/>
+                        <h3>Outline buttons</h3>
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+                        <br/><br/>
+                        <h3>Sizes</h3>
+                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+
+                        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+                        <br/><br/>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                        <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+
+                        <h6>Active state</h6>
+                        <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+                        <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+
+                        <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+                        <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+
+                        <h6>Toggle states</h6>
+                        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                            Single toggle
+                        </button>
+
+                        <h6>Checkbox and radio buttons</h6>
+                        <div class="btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="checkbox" checked autocomplete="off"> Checked
+                            </label>
+                        </div>
+
+                        <br/>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                            </label>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade col-sm" id="list-content-component-card" role="tabpanel" aria-labelledby="list-menu-component-card">
+                        component card
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

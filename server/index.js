@@ -127,6 +127,14 @@ app.post('/wangyixinverify', function (req, res, next) {
     res.json({});
 });
 
+app.all('/election/postCrashReport', function (req, res, next) {
+  console.log(req);
+  console.log(req.body);
+  console.log(req.params);
+  console.log(req.query);
+  res.json({})
+});
+
 app.use(function(err, req, res, next) {
     console.error(err.stack);
     res.status(500).send('Something broke!');
