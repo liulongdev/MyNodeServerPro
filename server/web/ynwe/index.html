@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="YNWEShopApp">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap_4.0.1.min.css">
+    <link rel="stylesheet" href="ynweshop.css" type="text/css">
+    <script src="../jquery/jquery_3.2.1.min.js"></script>
+    <!--<script src="../util/spin.min.js"></script>-->
+    <script src="../bootstrap/bootstrap_4.0.0.min.js"></script>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>shop</title>
+</head>
+<body>
+
+    <div ng-controller="YNWEShopAppController" class="container-fluid text-center" style="padding-left: 0px; padding-right: 0px;">
+
+        <div class="topMenu row">
+            <span class="col-2 text-left">X</span>
+            <div id="topMenuTitle" class="col-8">分类</div>
+            <span class="col-2 text-right">...</span>
+        </div>
+
+        <div class="content">
+            <div id="homeSection" class="invisible"></div>
+
+            <div id="categorySection" class="row">
+                <div class="shopMenu col-3">
+                    <div class="shopMenuItem" ng-click="clickShopMenuItemAction($event)">
+                        <div>热销</div></div>
+                    <div class="shopMenuItem" ng-click="clickShopMenuItemAction($event)">
+                        折扣
+                    </div>
+                    <div class="shopMenuItem" ng-click="clickShopMenuItemAction($event)">
+                        <div>招牌系列</div>
+                    </div>
+                    <div class="shopMenuItem menuItemSelected" ng-click="clickShopMenuItemAction($event)">果茶系列</div>
+                    <div class="shopMenuItem" ng-click="clickShopMenuItemAction($event)">果汁&奶昔</div>
+                    <div class="shopMenuItem" ng-click="clickShopMenuItemAction($event)">夏季茶单</div>
+                </div>
+
+                <div class="shopContent col-9 pl-5 pr-5">
+                    <div id="shopCarousel" class="carousel slide pt-3 pb-3">
+                        <!-- 轮播图片 -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="goodsContainer" class="w-auto">
+                        <div class="goodItem row">
+                            <div class="goodItemImgContainer">
+                                <img class="goodItemImg w-100 h-100" src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="pl-5 text-left  col-8">
+                                <div class="goodItem-title">缤纷气泡水</div>
+                                <div class="goodItem-subTitle">
+                                    <span class="goodItem-sale">销量26份</span>
+                                    <span class="goodItem-comment">好评率98%</span>
+                                </div>
+                                <div class="row">
+                                    <div class="goodItemPrice">
+                                        <span class="goodItem-price">¥16</span>
+                                        <span class="goodItem-originalPrice">¥26</span>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <button type="button" class="btn btn-warning">选规格</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodItemSeparatorLine col-12"></div>
+                        </div>
+
+
+                        <div class="goodItem row">
+                            <div class="goodItemImgContainer">
+                                <img class="goodItemImg w-100 h-100" src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="pl-5 text-left  col-8">
+                                <div class="goodItem-title">缤纷气泡水</div>
+                                <div class="goodItem-subTitle">
+                                    <span class="goodItem-sale">销量26份</span>
+                                    <span class="goodItem-comment">好评率98%</span>
+                                </div>
+                                <div class="row">
+                                    <div class="goodItemPrice">
+                                        <span class="goodItem-price">¥16</span>
+                                        <span class="goodItem-originalPrice">¥26</span>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <button type="button" class="btn btn-warning">选规格</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodItemSeparatorLine col-12"></div>
+                        </div>
+
+                        <div class="goodItem row">
+                            <div class="goodItemImgContainer">
+                                <img class="goodItemImg w-100 h-100" src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="pl-5 text-left  col-8">
+                                <div class="goodItem-title">缤纷气泡水</div>
+                                <div class="goodItem-subTitle">
+                                    <span class="goodItem-sale">销量26份</span>
+                                    <span class="goodItem-comment">好评率98%</span>
+                                </div>
+                                <div class="row">
+                                    <div class="goodItemPrice">
+                                        <span class="goodItem-price">¥16</span>
+                                        <span class="goodItem-originalPrice">¥26</span>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <button type="button" class="btn btn-warning">选规格</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodItemSeparatorLine col-12"></div>
+                        </div>
+
+                        <div class="goodItem row">
+                            <div class="goodItemImgContainer">
+                                <img class="goodItemImg w-100 h-100" src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="pl-5 text-left  col-8">
+                                <div class="goodItem-title">缤纷气泡水</div>
+                                <div class="goodItem-subTitle">
+                                    <span class="goodItem-sale">销量26份</span>
+                                    <span class="goodItem-comment">好评率98%</span>
+                                </div>
+                                <div class="row">
+                                    <div class="goodItemPrice">
+                                        <span class="goodItem-price">¥16</span>
+                                        <span class="goodItem-originalPrice">¥26</span>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <button type="button" class="btn btn-warning">选规格</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goodItemSeparatorLine col-12"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="shoppingCartSection" class="invisible"></div>
+
+            <div id="mineSection" class="invisible"></div>
+        </div>
+
+
+        <div class="bottomMenu fixed-bottom">
+            <div class="bottomMenuSeparatorLine"></div>
+            <div class="row h-100">
+                <div class="tabItem col-3 h-100" ng-click="clickTabAction($event, 'homeSection')">
+                    <div>点单</div>
+                </div>
+                <div class="tabItem col-3 h-100 tab-selected" ng-click="clickTabAction($event, 'categorySection')">
+                    <label>分类</label>
+                </div>
+                <div class="tabItem col-3 h-100" ng-click="clickTabAction($event, 'shoppingCartSection')">
+                    <label>购物车</label>
+                </div>
+                <div class="tabItem col-3 h-100" ng-click="clickTabAction($event, 'mineSection')">
+                    <label>个人</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../angular/angular_1.4.6.min.js"></script>
+    <script src="./ynweshop.js"></script>
+</body>
+</html>

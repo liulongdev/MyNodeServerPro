@@ -169,6 +169,94 @@ function mxr_express_mxr_encryption(app){
             }
         });
     });
+
+    /*weex test*/
+    app.all(AllUrl.SERVER_URL_MXRWeexUrl, function (req, response, next) {
+
+        const method = ('' + req.method).toUpperCase();
+        console.log('method : ', method);
+        if (method === 'POST')
+        {
+            const result = new MARResponseModel();
+            let params = req.body.params;
+            if (!MARUtil.verifyParams(params, ['mxrUrl'])) {
+                // res.status = 500;
+                result.header.errCode = 500;
+                result.header.errMsg = '测试格式错误';
+                response.json(result.toResponseJSON());
+                return;
+            }
+            let mxrHeader = req.body.headers['mxr-key'];
+            if (mxrHeader !== undefined)
+            {
+                mxrHeader = MARUtil.mxrEncoder(mxrHeader);
+            }
+            let url = params['mxrUrl'];
+            let encoderParams = MARUtil.mxrEncoder(JSON.stringify(params));
+            request.post(url)
+              .send(encoderParams)
+              .set('mxr-key', mxrHeader)
+              .end((err, res) => {
+                  // response.status(res.status);
+                  if (err) {
+                      result.header.errCode =1;
+                      result.header.errMsg = '' + err;
+                      response.json(result.toJSON());
+                  }
+                  else if (res.status !== 200) {
+                      result.header.errCode = res.status;
+                      result.header.errMsg = '' + res.text;
+                      response.json(result.toJSON());
+                  }
+                  else{
+                      // console.log(res.text);
+                      let responseModel = MXRResponseModel.builderWithResponse(res.text);
+                      console.log('>>>> ret : ', responseModel.toJSON());
+                      response.json(responseModel.toJSON());
+                  }
+              })
+        }
+        else
+        {
+            const result = new MARResponseModel();
+            let params = req.query;
+            if (!MARUtil.verifyParams(params, ['mxrUrl'])) {
+                result.header.errCode = 500;
+                result.header.errMsg = '测试格式错误';
+                response.json(result.toResponseJSON());
+                return;
+            }
+            console.log(">>> params : ", params);
+            let mxrHeader = req.headers['mxr-key'];
+            console.log('header : ', req.headers);
+            if (mxrHeader !== undefined)
+            {
+                mxrHeader = MARUtil.mxrEncoder(mxrHeader);
+            }
+            let url = params['mxrUrl'];
+            request.get(url)
+              .set('mxr-key', mxrHeader)
+              .query(params)
+              .end((err, res) => {
+                  // response.status(res.status);
+                  if (err) {
+                      result.header.errCode =1;
+                      result.header.errMsg = '' + err;
+                      response.json(result.toJSON());
+                  }
+                  else if (res.status !== 200) {
+                      result.header.errCode = res.status;
+                      result.header.errMsg = '' + res.text;
+                      response.json(result.toJSON());
+                  }
+                  else{
+                      let responseModel = MXRResponseModel.builderWithResponse(res.text);
+                      console.log('>>> response : ', responseModel.toJSON());
+                      response.json(responseModel.toJSON());
+                  }
+              });
+        }
+    });
 }
 
 

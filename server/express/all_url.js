@@ -39,5 +39,8 @@ module.exports = Object.freeze({
 
     SERVER_URL_MXRTestUrl:              '/api/mxr/core/mxr/v1/test',        // 梦想人测试接口
     SERVER_URL_MXRNetworkTestAddApi:    '/api/mxr/core/mxr/v1/network/add', // 增加接口
-    SERVER_URL_MXRGetAllApi:            '/api/mxr/core/mxr/v1/network/getAll' // 获取所有的接口
+    SERVER_URL_MXRGetAllApi:            '/api/mxr/core/mxr/v1/network/getAll', // 获取所有的接口
+
+    /*weex 调试接口*/
+    SERVER_URL_MXRWeexUrl:              '/api/mxr/core/weex',        // 梦想人测试接口
 });

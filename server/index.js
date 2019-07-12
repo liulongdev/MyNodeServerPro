@@ -84,17 +84,23 @@ app.post('/api/core/delegation/wy/special', function (req, res, next) {
 
 // test  ------------------------------
 
-app.get('/test/safari',  function (req, res, next) {
-    console.log(req);
+app.get('/test/zidong',  function (req, res, next) {
+    console.log(req.ip);
     res.end('hello , this is Martin');
 });
 
-
+app.all('/testssr',  function (req, res, next) {
+  // console.log(req);
+  console.log('>>>> test ssr');
+  console.log(req.body);
+  // console.log(req.query);
+  res.end('hello , this is Martin');
+});
 
 
 // test ________________________________
 
-/* /api/core/* 接口验证， 数字签名验证 */
+/* /api/core/* 接口验证， 数字签名验证  */
 const mar_express_api_core_validate = require('./express/api_validate');
 mar_express_api_core_validate(app);
 
@@ -127,13 +133,22 @@ app.post('/wangyixinverify', function (req, res, next) {
     res.json({});
 });
 
-app.all('/election/postCrashReport', function (req, res, next) {
+app.get('/test', function (req, res, next) {
+  res.json({test: 'haha'});
+});
+
+var multer  = require('multer')
+var upload = multer({ dest: 'crashCollection/' })
+
+app.all('/election/postCrashReport', upload.any(), function (req, res, next) {
   console.log(req);
   console.log(req.body);
   console.log(req.params);
   console.log(req.query);
   res.json({})
 });
+
+const URL = require('url').URL
 
 app.use(function(err, req, res, next) {
     console.error(err.stack);
@@ -146,8 +161,6 @@ const http = require('http');
 const https = require('https');
 
 const httpServer = http.createServer(app);
-
-
 
 httpServer.listen(3000, function() {
     console.log('HTTP Server is running on: http://localhost:%s', 80);

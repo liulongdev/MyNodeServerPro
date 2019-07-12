@@ -27,7 +27,7 @@ class MXRResponseModel
         }
         return responseModel;
     }
-    
+
     // constructor(json) {
     //     if (typeof json === "object") {
     //         this.header = new MXRResponseHeaderModel(json.Header);
@@ -45,6 +45,15 @@ class MXRResponseModel
 
     toResponseJSON() {
         let responseJSON = {header:{errCode: this.header.errCode, errMsg: this.header.errMsg}, body:this.body};
+        return responseJSON;
+    }
+
+    toJSON() {
+        let bodyJson = this.body;
+        if (typeof bodyJson === 'string') {
+            bodyJson = JSON.parse(bodyJson);
+        }
+        let responseJSON = {header:{errCode: this.header.errCode, errMsg: this.header.errMsg}, Body:bodyJson, body: bodyJson};
         return responseJSON;
     }
 

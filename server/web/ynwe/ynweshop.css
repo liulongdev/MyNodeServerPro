@@ -1,0 +1,141 @@
+body{
+    font-size: 22px;
+    background: #ececec;
+}
+
+/* Top ------------------------------ */
+.topMenu {
+    background: #f2f2f2;
+    height: 128px;
+    font-size: 38px;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Container ------------------------------ */
+
+#categorySection {
+    margin-bottom: 100px;
+}
+
+.shopMenu {
+    background: #ececec;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.shopMenuItem {
+    padding-top: 50px;
+    height: 140px;
+}
+
+.menuItemSelected {
+    background: #ffffff;
+}
+
+.shopContent {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #ffffff;
+}
+
+.carousel-inner  {
+border-radius: 20px;
+}
+.carousel-item{
+border-radius: 20px;
+}
+
+#goodsContainer {
+    padding-left: 15px;
+}
+
+#goodsContainer {
+    margin-top: 20px;
+}
+
+.goodItem {
+    height: 220px;
+}
+
+.goodItemImgContainer {
+    width: 180px;
+    height: 180px;
+
+}
+
+.goodItemImg{
+    border-radius: 10px;
+}
+
+.goodItem-title {
+    margin-top: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.goodItem-subTitle {
+    font-size: 20px;
+    color: #9a9a9a;
+    margin-bottom: 20px;
+}
+
+.goodItem-sale {
+    margin-right: 20px;
+}
+
+.goodItemPrice {
+    margin-top: 20px;
+}
+
+.goodItem-price {
+    font-size: 28px;
+    color: #ff5858;
+    margin-right: 20px;
+}
+
+.goodItem-originalPrice {
+    font-size: 18px;
+    color: #9a9a9a;
+    text-decoration:line-through
+}
+
+.goodItem button, .goodItem button:hover {
+    background-color: #fa92be;
+    border-color: #fa92be;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    width: 130px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.goodItemSeparatorLine {
+    height: 1px;
+    background-color: #d8d8d8;
+}
+
+
+/* Bottom ------------------------------ */
+
+.bottomMenu {
+    background: #ffffff;
+    height: 100px;
+}
+
+.bottomMenuSeparatorLine {
+    background: #d8d8d8;
+    height: 1px;
+}
+
+.tab-selected {
+    color: #fa92be;
+}
+
+.tabItem {
+    padding-top: 60px;
+}
