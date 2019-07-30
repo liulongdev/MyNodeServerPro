@@ -211,7 +211,6 @@ function mxr_express_mxr_encryption(app){
                   else{
                       // console.log(res.text);
                       let responseModel = MXRResponseModel.builderWithResponse(res.text);
-                      console.log('>>>> ret : ', responseModel.toJSON());
                       response.json(responseModel.toJSON());
                   }
               })
@@ -251,7 +250,6 @@ function mxr_express_mxr_encryption(app){
                   }
                   else{
                       let responseModel = MXRResponseModel.builderWithResponse(res.text);
-                      console.log('>>> response : ', responseModel.toJSON());
                       response.json(responseModel.toJSON());
                   }
               });

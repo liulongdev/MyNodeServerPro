@@ -162,7 +162,7 @@ const https = require('https');
 
 const httpServer = http.createServer(app);
 
-httpServer.listen(3000, function() {
+httpServer.listen(80, function() {
     console.log('HTTP Server is running on: http://localhost:%s', 80);
 });
 
@@ -173,7 +173,7 @@ if (ExpressUseCredentials) {
     const certificate = fs.readFileSync(path.resolve('./server/cer/maxiaoding.pem'), 'utf8');
     const credentials = {key: privateKey, cert: certificate};
     const httpsServer = https.createServer(credentials, app);
-    httpsServer.listen(3001, function() {
+    httpsServer.listen(443, function() {
         console.log('HTTPS Server is running on: https://localhost:%s', 443);
     });
 }
